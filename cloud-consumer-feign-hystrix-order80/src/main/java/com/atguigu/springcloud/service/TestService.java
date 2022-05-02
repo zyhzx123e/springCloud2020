@@ -17,6 +17,7 @@ import javax.annotation.Resource;
 import javax.el.MethodNotFoundException;
 import javax.validation.constraints.AssertTrue;
 import java.io.*;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 
@@ -335,6 +336,7 @@ class Citadel {
             } catch (CastleUnderSiegeException e) {
                 e.printStackTrace();
             }
+            //throw new CastleUnderSiegeException(); // q2
             // //CastleUnderSiegeException is checked exception
             //so it must be handled here
         }
@@ -387,9 +389,11 @@ class Stranger {
             return;//note that even if it returns here, finally still execute
 
         }finally {
-            System.out.println("getName Finished!");
+            System.out.println("getName finally!");
             return;
         }
+        //unreachable line
+        //System.out.println("getName Finished!");
         //return;
     }
     public static void main(String[] things) {
@@ -427,6 +431,24 @@ class Heart extends Organ {
 //        } finally {
 //
 //        }
+    }
+}
+
+
+class Coat {
+    public Long zipper() throws Exception {
+        try {
+            String checkZipper = (String)new Object();
+        } catch (Exception e) {
+            throw new RuntimeException("Broken!");
+        }
+        return null;
+    }
+    public static void main(String... warmth) {
+        try {
+            new Coat().zipper();
+            System.out.print("Finished!");
+        } catch (Throwable t) {}
     }
 }
 
@@ -736,7 +758,7 @@ enum EnumAnimal {
         public String makeNoise() { return "WOOF!"; }
     };
 
-    public abstract String makeNoise();
+    protected abstract String makeNoise();
 }
 abstract class ProviderAnim {
     protected EnumAnimal c = EnumAnimal.CAT;
@@ -757,7 +779,7 @@ class Vacation {
     private static  enum  DaysOff  {//enum cannot be abstract
 
         Thanksgiving{
-            void walk(){
+            public void walk(){
 
             }
         },
@@ -772,8 +794,10 @@ class Vacation {
             }
         };
 
-        private DaysOff(){}//enum constructor must be private and is default private
-        abstract void walk();
+        private DaysOff(){
+            System.out.println("enum constructor DaysOff invoked");
+        }//enum constructor must be private and is default private
+        abstract void walk();//if enum has abstract method, then the inner child must implement it
         void drive(){
 
         }
@@ -789,7 +813,7 @@ class Vacation {
         final RaceCar raceCar = new RaceCar();
         raceCar.drive();
 
-        System.out.println("=====> "+DaysOff.valueOf("Thanksgiving"));//=====> Thanksgiving
+        System.out.println("=====> "+DaysOff.valueOf("Thanksgiving").name());//=====> Thanksgiving
         //System.out.println("=====> "+DaysOff.valueOf("ak"));
         // it throw java.lang.IllegalArgumentException "No enum constant"
 
@@ -830,14 +854,24 @@ class Matrix {
             private int level = 5;
             public void printReality() {
                 System.out.print(level); //5
-                System.out.print(" "+Matrix.Deep.this.level);
-                System.out.print(" "+Deep.this.level);
+                System.out.print(" "+Matrix.Deep.this.level);//2
+                System.out.print(" "+Deep.this.level);//2
             }
         }
     }
+
     public static void main(String[] bots) {
         Matrix.Deep.Deeper simulation = new Matrix().new Deep().new Deeper();
         simulation.printReality();
+
+        class RaceCar  {
+            public String makeNoise() {
+                return null;
+            };
+        };
+        RaceCar r =new RaceCar();
+
+
         //local variables referenced from a lambda expression must be final or effectively final
         //A variable or parameter whose value is never changed after it is initialized is effectively final.
     }
@@ -850,6 +884,7 @@ class Bottle {
             TALL {protected int getHeight() {return 100;}},
             SHORT {protected int getHeight() {return 2;}};
             protected abstract int getHeight();
+            //Sail(int i){}
         }
         public Sail getSail() {
             return Sail.TALL;
@@ -858,7 +893,7 @@ class Bottle {
     public static void main(String[] stars) {
         Bottle bottle = new Bottle();
         //Ship q = bottle.new Ship(); // w2 -> qualified new of static Class
-        Ship q1 = new Bottle.Ship();
+        Ship q1 =  new Bottle.Ship();
         System.out.print(q1.getSail());
     }
 }
@@ -926,7 +961,7 @@ class Twins implements Alex, Michael {
 
 //enum param
  enum Proposition {
-    TRUE(-10) {
+    TRUE(10) {
         @Override
         protected String getNickName() { return "RIGHT"; }
     },
@@ -938,10 +973,15 @@ class Twins implements Alex, Michael {
         public String getNickName() { return "LOST"; }
     };
     private final int value;
+    static void method(){
+        return;
+    }
     //enum constructor are assumed private if no access modifier is specified
     //enum constructor can only be private
     //class constructor are assumed package private default
     Proposition(int value) {
+
+        System.out.println("enum Proposition val:"+value);
         this.value = value;
     }
     public int getValue() {
@@ -950,8 +990,18 @@ class Twins implements Alex, Michael {
     protected abstract String getNickName();
 
     public static void main(String[] args) {
+        Proposition.FALSE.name();
+        Proposition.TRUE.name();
+        Proposition.UNKNOWN.name();
         int val = Proposition.FALSE.value;
         System.out.println(val);
+
+        ArrayList<Object> list = new ArrayList<>();
+
+        //Proposition
+        //Class clazz= Proposition.class;
+        //Constructor declaredConstructor = clazz.cons();
+
 
     }
 }
@@ -1061,7 +1111,8 @@ class Ready {
 
 
 //TreeSet & Comparable & Comparator
-class Magazine implements Comparable<Magazine>{//
+class Magazine implements Comparable<Magazine>
+{//
     private String name;
     public Magazine(String name)
     {
@@ -1081,12 +1132,20 @@ class Magazine implements Comparable<Magazine>{//
         //0 : o1 == o2
         //+1 : o1 > o2
 
+        TreeMap<Magazine,SnoopyClass> tm = new TreeMap();
+        tm.put(new Magazine("a"),new SnoopyClass());
+        tm.put(new Magazine("A"),new SnoopyClass());
+        tm.keySet().stream().sorted();
+        System.out.println("tm: "+tm);
 
         //comparator version
         Set<Magazine> s = new TreeSet<>(new Comparator<Magazine>() {
             @Override
             public int compare(Magazine o1, Magazine o2) {
-                return o1.name.compareTo(o2.name);
+                //if(o2==null || null==o1)return 0;
+                int r=o1.name.compareTo(o2.name);
+                System.out.println("compare[o1.name:"+o1.name+"] vs [o2.name:"+o2.name+"] r:"+r);
+                return r;
             }
         });
         //s.add(null); //->//java.lang.NullPointerException at runtime
@@ -1118,7 +1177,8 @@ class Magazine implements Comparable<Magazine>{//
 
 //generic annonymous class inheritance
 interface Comic<C> {
-    void draw(C c);
+     int jo=0;
+     void draw(C c);
 }
 class ComicClass<C> implements Comic<C> {
     public void draw(C c) {
@@ -1227,6 +1287,9 @@ class ExtendingGenerics {
         add(values, "duck");
         add(values, "goose");
         System.out.println(values);
+
+
+
     }
 }
 
@@ -1240,6 +1303,30 @@ class LaundryTime {
     public static void main(String[] args) {
         Washx<List> wash = new Washx<List>();
         wash.clean(Arrays.asList("sock", "tie"));
+
+        IntStream ints = IntStream.empty();
+        IntStream moreInts = IntStream.of(66, 77, 88);
+        Stream.of(ints, moreInts).flatMapToInt(x -> x).forEach(System.out::print);
+    }
+}
+
+class TestOverride {
+    static void doCalc(byte... a) {
+        System.out.print("byte...");
+    }
+    static void doCalc(long a, long b) {
+        System.out.print("long, long");
+    }
+    static void doCalc(Byte s1, int s2) {
+        System.out.print("Byte, int");
+    }
+    static void doCalc(short s1, int s2) {
+        System.out.print("short, int");
+    }
+
+    public static void main (String[] args) {
+        byte b = 5;
+        doCalc(b, b);
     }
 }
 
@@ -1249,35 +1336,57 @@ class Asteroid {
 
     }
     public static void main(String[] debris) {
+
         new Asteroid().mine((s,p) -> s+p);
+        Stream<Integer> numStream = Stream.of(10, 20, 30);
+        numStream.map(n -> n + 10).peek(s -> System.out.print(s)).forEach(s -> System.out.println(s));
+        numStream.forEach(s -> System.out.println(s));
     }
 }
 //IntUnaryOperator
  class TicketTaker {
+    private static void checkPrices(List<Double> prices,
+                                    Consumer<Double> scanner) {
+        prices.forEach(scanner);
+    }
     private static int AT_CAPACITY = 100;
     //the following takes primitives, not generics
-    //DoubleUnaryOperator
-    //LongUnaryOperator
+    //DoubleUnaryOperator -> double applyAsDouble(double operand);
+    //LongUnaryOperator ->   long applyAsLong(long operand);
     //IntUnaryOperator//int applyAsInt(int operand);
-    //UnaryOperator// takes in T and returns T
+    //UnaryOperator// takes in T and returns T   it extends Function -> R apply(T t);
 
-    //DoubleConsumer -> primitives
+    //DoubleConsumer -> primitives -> void accept(double value);
     //Consumer<Double>  -> generics can use in Stream.foreach()
 
+
+    //ToDoubleBiFunction ->  double applyAsDouble(T t, U u);
+    //DoubleSupplier ->  double getAsDouble();  : DoubleSupplier use double primitives cannot return null
+    //Supplier<Double> -> T get(); : generics can return null
+    //LongFunction ->  R apply(long value);
     //Function//Function<T, R>  //R apply(T t);
     //DoubleToIntFunction//  int applyAsInt(double value);
+    //IntUnaryOperator  -> int applyAsInt(int operand);
     //ToIntBiFunction // int applyAsInt(T t, U u);
     //ToDoubleFunction// double applyAsDouble(T value);
     //ObjDoubleConsumer// void accept(T t, double value); //takes in T & double primitive
     //BiFunction<Double,Double,Double> takes in 2 Double -> return 1 Double apply
     //BinaryOperator<Double> takes in 2 Double -> return 1 Double //it extends BiFunction.
-    //the BiFunction<T, T, T> which accepts and returns the same type, can be replaced with BinaryOperator<T>.
+    //BiFunction<T, T, T> which accepts and returns the same type, can be replaced with BinaryOperator<T>.
     //DoubleFunction<Double>// R apply(double value); takes in 1 double primitives -> return 1 R (Double)
     public int takeTicket(int currentCount, java.util.function.IntUnaryOperator counter)//<Integer>
     {
         return counter.applyAsInt(currentCount);
     }
     public static void main(String...theater) {
+
+        List<Double> prices = Arrays.asList(1.2, 6.5, 3.0);
+        checkPrices(prices,
+                p -> {
+                    String result = p<5 ? "Correct" : "Too high";
+                    System.out.println(result);
+                });
+
         final TicketTaker bob = new TicketTaker();
         final int oldCount = 50;
         final int newCount = bob.takeTicket(oldCount,t -> {
@@ -1293,6 +1402,20 @@ class Asteroid {
         //               12 = 8           + (8/2)
 
         System.out.print(newCount);
+
+        CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(new Integer[] { 1, 3, 5, 8 });
+        //List<Integer> list = new ArrayList<>();list.add(1);list.add(2);list.add(3);
+        //int n=1/0;
+        Iterator itr = list.iterator();
+        while (itr.hasNext()) {
+            Integer no = (Integer)itr.next();
+            System.out.println(no);
+            if (no == 3)
+                // This will not print,
+                // hence it has created separate copy
+                list.add(14);
+        }
+        System.out.println(list);
     }
 }
 
@@ -1333,10 +1456,24 @@ public static void main(String[] participants) {
  class DogSearch {
     //private static IntFunction<Integer> ;
 
+    public static void printnn(Stream<String> stream) {
+        Consumer<String> print = System.out::println;
+        stream.peek(f-> System.out.println("f peek 1 "+f))
+                .sorted((a,b)->a.length()-b.length())
+                .peek(f-> System.out.println("f peek 2 "+f))
+                .map(s -> {System.out.println("f map "+s);return s;})
+                
+                .peek(f-> System.out.println("f peek 3 "+f))
+
+                .forEach(f-> System.out.println("f foreach "+f));
+    }
+
     void reduceList(List<String> names, Predicate<String> tester) {
         names.removeIf(tester);
     }
     public static void main(String[] treats) {
+        printnn(Stream.of("hi"));
+
         int MAX_LENGTH = 2;
         DogSearch search = new DogSearch();
         List<String> names = new ArrayList<>();
@@ -1363,6 +1500,7 @@ public static void main(String[] participants) {
         //1.empty optional returns false for isPresent()
         Optional<String> opt = Optional.empty();//new Optional<T>();
         opt.isPresent();//empty optional returns false
+
 
 
         //opt.orElseThrow()//Supplier<? extends X> exceptionSupplier
@@ -1490,7 +1628,14 @@ public static void main(String[] participants) {
                 .forEach(System.out::print);// tire-wheel-
         System.out.println("====== merge multiple collections via stream end =====\n ");
 
+        IntStream streams = IntStream.of(6, 10);
 
+
+        OptionalInt min = streams.min();
+        int asInt = min.getAsInt();
+        System.out.println("asInt--> "+asInt);
+        java.util.stream.LongStream longs = stream.mapToLong(i -> i);
+        double asDouble = longs.average().getAsDouble();
 
         //sort stream
         System.out.println("\n ====== sort stream start Comparator.reverseOrder() ===== ");
@@ -1562,8 +1707,9 @@ public static void main(String[] participants) {
         //Optional of
         System.out.println("\n Optional of start =====");
         Optional<String> cupcake = Optional.of("Cupcake");
+
         //cupcake.orElse("");// return value != null ? value : other;
-        //cupcake.orElseGet("");//return value != null ? value : other.get();
+        //cupcake.orElseGet(()->"");//return value != null ? value : other.get();
         //cupcake.get(""); cannot pass in string param
 
 
@@ -3081,7 +3227,7 @@ class ElectricCar extends Auto {
 }
 
 
-//overload example: overload must have diff params(types differs of no. of param differs),
+//overload example: overload must have diff params(types differs or no. of param differs),
 // return type doesnt matter
 class ChooseWisely {
     public ChooseWisely() { super(); }
@@ -3093,6 +3239,7 @@ class ChooseWisely {
     //public static void choose(long choice) { return; }//overload 3
     public static void main(String[] path) {
         System.out.print(new ChooseWisely().choose((byte)2+1));
+        System.out.print(new ChooseWisely().choose((byte)2));
         //*Integral data type default is int
         //here(byte) only converts 2, then 2+1 => becomes int again
         //bcz + operator automatically promotes any byte/short to int
