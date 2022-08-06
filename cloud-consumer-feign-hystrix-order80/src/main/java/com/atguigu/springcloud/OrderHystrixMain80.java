@@ -14,6 +14,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.lang.ref.WeakReference;
+import java.nio.file.Files;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -38,6 +40,8 @@ class ListNode {
       ListNode(int val) { this.val = val; }
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  }
+
+
 
  /*MergeSort
  ultimately bubble sort quickly becomes less efficient when it comes to sorting
@@ -80,18 +84,28 @@ class MergeSort_QuickSort{
      public static void main(String[] args) {
          //deque();
 
+         int mid_odd=0+(3-0)/2;//takes floor
+         int mid_even=0+(4-0)/2;
+         System.out.println("mid_odd:"+mid_odd);
+         System.out.println("mid_even:"+mid_even);
+
+         StringBuilder builder = new StringBuilder("Leaves growing");
+         do {builder.delete(0, 5); } //start - end
+         while (builder.length() > 5);
+         System.out.println(builder);
+
          int[] arr_=new int[]{10,0,0,1,9,3,5};
-         //mergeSort(arr_,false);
+         mergeSort(arr_,false);
          //quickSort(arr_,0,arr_.length-1,false);
          System.out.println(Arrays.toString(arr_));
      }
 
      //mergeSort time complexity worst scenario: O(nlogn)
      //mergeSort space complexity : O(n)
-     static void mergeSort(int[] arrA,boolean isAsc){
+     static void mergeSort(int[] arrOri,boolean isAsc){
 
          //Arrays.sort(Arrays.stream(arrA_).boxed().toArray(), Collections.reverseOrder());
-         int lenA=arrA.length;
+         int lenA=arrOri.length;
          int left=0,right=lenA;
          int mid=left+(right-left)/2;
          if(lenA==1){
@@ -101,17 +115,18 @@ class MergeSort_QuickSort{
          int[] rightArr=new int[lenA-mid];
 
          for(int i=-1;++i<mid;){
-             leftArr[i]=arrA[i];
+             leftArr[i]=arrOri[i];
          }
          for(int i=mid;i<lenA;++i){
-             rightArr[i-mid]=arrA[i];
+             rightArr[i-mid]=arrOri[i];
          }
 
          mergeSort(leftArr,isAsc);
          mergeSort(rightArr,isAsc);
 
-         int[] intsTmp = mergeTwoSortedArr(arrA, leftArr, rightArr, isAsc);
+         int[] intsTmp = mergeTwoSortedArr(arrOri, leftArr, rightArr, isAsc);
          System.out.println("tmp arr :"+Arrays.toString(intsTmp));
+
 
      }
 
@@ -128,16 +143,21 @@ class MergeSort_QuickSort{
             if(i!=lenA && j!=lenB){
                  if(arrA[i]<=arrB[j]){
                      //System.out.println("arrA["+i+"]<=arrB["+j+"]: ");
-                     finalArr[pointer]= isAsc? arrA[i]:arrB[j];++pointer;
+                     finalArr[pointer]= isAsc? arrA[i]:arrB[j];
+
+                     ++pointer;
                      //finalArr[pointer]= isAsc? arrB[j]:arrA[i];++pointer;
                      if(isAsc)
                          ++i;
                      else
                          ++j;
                      continue;
-                 }else{
+                 }
+                 else{
                      //System.out.println("arrA["+i+"]<=arrB["+j+"] else");
-                     finalArr[pointer]= isAsc? arrB[j]:arrA[i];++pointer;
+                     finalArr[pointer]= isAsc? arrB[j]:arrA[i];
+
+                     ++pointer;
                      //finalArr[pointer]= isAsc? arrA[i]:arrB[j];++pointer;
                      if(isAsc)
                          ++j;
@@ -147,12 +167,14 @@ class MergeSort_QuickSort{
                      continue;
                  }
                 //++i;++j;
-            }else if(i!=lenA && j==lenB){
+            }
+            else if(i!=lenA && j==lenB){
                 //System.out.println("i!=lenA: "+i);
 
                 finalArr[pointer]= arrA[i];
                 ++i;++pointer;
-            }else if(i==lenA && j!=lenB){
+            }
+            else if(i==lenA && j!=lenB){
                 //System.out.println("j!=lenB: "+j);
 
                 finalArr[pointer]= arrB[j];
@@ -841,21 +863,25 @@ class TreeNode {//bfs
 
         //Map<String,Integer> mapC=new HashMap<>();
         StringBuilder longestStrSoFar=new StringBuilder();
-        for(int q=-1;++q<(len-1);){
+        outer:for(int q=-1;++q<(len-1);){
             int pointer1=q+1;
             StringBuilder sb=new StringBuilder();
             sb.append(s.charAt(q));
 
-            while(pointer1<len){
-                String tmc=String.valueOf(s.charAt(pointer1));
-                if(sb.indexOf(tmc)<0){//non repeating
-                    sb.append(tmc);
-                }else{
-                    // q=pointer1-1;
-                    break;
-                }
 
-                ++pointer1;
+            blockA:{
+                inner:while(pointer1<len){
+                    String tmc=String.valueOf(s.charAt(pointer1));
+                    if(sb.indexOf(tmc)<0){//non repeating
+                        sb.append(tmc);
+                    }else{
+                        // q=pointer1-1;
+                        break blockA;
+                        //break inner;
+                    }
+
+                    ++pointer1;
+                }
             }
 
             System.out.println("get sb.length():"+sb.length()+"|");
@@ -2044,6 +2070,8 @@ public class OrderHystrixMain80
     public static void main(String[] args) throws Exception
     {
 
+        String testPwd_ak="12345_jason_pwd_67890";
+        char[] testPwd_ak_char={'j','a','s','o','n','_','p','w','d'};
 
         Stack<Integer> stack = new Stack<>();
 
@@ -2238,25 +2266,27 @@ public class OrderHystrixMain80
 
 
         //1.SoftReference eg start
-//        User u1=new User();
-//        WeakReference<User> softU=new WeakReference<User>(u1);
-//        u1=null;
-//        System.out.println(softU.get());
-//        Runtime.getRuntime().gc();
-//        System.out.println("After gc");
-//        System.out.println(softU.get());
-//        List<byte[]> lb= new LinkedList<>();
-//        try{
-//            for(int j=0;++j<100;){
-//                System.out.println(softU.get());
-//                lb.add(new byte[1024*1024*1]);
-//            }
-//        }catch (Throwable ec){
-//            System.out.println(softU.get());
-//            ec.printStackTrace();
-//            System.out.println(ec.getMessage());
-//        }
-//        //1.SoftReference eg end
+        User u1=new User();
+        WeakReference<User> softU=new WeakReference<User>(u1);
+        u1=null;
+        System.out.println(softU.get());
+        Runtime.getRuntime().gc();
+        //note that softReference will survive after gc if there is sufficient memory,
+        //but weakReference will somehow sweep away the item once gc is carried out
+        System.out.println("After gc");
+        System.out.println(softU.get());
+        List<byte[]> lb= new LinkedList<>();
+        try{
+            for(int j=0;++j<100;){
+                System.out.println(softU.get());
+                lb.add(new byte[1024*1024*1]);
+            }
+        }catch (Throwable ec){
+            System.out.println(softU.get());
+            ec.printStackTrace();
+            System.out.println(ec.getMessage());
+        }
+        //1.SoftReference eg end
         System.out.println("=================SoftReference end===================");
         System.out.println("=================SoftReference end===================");
         System.out.println("=================SoftReference end===================");

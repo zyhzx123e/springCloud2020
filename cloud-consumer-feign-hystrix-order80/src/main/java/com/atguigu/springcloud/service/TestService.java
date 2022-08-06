@@ -2,6 +2,8 @@ package com.atguigu.springcloud.service;
 
 import cn.hutool.json.JSONException;
 import cn.hutool.json.JSONObject;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import lombok.SneakyThrows;
 import org.apache.http.annotation.Contract;
 import org.springframework.beans.BeanUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,6 +18,7 @@ import sun.util.resources.LocaleData;
 import javax.annotation.Resource;
 import javax.el.MethodNotFoundException;
 import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Null;
 import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -28,6 +31,7 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneOffset;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -42,11 +46,16 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import static java.lang.Thread.sleep;
 import static java.lang.Thread.yield;
+
+import static java.lang.Thread.*;//includes all methods/variables import
 
 
 class TestJDBC{
     public static void main(String[] args) throws ClassNotFoundException {
+        //yield();
+        //int h=MIN_PRIORITY;
         SimpleDriverDataSource ds = new SimpleDriverDataSource();
         Class<?> clazz = Class.forName("com.mysql.jdbc.Driver");
         Object driver = BeanUtils.instantiateClass(clazz);
@@ -65,20 +74,61 @@ class TestJDBC{
 
 
 //inheritance example 1:
-interface Sphere {
-    //void fly();
-    default String getName() { return "Unknown"; }
+@FunctionalInterface
+interface Sphere {//all are implicitly public, and interface method not allow final
+    public final static int a=1;///interface variable are default public static final
+
+    public static void fly(){//since jdk 1.8 static method in interface, 1.7 not work
+        //a=2;
+    }
+    public abstract void flyHigh() throws FileNotFoundException;
+    public  default  String getName() { return "Unknown"; }
+    public  default  String getName1() { return "Unknown"; }
+    //public  default  boolean equals(Object o) { return true; }
+    //default cannot override object equals(Object o)
 }
 abstract class Planet {
     int gl;
-    int getG(){
+    static final int ng;//must be initiated in static block
+    static {
+        ng=1;
+        Sphere.fly();
+    }
+    {
+        //ng=1;
+    }
+    public Planet(){
+        //ng=1;
+    }
+    public int getG() throws Exception{
         return gl;
         //return 1;//cannot have 2 return in one function-> unreachable statement
     }
+
     abstract String getName();
 }
 class Mars extends Planet implements Sphere{
     public Mars() { super(); }
+
+    @Override
+    public synchronized void flyHigh() {//throws FileNotFoundException //optional
+
+    }
+    @Override
+    public synchronized int getG() throws Error{
+        synchronized(this){
+            return gl;
+            //return 1;//cannot have 2 return in one function-> unreachable statement
+        }
+    }
+    public int talk(String... x) {
+        System.out.println("talk x constructor");
+        return x.length;
+    }
+    public int talk() {
+        System.out.println("talk empty constructor");
+        return 1;
+    }
     //if RuntimeException change to a checked Exception
     // like Exception,IOException,FileNotFoundException etc.-> compilation error
     public String getName() throws RuntimeException { return "Mars"; }
@@ -89,7 +139,9 @@ class Mars extends Planet implements Sphere{
         if (probe!=null && probe.length>0) {
             System.out.println(probe[0]);
         }
-        System.out.print(((Planet)new Mars()).getName());//Mars
+        Mars mars = new Mars();
+        mars.talk();
+        System.out.print(((Planet)mars).getName());//Mars
         //**Object's parent can hold the object and run the code with
         //its own implementation
     }
@@ -108,11 +160,32 @@ class BlueCar extends Car {
     int no=1;
     { System.out.print("4"); }
     public BlueCar() {
-        super("blue");//this super run b4 this class initialization block
+        super("blue");//**this super run b4 this class initialization block
         System.out.print("5");
     }
     public static void main(String[] gears) {
         new BlueCar();//13245
+    }
+}
+
+
+abstract class Ball {
+    protected final int size;
+    public Ball(int size) { this.size = size; }
+}
+interface Equipment {}
+class SoccerBall extends Ball implements Equipment {
+    public SoccerBall() {
+        super(5);
+    }
+
+    public Ball get() {
+        return this;
+    }
+
+    public static void main(String[] passes) {
+        Equipment equipment = (Equipment) (Ball) new SoccerBall().get();
+        System.out.print(((SoccerBall) equipment).size);
     }
 }
 
@@ -136,10 +209,24 @@ final class Square extends Rectangle {
 //inheritance eg 4: abstract
 abstract class Rotorcraft {
     protected final int height = 5;
+    static  Number talk(){return 0;}
+    Number see(){return 0;}
     abstract int fly();
 }
-class Helicopter extends Rotorcraft {
+//final abstract class RotorcraftF { abstract class cannot be final, final class cannot be inherited from
+//    protected final int height = 5;
+//    abstract int fly();
+//}
+class Helicopter extends Rotorcraft  {
     private int height = 10;
+
+    //compile error:
+    //instance method in child-class cannot override static method in parent class
+    //static method in child-class cannot override instance method in parent class
+    static Integer talk(){return 1;}//method hiding, ** static replace static is not called override
+    @Override
+    Integer see(){return 1;}//override
+
     protected int fly() { return super.height; }
     public static void main(String[] unused) {
         Helicopter h = (Helicopter)new Helicopter();//return 5
@@ -278,6 +365,11 @@ class PolarBear extends Bear {
     }
 
     public static void main(String[] args) {
+        Integer _123=123;
+        int[] as=new int[2];
+        System.out.println(as instanceof Object);
+        System.out.println(_123.hashCode());
+
         PolarBear polarBear = new PolarBear();
         System.out.println(polarBear.sing());
         System.out.println(polarBear.grunt());
@@ -298,7 +390,7 @@ class Fortress {
             throw new Exception("Circle");
 
         }
-        catch (Exception e)
+        catch (Throwable e)
         {
             System.out.print("Opening!");
         }
@@ -313,6 +405,17 @@ class Fortress {
         } catch (Throwable e) {
             e.printStackTrace();
         }
+
+        System.out.println("====================");
+        try {System.out.print('A');
+            throw new RuntimeException("Out of bounds!");
+        } catch (ArrayIndexOutOfBoundsException t) {
+            System.out.print('B'); throw t;
+        } finally { System.out.print('C'); }
+
+
+
+
 
     }
 }
@@ -383,6 +486,15 @@ class Stranger {
         }
         return null;
     }
+    public static String testStringRe(){
+        StringBuilder sb=new StringBuilder();
+        try{
+            sb.append("a");
+            return sb.append("b").toString();
+        }finally {
+            sb=null;
+        }
+    }
     public static void getName(String firstName, String lastName) {
         try {
             System.out.print(firstName.toString() + " " + lastName.toString());
@@ -397,6 +509,7 @@ class Stranger {
         //return;
     }
     public static void main(String[] things) {
+        System.out.println(testStringRe());
         getName("Joyce","Hopper");//Joyce HoppergetName Finished!
         System.out.print(getFullName("Joyce","Hopper"));//Finished!Joyce Hopper
 
@@ -473,6 +586,7 @@ class SelectedJavaClassApi{
 
     public static void main(String[] args) {
         StringBuilder line = new StringBuilder("-");
+
         StringBuffer buf = new StringBuffer("-");
         //initial capacity = pass in len + 16
         System.out.println("init capacity:"+line.capacity());//17
@@ -537,6 +651,28 @@ class Shoot {
     public static void main(String[] args) {
 
 
+        List li= new ArrayList();
+        List li2= new ArrayList<Integer>();
+        li.add("k");li.add(1);
+        li2.add(200.9d);li2.add("ok");
+        for(int h=li2.size();--h>=0;){
+            Object o = li2.get(h);
+            if(o instanceof String){
+                System.out.println("is string:"+(String)o);
+            }
+            if(o instanceof Integer){
+                System.out.println("is Integer:"+(Integer)o);
+            }
+            if(o instanceof Float){
+                System.out.println("is Float:"+(Float)o);
+            }
+            if(o instanceof Double){
+                System.out.println("is Double:"+(Double)o);
+            }
+        }
+        System.out.println("test list"+li);
+        System.out.println("test list2"+li2);
+
 
         //java.util.function.Predicate dash = c -> c.startsWith(" ");
 // bcz Predicate has no explicit type, default will be Object, so Object has no startsWith -> compile error
@@ -559,8 +695,11 @@ class Shoot {
         System.out.println("LocalDateTime getDayOfMonth->"+ldt.getDayOfMonth());//19
         System.out.println("LocalDateTime getMonth->"+ldt.getMonth().getValue());//1
         java.time.LocalDate ld= java.time.LocalDate.now();//2022-01-19
+
         System.out.println("LocalDate getMonth->"+ld.getMonth().getValue());//1
         System.out.println("LocalDate getMonth->"+ld.getMonth());//JANUARY
+
+
 
 
         int[] ints = new int[1];
@@ -568,6 +707,7 @@ class Shoot {
 
         HashMap<String, String> stringStringHashMap = new HashMap<>();
         stringStringHashMap.size();
+
 
         LocalDate newYears = LocalDate.of(2017, 1, 1);
         //note LocalDate is immutable, no setter method like setYear(), etc.
@@ -611,7 +751,9 @@ class Shoot {
 
         previous = java.time.Instant.now().minusMillis(1000);
         current = java.time.Instant.now();
-        System.out.println("ChronoUnit previous instance temporal :"+previous);
+        java.time.LocalDateTime dtnow=java.time.LocalDateTime.now();
+        System.out.println("ChronoUnit previous instance dtnow :"+dtnow);//2022-06-06T17:42:01.617
+        System.out.println("ChronoUnit previous instance temporal :"+previous);//2022-06-06T09:42:00.617Z
         System.out.println("ChronoUnit current instance temporal :"+current);//2022-02-02T16:09:53.857Z -> GMT ZULU Time
         long gap = java.time.temporal.ChronoUnit.MILLIS.between(previous,current);
         System.out.println("ChronoUnit gap btw temporal :"+gap);
@@ -633,6 +775,7 @@ class Shoot {
 
         //change LocalDate test
         LocalDate datea = LocalDate.of(2017, java.time.Month.JULY, 17);
+        datea.isAfter(ld);
         java.time.LocalTime timea = java.time.LocalTime.of(10, 0);
         java.time.ZoneId zonea = java.time.ZoneId.of("America/New_York");
         java.time.ZonedDateTime iceCreamDay = java.time.ZonedDateTime.of(datea, timea, zonea);
@@ -652,7 +795,7 @@ class Shoot {
         ng = ng.substring(0,3);
         CharSequence cs=new CharSequence() {
             @Override
-            public int length() {
+            public  int length() {
                 return 0;
             }
 
@@ -693,6 +836,8 @@ class Shoot {
         pennies.add(3); pennies.add(2); pennies.add(1);
         Integer integer = new Integer(2);
         pennies.remove(integer);pennies.remove(integer);
+        //remove compare the object value
+
         //list remove can remove by index or remove by object
         System.out.println(pennies);
 
@@ -724,6 +869,15 @@ class Cowboy {
 //        System.out.println(s);
 //    }
 //}
+class Tool {
+    void use() { } // r1
+ }
+ class Hammer extends Tool {
+    private void use(String str) { } // r2
+     public void bang() { } // r3
+
+}
+
 class Building {}
 class House extends Building{
     public static void main(String... args) {
@@ -731,7 +885,7 @@ class House extends Building{
         House h = new House();
         Building bh = new House();
         //Building p = (House) b; //ClassCastException will be thrown at runtime
-        //House q = (Building) h; cannot compile, parent can assign to child
+        //House q = (Building) h; //cannot compile, parent cannot assign to child
         //House q = bh;//parent cannot assign to child
         Building rp = h;//child can assign to parent
         Building r = (Building) bh;
@@ -739,8 +893,14 @@ class House extends Building{
         System.out.println("blocka b4");
         blocka :{
 
+            //if(s==bh) break blocka;
             System.out.println("blocka");
-            //break blocka;
+            if(s instanceof Collection && s instanceof Serializable
+            && s instanceof ExecutorService  && s instanceof Executor){
+                //instanceof interface always able to compile, but instanceof class cannot
+                System.out.println("House is an instance of any interface is able to compile : eg. Collection & Serializable & ExecutorService & Executor");
+            }
+
         }
         System.out.println("blocka after");
 
@@ -750,15 +910,15 @@ class House extends Building{
 
 //OCP advanced api
 //enum example
-enum EnumAnimal {
+ enum EnumAnimal {
     CAT {
-        public String makeNoise() { return "MEOW!"; }
+         public  String makeNoise() { return "MEOW!"; }
     },
-    DOG {
+     DOG {
         public String makeNoise() { return "WOOF!"; }
     };
 
-    protected abstract String makeNoise();
+     abstract String makeNoise();
 }
 abstract class ProviderAnim {
     protected EnumAnimal c = EnumAnimal.CAT;
@@ -794,7 +954,7 @@ class Vacation {
             }
         };
 
-        private DaysOff(){
+        private DaysOff(){//enum constructor default and is compulsory private
             System.out.println("enum constructor DaysOff invoked");
         }//enum constructor must be private and is default private
         abstract void walk();//if enum has abstract method, then the inner child must implement it
@@ -802,11 +962,27 @@ class Vacation {
 
         }
     }//enum cannot be final
+    static int Integer;
+    int Integer_instance;
     public static void main(String... unused) {
 
+        int Integer=12;
+        int Integer_instance=13;//
+        System.out.println("Integer ->"+Integer);
+        System.out.println("Integer_instance ->"+Integer_instance);
+
+
+        //DaysOff da= new DaysOff();
         class RaceCar{
+
+            {
+                System.out.println("RaceCar initializer 2");
+            }
             void drive(){
                 System.out.println("main driving ");
+            }
+            {
+                System.out.println("RaceCar initializer 1");
             }
         }
         enjoy();
@@ -827,12 +1003,53 @@ class Vacation {
         int gf;
 //        if(gf>0){//local var cannot be used without given a value
 //        }
+                System.out.println("================ switch test begging");
+        //**switch case(no break) execution order
+        // if has matching case(if no matched one, then default is the match),
+        // it will start from the matched one until the end[follow declared sequence] (include default)
+        // ***if no matched one(no default), will not go in any
         switch(input) {//switch if without break, even value not match it will also execute
-            default: System.out.print("default"); //break;
-            case ValentinesDay: System.out.print("1"); //break;
-            case PresidentsDay: System.out.print("2"); //break;
+
+
+            //default: System.out.println("default"); //break;//default is not compulsory to provide
+            case ValentinesDay: System.out.println("1"); //break;
+            //
+            //case Thanksgiving: System.out.println("99=>"); //break;
+            case PresidentsDay: System.out.println("2"); //break;
+            //case Thanksgiving: System.out.println("99=>"); //break;
             //case DaysOff.PresidentsDay: System.out.print("2"); //break; //this line is wrong
         }
+
+
+        System.out.println(1+ 1==2?"a":"b");
+        System.out.println("================");
+
+//        String chair, table = "metal";
+//        chair = chair + table;
+//        System.out.println(chair);
+        //double num1, int num2 = 0;
+        float f1=1.1f;//by default is double
+        double d1=1.1f;
+        int i1=1;
+        long l1=100;
+        f1=i1;
+        d1=i1;
+        d1=f1;
+        l1=i1;
+        d1=l1;
+        Integer iwr=new Integer(i1);
+        Double dwr=new Double(i1);//convert double to int
+        i1=dwr.intValue();
+        //d1=i1;
+
+        int ggi;
+        {
+            if(0==Integer){
+                //System.out.println(ggi);//variable "ggi" might not have been initialized
+            }
+        }
+
+        double Double = iwr.doubleValue();
 
 
         String fnals ="a";
@@ -841,6 +1058,21 @@ class Vacation {
             case "b": System.out.println("fnals b"); break;
             case "c": System.out.println("fnals c"); break;
         }
+        //while(1==1);
+        System.out.println("All comparison with NaN returns false ======>");
+        System.out.println(10>Float.NaN);
+        System.out.println(10>=Float.NaN);
+        System.out.println(10<=Float.NaN);
+        System.out.println(10==Float.NaN);
+        System.out.println(Float.NaN==Float.NaN);
+
+        System.out.println("divide by 0 with floating point ======>");
+        System.out.println(10.0/0);//Infinity
+        //System.out.println(0/0);//java.lang.ArithmeticException: / by zero
+        System.out.println(0/0.0);//NaN
+        System.out.println(Float.POSITIVE_INFINITY/Float.POSITIVE_INFINITY);//NaN
+        System.out.println(Float.POSITIVE_INFINITY/0);//Infinity
+        System.out.println(Float.POSITIVE_INFINITY/1);//Infinity
     }
 }
 
@@ -855,12 +1087,16 @@ class Matrix {
             public void printReality() {
                 System.out.print(level); //5
                 System.out.print(" "+Matrix.Deep.this.level);//2
-                System.out.print(" "+Deep.this.level);//2
+                System.out.print(" "+Deeper.this.level);//5
+                System.out.print(" "+this.level);//5
+                System.out.print(" "+Matrix.this.level);//1
             }
         }
     }
+    static class VC{}
 
     public static void main(String[] bots) {
+        new Matrix.VC();
         Matrix.Deep.Deeper simulation = new Matrix().new Deep().new Deeper();
         simulation.printReality();
 
@@ -942,7 +1178,7 @@ interface Alex {
     void think();
 }
 interface Michael {
-    public default void write() {}
+    public default  void write() {}
     public static void publish() {}
     public void think();
 }
@@ -970,7 +1206,10 @@ class Twins implements Alex, Michael {
     },
     UNKNOWN(0) {// Proposition.FALSE.getValue();
         @Override
-        public String getNickName() { return "LOST"; }
+        public synchronized String getNickName() { return "LOST"; }
+
+        @Override
+        public  int getValue() { return 1; }
     };
     private final int value;
     static void method(){
@@ -984,10 +1223,10 @@ class Twins implements Alex, Michael {
         System.out.println("enum Proposition val:"+value);
         this.value = value;
     }
-    public int getValue() {
+    public synchronized int getValue() {
         return this.value;
     }
-    protected abstract String getNickName();
+    protected abstract  String getNickName();
 
     public static void main(String[] args) {
         Proposition.FALSE.name();
@@ -1109,6 +1348,12 @@ class Ready {
     }
 }
 
+ class Week {
+    private static final String monday="";
+    String tuesday;
+    final static int wednesday = 3;
+    final protected int thursday = 4;
+}
 
 //TreeSet & Comparable & Comparator
 class Magazine implements Comparable<Magazine>
@@ -1154,6 +1399,7 @@ class Magazine implements Comparable<Magazine>
         s.add(new Magazine("highlights"));
         System.out.println(s.size());
         System.out.println(s.iterator().next());
+
 
         //comparable version
         Set<Magazine> set = new TreeSet<>();
@@ -1203,8 +1449,33 @@ class Wash<T> {
     }
 }
 class Snoopy {
-    public static void main(String[] args) {
+//    public String playMusic() {
+//        System.out.print("Play!");
+//        return "";
+//    }
+//    private static int playMusic() {
+//        System.out.print("Music!");
+//        return 0;
+//    }
+    public static void main(String[] args) throws InterruptedException {
+        MyThread thread1 = new MyThread();
+        Thread th1 = new Thread(thread1,"t1");
 
+        Thread thread2 = new Thread(()->{
+            System.out.println(Thread.currentThread().getName()+" thread2 b4 start");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName()+" thread2 start");
+        },"t2");
+        th1.start();thread2.start();
+        //thread2.join();
+
+
+        System.out.println(Thread.currentThread().getName()+" main thread ->");
+        int a=1/0;
         ArrayList ar=new ArrayList();
         Wash wash = new Wash();
         Wash<String> wash1 = new Wash<String>();
@@ -1218,6 +1489,35 @@ class Snoopy {
     }
 }
 
+class MyThread implements Runnable{
+
+    volatile int ia;
+    @Override
+    public void run() {
+        for(int i=0;++i<=1000;){
+            ia+=1;
+        }
+        System.out.println(Thread.currentThread().getName()+" MyThread run"+ia);
+    }
+    public void start() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName()+" MyThread start");
+    }
+}
+class MyThread1 implements Runnable{
+
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName()+" MyThread1 run");
+    }
+    public void start() {
+        System.out.println(Thread.currentThread().getName()+ " MyThread1 start");
+    }
+}
 
 //generic naming
 class News<_i_$1234567890_$$$$$> {}//same
@@ -1285,11 +1585,48 @@ class ExtendingGenerics {
         List<String> values = new ArrayList<>();
         add(values, "duck");
         add(values, "duck");
+        //add(values, String::new);//cannot compile
+        add(values, new String());
         add(values, "goose");
         System.out.println(values);
 
+        StringBuilder sb = new StringBuilder();//.insert(sb.length(),"");sb.length();
+        sb.append("red");
+        sb.deleteCharAt(0);
+        System.out.println("deleteCharAt:"+sb);
+        sb.delete(1, 9);
+        System.out.println(sb);
 
 
+
+        //1. extends
+        List<? extends Number> list1 = new ArrayList<Integer>();
+        list1.add(null);  //OK
+        //Integer nnum = list1.get(0);  //Error
+        Number n = list1.get(0);  //OK
+        Serializable s = list1.get(0);  //OK
+        Object o = list1.get(0);  //OK
+
+        list1.add(null);//OK
+//        list1.add(2.3);  //ERROR
+//        list1.add(5);  //ERROR
+//        list1.add(new Object());  //ERROR
+//        Integer i = list1.get(0);  //ERROR
+
+
+        //2. super
+        List<? super Number> list2 = new ArrayList<Number>();
+        list2.add(null);  //OK
+        list2.add(2.3);  //OK
+        list2.add(5);  //OK
+        Object o1 = list2.get(0);  //OK
+
+        list2.add(new Integer(1)); //OK
+//        list2.add(new Object());  //ERROR // add item that must be Number or subtype of Number
+//        Number n1 = list2.get(0);  //ERROR
+//        Serializable s1 = list2.get(0);  //ERROR
+//        Integer i = list2.get(0);  //ERROR
+        Object oi = list2.get(0);  //OK
     }
 }
 
@@ -1301,8 +1638,17 @@ class Washx<T extends Collection> {
 }
 class LaundryTime {
     public static void main(String[] args) {
+        Washx wash0 = new Washx();
+        wash0.clean(Arrays.asList("sock", "tie"));
+
         Washx<List> wash = new Washx<List>();
         wash.clean(Arrays.asList("sock", "tie"));
+
+        Washx<List> wash1 = new Washx();
+        wash1.clean(Arrays.asList("sock", "tie"));
+
+        Washx wash2 = new Washx<List>();
+        wash2.clean(Arrays.asList("sock", "tie"));
 
         IntStream ints = IntStream.empty();
         IntStream moreInts = IntStream.of(66, 77, 88);
@@ -1325,8 +1671,16 @@ class TestOverride {
     }
 
     public static void main (String[] args) {
+
+        long bignu=2147483647l;
         byte b = 5;
+        int gb = b << 1;//10
+        System.out.println("gb(5) left shifted 1 :"+gb);
         doCalc(b, b);
+
+        final Object exception = new RuntimeException();
+        final Exception data = (Exception)exception;
+        System.out.print(data);//java.lang.RuntimeException
     }
 }
 
@@ -1380,10 +1734,13 @@ class Asteroid {
     }
     public static void main(String...theater) {
 
+
         List<Double> prices = Arrays.asList(1.2, 6.5, 3.0);
         checkPrices(prices,
                 p -> {
                     String result = p<5 ? "Correct" : "Too high";
+                    result.replace(new StringBuffer("asd"),new StringBuffer("v"));
+                    //result.substring(1,2) exclusive end index
                     System.out.println(result);
                 });
 
@@ -1425,6 +1782,8 @@ public static Integer rest(BiFunction<Integer,Double,Integer> takeABreak) {
     return takeABreak.apply(3, 10.2);
 }
 public static void main(String[] participants) {
+
+
     //rest((Integer n, Double e) -> (int)(n+e));
     //rest((n,w) -> (int)(n+w));
     //rest((s,w) -> (int)(2*w));
@@ -1746,9 +2105,26 @@ public static void main(String[] participants) {
     public static void main(String[] bricks) {
 
         try {
+            ClassLoader loader = ClassLoader.getSystemClassLoader();
+            loader.setDefaultAssertionStatus(true);
+            Class<?> c = loader.loadClass("com.atguigu.springcloud.service.TestService");
+            TestService myObj = (TestService) c.newInstance();
             int flakes = 1;
             //double assert = 7.0;
-            assert(true);
+            assert 1==2;
+            TestService myObj1 = new TestService();
+            System.out.println("1 myObj1=> "+myObj1);
+            System.out.println("1 myObj=> "+myObj);
+            myObj1=myObj;
+            System.out.println("2 myObj1=> "+myObj1);
+            System.out.println("2 myObj=> "+myObj);
+            myObj=null;
+            Runtime.getRuntime().gc();
+            System.out.println("myObj1=> "+myObj1);
+            System.out.println("myObj=> "+myObj);
+
+
+            System.out.println("test assert passed");
             //assert flakes++>5:"flakes <= 5";
            // Assert.isTrue(flakes++>5);
         } catch (ClassCastException | ArithmeticException ec) {
@@ -1784,7 +2160,7 @@ public static void main(String[] participants) {
 }
 
 //try-with-resources
-//1.class must inherit from RunTimeException or Error to be Considered an unchecked exception, others like inherit from Throwable , etc. are checked exception
+//***1.class must inherit from RunTimeException or Error to be Considered an unchecked exception, others like inherit from Throwable , etc. are checked exception
 //The main point of try-with-resources is to make sure resources are closed reliably
 // without possibly losing information.
 //Closeable -> IOException
@@ -1809,6 +2185,7 @@ public static void main(String[] participants) {
              System.out.println("try-with-resources");
          }
          public void close() throws IOException {
+             //super();
              System.out.println("close exception thrown intentionally from :"+instanceName);
             throw new IOException("close exception...");
          }
@@ -1816,6 +2193,9 @@ public static void main(String[] participants) {
         //are declared
     }
     public void printHeadlines() {
+        Printer p0 = new Printer("p");
+        Printer p10 = new Printer("p1");
+
         try (Printer p = new Printer("p");//can have multiple resources
 
              //must implements Closeable/AutoCloseable
@@ -1923,6 +2303,20 @@ class Smoke {
     }
 }
 
+class Roster {
+    protected void printRoster(Path p) throws IOException {
+        for(Path f :
+                Files.list(p).collect(Collectors.toList())
+        ) { // n1
+            if(f.toString().endsWith(".per")) // n2
+                 System.out.print(f);
+        }
+    }
+    public static void main(String... volunteers) throws IOException {
+        new Roster().printRoster(Paths.get(volunteers[0]));
+    }
+}
+
 class PrimeReader {
      /*InputStream mark():
      -   The general contract of mark is that,
@@ -1937,7 +2331,10 @@ class PrimeReader {
         //BufferedInputStream constructor takes in InputStream
         //FileReader extends InputStreamReader
 
-        try (InputStream is = new FileInputStream("prime6.txt")) {
+        ClassLoader cl = Thread.currentThread().getContextClassLoader();
+        //InputStream is = cl.getResourceAsStream("prime6.txt");
+        //this.getClass().getClassLoader().getResourceAsStream("file.name");
+        try (InputStream is = cl.getResourceAsStream("prime6.txt")) {
             is.skip(1); is.read();//read read the next byte called native method read0()
             is.skip(1); is.read();
             //InputStream markSupported() method default return false
@@ -1979,23 +2376,58 @@ class Pidgin {
     }
 }
 
+
+
+class Valve implements Serializable {
+    private int chambers = -1;
+    private transient Double size = null;
+    private static String color="black";
+    public Valve() {
+        this.chambers = 3;
+        color = "BLUE";
+    }
+    public static void main(String[] love) throws Throwable {
+        try (ObjectOutputStream o = new ObjectOutputStream(
+                new FileOutputStream("."+ File.separator+"scan.txt")))
+        {
+            final Valve v = new Valve();
+            v.chambers = 2;
+            v.size = 10.0;
+            v.color = "RED";
+            o.writeObject(v);
+        }
+        new Valve();
+        try (ObjectInputStream o = new ObjectInputStream(
+                new FileInputStream("."+ File.separator+"scan.txt")))
+        {
+            Valve v = (Valve)o.readObject();
+            System.out.print(v.chambers+","+v.size+","+v.color);
+        }
+    }
+
+    {
+        chambers = 4;
+    }
+}
+
 //Chapter 19: Java File I/O NIO.2
 //System console reader & writer
 class InconvenientImplementation {
-    public void tendGarden(Path p) throws Exception {
+    public static void tendGarden(Path p) throws Exception {
         /*
-        if you you need to filter out files/dirs by attributes - use Files.find(),
+        if you need to filter out files/dirs by attributes - use Files.find(),
         if you don't need to filter by file attributes - use Files.walk().
         * */
         Files.walk(p,1)
+                //.map(pa -> pa.toRealPath())//unhandled exception
                 .map(pa -> {
-                    //pa.toAbsolutePath()//this method does not throw
-                    try {//lambda expression if has checked exception need handle inside lambda
-                        return pa.toRealPath();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        return ""+e.getMessage();
-                    }
+                    return pa.toAbsolutePath();//this method does not throw if written in this manner
+//                    try {//lambda expression if has checked exception need handle inside lambda
+//                        return pa.toRealPath();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                        return ""+e.getMessage();
+//                    }
                 })
                 .forEach(System.out::println);
     }
@@ -2080,13 +2512,18 @@ class InconvenientImplementation {
     public static void main(String... dontDoThis) throws Exception {
         Console c = System.console();
 
+
         //Path only have toRealPath() & register() throws IOException
         Path p_parent = Paths.get("../sang").getParent();
+        tendGarden(Paths.get("./oktest123"));
         Path parentParent = p_parent.getParent();
         System.out.println("p_parent:"+p_parent);
         System.out.println("parentParent:"+parentParent);
 
         //Paths.get("../sung").getRoot().getParent();
+        // relative path getRoot & getParent both returns null
+        System.out.println("getroot ====> "+Paths.get("/sung").getRoot());//  =>  /
+        System.out.println("getparent ====> "+Paths.get("/sung").getParent());// =>  /
 
         File snf=new File("");
         System.out.println(snf.isDirectory());//false
@@ -2320,8 +2757,25 @@ class Sneaker { //java.nio
             Files.createDirectories(desiredPath); // j2
     }
     public static void main(String[] socks) throws Exception {
+        //java.io.File
+        System.out.println(Files.isSameFile(FileSystems.getDefault().getPath("abc123"),Paths.get("abc123")));
+
         Path w = new File("/stock/sneakers").toPath(); // j3
         new Sneaker().setupInventory(w);
+    }
+}
+
+ class Guitar {
+    public void readMusic(File f) throws IOException {
+        try (BufferedReader r = new BufferedReader(new FileReader(f))) {
+             String music = null;
+            try {
+                while((music = r.readLine()) != null)
+                    System.out.println(music);
+            } catch (IOException e) {}
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } finally {}
     }
 }
 
@@ -2350,6 +2804,7 @@ class Surgeon {
         Path p = folder.resolve(file);
         BasicFileAttributeView vw = Files.getFileAttributeView(p,
                 BasicFileAttributeView.class);
+
         //FileTime
         /*
         * */
@@ -2375,7 +2830,7 @@ class Surgeon {
                 System.out.println("getName path["+i+"]:"+v);
             }
             else {
-                System.out.println("getName path["+i+"]:"+p.getName(i));
+                System.out.println("getName else path["+i+"]:"+p.getName(i));
                 v = v.resolve(p.getName(i));
             }
             return v;
@@ -2429,8 +2884,8 @@ class TicketTakerConcurrency {
                         });
 
                 IntStream.iterate(1, q -> q+1)
-                        .parallel()
                         .limit(5)
+                        .parallel()
                         .forEach(ii -> {
                             //latch.countDown();
                             ++ticketsSold;
@@ -2443,15 +2898,17 @@ class TicketTakerConcurrency {
             latch.await();
         } catch(InterruptedException ex) {
             System.out.println(ex);
+        } catch(IllegalArgumentException | ClassCastException ex1) {
+            System.out.println(ex1);
         }
         System.out.println(ticketsTaken+" "+ticketsSold);
     }
     public static void main(String[] matinee) throws ExecutionException, InterruptedException {
-        //new TicketTakerConcurrency().performJob();
+        new TicketTakerConcurrency().performJob();
 
         //Executor//Executor is interface -> void execute(Runnable command);
 
-        //ExecutorService cache= Executors.newCachedThreadPool();
+        ExecutorService cache= Executors.newCachedThreadPool();
         //Runnable functional interface -> public abstract void run();
 
 //        Executors.newCachedThreadPool();
@@ -2464,21 +2921,33 @@ class TicketTakerConcurrency {
         //Executors.unconfigurableExecutorService()
 
         //scheduledExecutorService.
-        List<Integer> original = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+        ArrayList<Integer> original = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+
+        List<Integer> original_copy = new ArrayList<>(original);
+        for(Integer q : original) original_copy.add(q);
+
         List<Integer> copy1 = new CopyOnWriteArrayList<>(original);
-        for(Integer w : copy1) copy1.remove(w);
+        for(Integer w : copy1) copy1.add(w);
 
         System.out.println("copy1 size:"+copy1.size());
+        System.out.println("original size:"+original.size());
+        System.out.println("original_copy => "+original_copy);
 
 
+        System.out.println("synchronizedList b4 original=> "+original);
         List<Integer> copy2 = Collections.synchronizedList(original);
         copy2.removeIf(r->true);//note this remove item from original as well
+        //for(Integer q : copy2) copy2.add(4);//concurrentModification
+        System.out.println("synchronizedList copy2=> "+copy2);
+        System.out.println("synchronizedList original=> "+original);
+
 //        Iterator<Integer> iterator2 = copy2.iterator();
 //        while(iterator2.hasNext()){
 //            copy2.remove(iterator2.next());
 //        }
         //for(Integer w : copy2) copy2.remove(w);// ConcurrentModification
         System.out.println("copy2 size:"+copy2.size());
+        System.out.println("copy2 remove chk original:"+original);
 
         List<Integer> original1 = new ArrayList<>(Arrays.asList(1,2,3,4,5));
         List<Integer> copy3 = new ArrayList<>(original1);
@@ -2919,6 +3388,7 @@ class CountSheep extends RecursiveAction {
     static int count = 0;
     public CountSheep(int start, int end) {
         this.start = start;
+
         this.end = end;
     }
     public void compute() {
@@ -3119,13 +3589,16 @@ class Cactus implements Flora,Flo{
         return 0;
     }
 }
+abstract class Catctip {
 
+}
 abstract class Cacti extends Cactus{
    // abstract void kon();
     public void open(Object j){
         return;
     }
     public Integer fly(Object t) {
+        //new Catctip(); cannot instantiate abstract class
         //Cactus ci=new Cacti();
         //abstract class cannot be instantiated even it has no abstract method
         return new Integer(1);
@@ -3165,6 +3638,7 @@ interface Organism{//interface var is implicitly public static final
     }
 }
 
+
 class Animal<T extends Object & Organism>{
     //interface must be at the end
     T obj;
@@ -3172,10 +3646,10 @@ class Animal<T extends Object & Organism>{
 
         System.out.println("Animal obj_ :"+obj_);
         obj=obj_;
-        obj.live("ok",1,2.2,true);
+        //obj.live("ok",1,2.2,true);
     }
     public Animal(){
-        obj.live("ko",2,'a',false);
+        if(null!=obj)obj.live("ko",2,'a',false);
         System.out.println("Animal emoty cstr");
     }
 }
@@ -3202,50 +3676,239 @@ class Football {
         //Integer is not subclass of Long, so cannot pass into m1
         System.out.print(getScore(startTime)); // m2
         //m2 choose m3 instead of m1, if m3 is not presents, compile error occurs
+
+        try {
+            System.out.print('A');
+            throw new RuntimeException("Out of bounds!");
+        } catch (ArrayIndexOutOfBoundsException aioobe) {
+            System.out.print('B');
+            throw aioobe;
+        }
+        finally { System.out.print('C'); }
     }
 }
 
 
 //inheritance example 1*
 class Automobile {
+    public Automobile(int v){
+        this.speed=v;
+    }
+    int speed=0;
+    public void test(int j){}
     private final String drive() { return "Driving vehicle"; }
 }
 class Auto extends Automobile {
+    int speed=1;
+    private final Object contents;//vairable 'contents' might not have been initialized
+    public Auto(int v) {
+        super(v);
+        this.contents=v;
+    }
+
     protected String drive() throws RuntimeException {
+        super.test(1);
         return "Driving car";
+        //System.out.println();//unreachable statement
     }
     //cannot override final method// unless it is private(bcz not visible to child)
 }
 class ElectricCar extends Auto {
+    int speed=10;
+    @Override
     public final String drive() throws ArithmeticException {
         return "Driving electric car";
     }//override
+    public ElectricCar(int h){
+        this();
+    }
+    public ElectricCar(){
+        super(1);
+    }
+    static Auto carToy;
+    public void testfunc(Auto car){
+        Object car1o = new ElectricCar();
+        Auto car1 = new ElectricCar();
+        System.out.println("testfunc:"+car1);
+        carToy=car1;
+    }
+
+    static char sbchar;
     public static void main(String[] wheels) {
+
+        String strg="hello ";
+        final Integer ji=10;
         final Auto car = new ElectricCar();
+        final Automobile auto = new Auto(1);
+        final Automobile autoE = new ElectricCar();
+        final ElectricCar eCar = new ElectricCar();
+        final Object eCo = new ElectricCar();
+        System.out.println("car speed :"+strg+ji+car.speed);//1
+        System.out.println("auto speed :"+auto.speed);//0
+        System.out.println("autoE speed :"+autoE.speed);//0
+        System.out.println("eCar speed :"+eCar.speed);//10
+
+
+        System.out.println("default value of char :"+sbchar);//
+        //sbchar='\u0000';//null
+        System.out.println("default value of equality char[\u0000]:"+(sbchar=='\u0000'));//
+        System.out.println("default value of equality char[\u0000]:"+(sbchar=='\u0020'));//
+        boolean[] barr=new boolean[10];
+        Boolean[] barr1=new Boolean[10];
+        System.out.println("boolean array:"+(barr));//[Z@6d21714c
+        System.out.println("Boolean array:"+(barr1));//[Ljava.lang.Boolean;@108c4c35
+        System.out.println(Arrays.toString(barr));//[false, false, false, false, false, false, false, false, false, false]
+        System.out.println(Arrays.toString(barr1));//[null, null, null, null, null, null, null, null, null, null]
+
+        StringBuilder bs=new StringBuilder("oksb");
+        System.out.println(bs);
+        bs.delete(0,1000000);
+
+        //java.time.LocalDate ld = new java.time.LocalDate(2022,6,30);
+        //LocalDate has private access -> cannot be instantiated
+        LocalDate ofdate = LocalDate.of(2022, 6, 30);
+        LocalTime oftime = LocalTime.of(23,50,45,888_888_888);
+        java.time.LocalDateTime ofdatetime = java.time.LocalDateTime.of(2022,6,30,23,30,45,888_888_888);
+        ofdatetime= java.time.LocalDateTime.of(ofdate,oftime);
+
+
+
+
+        //System.out.println("eCo speed :"+eCo.speed);//compile time error
+        //note the variable does not apply to polymorphism,
+        // it remains ref to the declared type
+
+        System.out.println();
+
+        System.out.println(carToy);
+        ElectricCar carb = new ElectricCar();
+        carb.testfunc(carb);
+        System.out.println(carToy);
+
         System.out.print(car.drive());
     }
 }
 
 
-//overload example: overload must have diff params(types differs or no. of param differs),
-// return type doesnt matter
-class ChooseWisely {
-    public ChooseWisely() { super(); }
-    public int choose(int choice) { return 5; }//overload base
+// class Big {
+//    public Big(boolean stillIn) { super(); }
+//}
+//class Trouble extends Big {
+//    public Trouble() {}
+//    public Trouble(int deep) { super(false); this(); }
+//    public Trouble(String now, int... deep) { this(3); }
+//    public Trouble(long deep) { this("check",deep); }
+//    public Trouble(double test) { super(test>5 ? true : false); }
+//}
+
+//overload:
+//      same method name, overload must have diff params(types differs or no. of param differs),
+//      return type/access modifier doesnt matter
+
+//override/inherited method:
+//      - method must have exact same parameters(same type, covariant also cannot)
+//      - return type can be covariant(same or sub-type of parent)
+//      - overridden method declared checked exception cannot be new or broader exception from parent method(it can omit or sub-class of the declared exception)
+//      - overridden method access modifier can only be same or broader
+// there is no static method override, it it exists then its 2 diff method with same name and params in 2 classes
+
+//same method name & same parameter cannot exist in same class
+class ChooseWisely extends ChooseParent{
+    public ChooseWisely(int a) {
+        super(a);//since ChooseParent has no constructor ,
+        //so this constructor and super is a must, else compile time error : "There is no default constructor available in ChooseParent...."
+    }
+    @Override
+    Integer choose(Number choice) { return 5; }//Override base, covariant
     //public Object choose(int choice) { return 5; }//overload base
-    public Object choose(int choice,String ok) { return 5; } //overload 1
-    public int choose(short choice) { return 2; }//overload 2
-    public int choose(long choice) { return 11; }//overload 3
-    //public static void choose(long choice) { return; }//overload 3
-    public static void main(String[] path) {
-        System.out.print(new ChooseWisely().choose((byte)2+1));
-        System.out.print(new ChooseWisely().choose((byte)2));
+
+    int choose(Integer choice) { return 5; }//overload base
+
+    public Object choose(int choice,String ok) { return (++choice)+5; } //overload 1
+    //public Exception choose(int choice,String ok) { return new RuntimeException(); } //overload 1
+    public String choose(short choice) { return "2"; }//overload 2
+    private int choose(CharSequence choice) { return 11; }//overload 3
+    private int choose(String choice) { return 11; }//overload 4
+    private int choose(long choice) { return 11; }//overload 4
+    private void choose(double choice) { return; }//overload 4
+    private int choose(int choice) { return root+11; }//overload 4
+    static void testLong(long lval)throws IOException{
+        System.out.println(1/0);
+        lval = 1^ 7;
+    }
+
+    //@Override
+    public static void choose(char choice) { return; }//overload 3
+    public static void choose(Object choice) { return; }//overload 3
+    public static void main(String[] path)   {
+        Integer ja=10;
+        Long jaa=100l;
+//        try{
+//            testLong(ja);
+//        }catch (IOException ec){
+//            System.out.println("throw io:"+ec.getMessage());
+//        }
+        System.out.println("testLong passed");
+
+        System.out.print(new ChooseWisely(1).choose(((long)2)+1));
+        System.out.print(new ChooseWisely(2).choose(2+1));//default int
+        System.out.print(new ChooseWisely(3).choose((byte)2));
+        if(2==2)
+        if(1==2)
+        if(2==2)
+        System.out.println("end");
+
+        else
+        System.out.println("end2");
+        System.out.println("end3");
         //*Integral data type default is int
         //here(byte) only converts 2, then 2+1 => becomes int again
         //bcz + operator automatically promotes any byte/short to int
         //if only (byte) is provided then it will run => choose(short choice) , as its the closest datatype matched
     }
 }
+class ChooseParent{
+     static int root;//final static can only be set in static block, cannot be in constructor
+    static {
+        root=0;
+    }
+    {
+        {
+            //obj=null;
+            obj=new Object();
+        }
+    }
+    protected int cal=-1;
+    private final Object obj;
+    protected final int kj=10;
+    final protected int jk=99;
+    public ChooseParent(int a){
+        //obj=new Object();
+        root=a;
+    }
+    public static void choose(char choice) { return; }//overload 3
+    Number choose(Number choice) {
+
+        super.hashCode();
+        System.out.println("root b4 --> "+root );//1
+        this.root=0;
+        System.out.println("root mid--> "+root );//0
+        ChooseParent.root=(int)choice;
+        System.out.println("root after--> "+root );//10
+        return root;
+    }//overload base
+
+
+    public static void main(String[] args) throws IOException{
+
+        ChooseParent cp = new ChooseParent(1);
+        cp.choose(10);
+        System.out.println("jk  --> "+ cp.jk );//99
+        System.out.println("kj  --> "+ cp.kj );//10
+
+    }
+}
+
 
 //*** inheritance example: constructor start***
 class RainForest extends Forest {
@@ -3255,18 +3918,39 @@ class RainForest extends Forest {
     public RainForest(int ak){
         //super(ak);
         this();
+        //ChooseParent.root=1;
+    }
+    static RainForest sc = new RainForest();
+    RainForest asv(){
+        return sc;
     }
     void $___(){}
 
     public RainForest(long treeCount) {
         super(treeCount);//if without this line, the code will not compile
         //bcz parent class "Forest" has no empty constructor ,
-        //if here dot not call super(), compiler will automatically insert
+        //if here do not call super(), compiler will automatically insert
         //an empty super() constructor , but parent class only has parameter-constructor
         //so the code will has compiling error
         this.treeCount = treeCount+1;
     }
     public static void main(String[] birds) {
+
+        try{
+            main(birds);
+        }catch (Exception ec){
+            System.out.println("Exception:"+ec);
+        }
+        catch (Throwable ec){
+            System.out.println("Throwable:"+ec);
+        }
+
+        Forest frst= new Forest(1);
+        RainForest rainfrst;//=(RainForest) frst;//java.lang.ClassCastException
+
+         frst= new RainForest(1);
+         rainfrst=(RainForest) frst;//cast with no issue
+
         System.out.print(new RainForest(5).treeCount);
     }
 }
@@ -3297,7 +3981,7 @@ class Ski {
         //racer=new Ski();
         racer.age = 18;
         name = "Wendy";//we can reassign it even if String name is final passed in
-        speed = new int[1];//note that even if speed is final passed in , but it just acopy we still change reassign
+        //speed = new int[1];//note that even if speed is final passed in , but it just acopy we still change reassign
         speed[0] = 11;
         racer = null;
 
@@ -3311,12 +3995,12 @@ class Ski {
         mySkier.age = 16;
         mySkier.arri=new int[3];
         mySkier.arri[0]=1;
-        final int[] mySpeed = new int[1];
+        final int[] mySpeed = new int[1];mySpeed[0]=99;
         final String myName = "Rosie";
         slalom(mySkier,mySpeed,myName,mySkier.arri);
         System.out.println(mySkier.age);//18
         System.out.println(myName);//Rosie
-        System.out.println(Arrays.toString(mySpeed));//[0]
+        System.out.println(Arrays.toString(mySpeed));//[11]
         System.out.println(Arrays.toString(mySkier.arri));//[100,0,0]
     }
 }
@@ -3353,7 +4037,7 @@ class Playground extends Animal implements Organism {
         System.out.println("b4 cstr");
     }
     public Playground(){
-        super(new Object());
+        //super(new Animal<>());
         System.out.println("cstr");
         end = 1;
         //****final instance variable must initialize in all constructor
@@ -3413,17 +4097,46 @@ class Playground extends Animal implements Organism {
                                  String... args//varargs must be last and must be at last
                                  //,String... args
     ) {
+        //main("1","2","3");
+
         if(spinner = roller) return "up";
         else return roller ? "down" : "middle";
+
+
     }
 
     static int[][] game = new int[6][6];
     static Object[] objgn=new Object[2][];
     static Object objgo=new Object[2][][];
 
+    public static void testMe(){
+        return;
+    }
     public static void voidMethod(){}//<K,V>
-    public static void main(String[] args) {
-        Animal<Playground> mc=new Animal<>(new Playground());
+    public static void main(String... args) {
+        //args[0]="";
+        //System.out.println("args[0]"+args[0]);//java.lang.ArrayIndexOutOfBoundsException
+        //System.out.println("args[1]"+args[1]);
+        int[] nums[] = new int[][] { { 0, 0 } };
+        int[] nums2[][] = new int[2][][];
+        nums2= new int[][][] {};
+
+        int[] nums3 = new int[2];
+
+        asd:{
+            System.out.println("asd block breaking now");
+            break asd;
+        }
+        //take note:
+        int[] arr1a[],arr2a;//arr1a is 2d, arr2a is 1d
+        int[] []arr1,arr2mm;//both 2d array
+        //int[] []arr3,[]arr4;// compilation error, [] only valid for 1st var
+
+        //int[1] ass;//declaration cannot define size, else compilation error
+//        game[3][3]=1;
+//        Object[] obja=game;
+//        game[3][3]="x";
+        //Animal<Playground> mc=new Animal<>(new Playground());
 
         //System.out.println(voidMethod());//void method cannot be printed
         int count = 0;
@@ -3432,12 +4145,21 @@ class Playground extends Animal implements Organism {
             do {
                 count++;
             } while (count < 2);//do while execute until while evaluated to false
-                //break;
+                break;
         } while (false);
         System.out.println(count);
 
+        int[] taxis= new int[]{'A','a','0'};
+        for (Object obj : taxis) {
+            System.out.println((int)obj);
+        }
+        //List<> alm3 = new ArrayList();
+        List<String> alm1 = new ArrayList<>();
+        //List<> alm2 = new ArrayList();//diamond sign cannot be at left(can only reside on instantiating side)
 
         int kj=10;
+        int j_k=+-+(kj--);
+
         numb:for(;++kj<14;){
             numb1:for(;kj++<15;){
                 System.out.println("kj===> "+kj);
@@ -3454,6 +4176,17 @@ class Playground extends Animal implements Organism {
         };
         System.out.println("kj===> "+kj);
 
+        whloop:while(++kj<11);//whloop can has duplicate, bcz context different
+        whloop:{
+            System.out.println("after whloop 2 block in kj:"+kj);
+            if(kj>11){
+                break whloop;
+            }
+            System.out.println("after whloop 2 block in end");
+        }
+        { System.out.println("after whloop 2 block in a");};
+        { System.out.println("after whloop 2 block in b");};
+        { System.out.println("after whloop 2 block in c");};
         String race = "";
 
         //1.test loop start
@@ -3470,6 +4203,9 @@ class Playground extends Animal implements Organism {
 
         ArrayList<Object> arrlist=new ArrayList<>();
         arrlist.add(new String());
+//        String name = "Desiree";
+//        int _number = 694; boolean profit$$$;
+//        System.out.println(name + " won. " + _number + " profit? " + profit$$$);
 
         final Stream<Object> streamList =
                 StreamSupport.stream(arrlist.spliterator(), false);
@@ -3477,11 +4213,15 @@ class Playground extends Animal implements Organism {
 
         objgn=game;//legal but dangerous
         objgo=game;//legal but dangerous
+        System.out.println("test arr -->>> game:"+Arrays.toString(game));
+        System.out.println("test arr -->>> objgn:"+Arrays.toString(objgn));
+        System.out.println("test arr -->>> objgo:"+Arrays.toString((Object[])objgo));
         //game[3][3] = 6;
+        //game[3]="";
         Object[] obj = game;//legal but dangerous
-        //obj[3] = "X";
+        obj[3] = "X";//ArrayStoreException
         eachl:for (Object oj: obj) {
-            break eachl;
+            System.out.println("test arr -->>> game:"+Arrays.toString((int[])oj));
         }
 
         for(obj = game;game.length<0;obj = game){
@@ -3489,6 +4229,12 @@ class Playground extends Animal implements Organism {
         }
 
         String version = System.getProperty("java.version");
+        String testn= null;
+        if(testn instanceof String){//null is not instanceof String
+            System.out.println("testn instanceof String true");
+        }else{
+            System.out.println("testn instanceof String false");
+        }
         int availableProcessors = Runtime.getRuntime().availableProcessors();
         long totalMemory =Runtime.getRuntime().totalMemory();
         long maxMemory = Runtime.getRuntime().maxMemory();
@@ -3498,25 +4244,43 @@ class Playground extends Animal implements Organism {
         String[] sparr=new String[]{"A","cat","a","b","dog","Damn"};
         // Arrays.sort(sparr);
         System.out.println("sparr :"+Arrays.toString(sparr));
+        Arrays.sort(sparr);
+        System.out.println("sparr :"+Arrays.toString(sparr));
         //binarySearch must be sorted according to natural order, else result is unpredictable
         int isearch=Arrays.binarySearch(sparr,"bd");//returns -5 means not found
+        //this binarySearch index logic is as below:
+        // where it should insert if it is exists in current sorted sequence
+        // for "bd" in [A, Damn, a, b, cat, dog] should be inserted at index: 4
+        //-(low + 1)
+        //so isearch = -(4+1) = -4 -1 =-5
         System.out.println("isearch :"+isearch);
 
+        int[][][] nums2a[], nums2b;
+
+//        for (int[][] ints : nums2b) {
+//
+//        }
 //        StringBuffer sb_=new StringBuffer("a");
 //        sb_.capacity();sb_.length();
 
         //var stvar=1;//var available in java 10 onwards
         //System.out.println(" stvar :"+stvar);
 
-        int colorOfRainbow=10;
+        short colorOfRainbow=10;
         final int red = 5;//must be constant
+        switch(colorOfRainbow){
+            //System.out.println("ok");
+        }
         switch(colorOfRainbow) {
+
             default:
-                System.out.print("Home");
-                break;
+                System.out.print("colorOfRainbowHome");
+                //break;
+//            case 2147483647://must be covariant type of colorOfRainbow
+//                System.out.print("2147483647");
             case red://must be constant
                 System.out.print("Away");
-        }
+        };
 
         char aswi=65;
         switch(aswi){//switch not accept floating point and long
@@ -3533,20 +4297,29 @@ class Playground extends Animal implements Organism {
 
 
         //test switch case
-        final int flavors = 30;
+        final int flavors = 10;
         int eaten = 0;
         switch(flavors) {
-            //***switch case if no break. all cases will be executed
+            //***switch case if no break.
+            // all cases that is after the match case will be executed(follow the declared sequence)
             //no matter it matches the case or not
             case 30:
                 eaten++;
-                System.out.println("case 30 :"+eaten);
-            case 40:
-                eaten+=2;
-                System.out.println("case 40 :"+eaten);
+                System.out.println("flavors case 30 :"+eaten);
+                //break;
             default:
                 eaten--;
-                System.out.println("case default :"+eaten);
+                System.out.println("flavors case default :"+eaten);
+                //break;
+            case 40:
+                eaten+=2;
+                System.out.println("flavors case 40 :"+eaten);
+                //break;
+            case 50:
+                eaten+=1;
+                System.out.println("flavors case 50 :"+eaten);
+                //break;
+
 
         }
         System.out.print(eaten);
@@ -3578,7 +4351,13 @@ class Playground extends Animal implements Organism {
         abyte=new byte[2][];
         bbyte= new byte[3][][];
 
+        //byte[] bn=new byte[-1];//exception NegativeArraySizeException(RuntimeException)
         byte  tdbyte[]=new byte[1];
+
+        //String  tdbyteBIG[]=new String[2147483648];//2147483648 > 2147483647  4byte max size of int: integer number too large// or OOM
+        //byte  tdbytel[]=new byte[10l];//10l is long, need explicit conversion : (int)10l, else compile error
+        byte  tdbytea[]=new byte['a'];// 'a'  -> 97
+        //byte / short / char -> int (implicit convert)
 
         short [] tdshort=new short[1];
         int [] tdint=new int[1];
@@ -3688,8 +4467,14 @@ class Playground extends Animal implements Organism {
 
         //System.out.println(zza.length);
 
-        int [][]arr2=new int[2][];
+        int arr2[][]=new int[2][];
         arr2[0]=new int[2];arr2[0][0]=1;
+
+        arr2[1]=new int[3];
+        arr2[1][0]=2;
+        arr2[1][1]=2;
+        arr2[1][2]=2;
+
         System.out.println(arr2.length);
         System.out.println(arr2.getClass().getName());//=> [[I
         int testi=130;
@@ -3721,6 +4506,38 @@ class Playground extends Animal implements Organism {
 //public interface ifg{
 //
 //}
+
+class BubbleException extends Exception {}
+class Fish {
+    Fish getFish() throws BubbleException {
+        throw new RuntimeException("fish!");
+    }
+}
+final class Clownfish extends Fish {
+    public final Clownfish getFish() {
+        throw new RuntimeException("clown!");
+    }
+    @SneakyThrows
+    public static void main(String[] bubbles) {
+        final Fish f = new Clownfish();
+        f.getFish();
+        System.out.println("swim!");
+    }
+}
+
+ class PrintNegative {
+    public static void main(String[] args) {
+        List<Integer> list= new ArrayList<>();
+        list.add(-5); list.add(0); list.add(5);
+        print(list, e -> e < 0);
+    }
+    public static void print(List<Integer> list, Predicate<Integer> p) {
+        for (Integer num : list)
+            if (p.test(num))
+                System.out.println(num);
+    }
+}
+
 @Service
 public class TestService  extends ListResourceBundle{//_US
 
@@ -3755,7 +4572,7 @@ public class TestService  extends ListResourceBundle{//_US
     public abstract  class Whale{
         private int height=180;
         protected int weight=80;
-        public abstract  void dive();
+        protected abstract  void dive();
         public native  void ne();
         //public static void nes();
     }
@@ -3773,6 +4590,7 @@ public class TestService  extends ListResourceBundle{//_US
             super.ne();
         }
 
+        @Override
         public void dive( ){
 
             Number[] oarr=new Number[2];
@@ -3872,6 +4690,38 @@ public class TestService  extends ListResourceBundle{//_US
 
     public static final void main(String[] args) {
 
+        //test arraylist declaration
+        ArrayList<String> arl=new ArrayList<>();
+        ArrayList arls=new ArrayList<String>();
+        ArrayList<String> arl1=new ArrayList();
+        ArrayList arl2=new ArrayList();
+        ArrayList arl3=new ArrayList<>();
+        List arl4=new ArrayList<String>();
+        arl.remove(new String("a"));
+        arls.add(0,"0 index pos test");
+        arls.add(2);
+        arls.set(0,"beginning");
+        arls.add(1,"5");
+        arls.add("str");arls.add(new Object());
+        arls.forEach(c->{
+            System.out.println("test list obj -> "+c);
+        });
+
+        boolean bprimitive=Boolean.parseBoolean("true");//logic is equalsIgnoreCase with "true" is true, all others are false
+        Boolean bwrapper= Boolean.valueOf("");//valueOf also internally use parseBoolean
+
+        //for(;;);//unreachable code below : CompileError
+        String str_="";
+
+        boolean bo = true^false;//true
+        boolean bo1 = true^true;//false
+        System.out.println("bo0:"+bo);//true
+        System.out.println("bo1:"+bo1);//false
+        int kj=10^1;// 1010 XOR 0001  =  1011  -> 11
+        int j_k=1+-+-(kj--);
+        System.out.println(j_k+""+0+" -j_k-> ");//120
+        System.out.println(0+kj);//10
+
         Playground playground = new Playground(10);
         genericInvokeMethod(playground,"callPint");
 
@@ -3902,5 +4752,73 @@ public class TestService  extends ListResourceBundle{//_US
 //        body.getStatus();
 //        body.getMessage();
         //System.out.println("Response body:"+ body);
+    }
+}
+
+class StringTest{
+    public static final String str_const="you cannot change me";
+    public static void main(String[] args) {
+        String s1 = new String("you cannot change me");
+        String s2 = new String("you cannot change me");
+        System.out.println(s1==s2);//false
+        String s3 = "you cannot change me";
+        System.out.println(s1==s3);//false
+        String s4 = "you cannot change me";
+        String s5 = "you cannot"+" change me";
+        System.out.println(s4==s5);//true
+        String s6 = "you cannot";//is not constant
+        String s7 = s6+" change me";
+        System.out.println(s4==s7);//false
+        System.out.println(s4==s7.intern());//true
+        final String s8 = "you cannot";
+        String s9 = s8+" change me";
+        System.out.println(s4==s9);//true
+
+        String strObj=new String("123");
+        //strObj.ap
+
+        //0 -> -1
+        //1 -> -2
+        //2 -> -3
+        //100 -> -101
+
+        // -(x+1) = ~x
+        int hj0=100;
+        System.out.println(~hj0);
+        int[] arri=new int[]{1};
+        char[] carri=new char[]{0,1,2,7,48,55,65,97,99,100,65535};//range : 0-65535
+        //if(arri==carri);//compile time error
+        for (char c : carri) {
+            System.out.println("cc["+(int)c+"]: "+c);
+        }
+
+        char c7='7';// default
+        char c71=7;// luck 7
+        Integer iw7=7;//luck 7
+        int i7=7;//luck 7
+        if(i7>10){
+
+        }
+        Character cw7='7';//default
+        Character cwi7=7;//luck 7
+        System.out.println(c7==cw7);
+        System.out.println("c7:"+(int)c7);//55
+        System.out.println("cw7:"+(int)cw7);//55
+        System.out.println((int)c7==(int)cw7);
+        switch(cwi7){
+            case 7:
+                System.out.println("luck 7");
+                break;
+            default:
+                System.out.println("default");
+        }
+
+
+//        try{
+//
+//        }catch (IOException e){//compile time error, "..is never thrown"
+//            e.printStackTrace();
+//        }
+
     }
 }
