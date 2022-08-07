@@ -490,6 +490,7 @@ class Stranger {
         StringBuilder sb=new StringBuilder();
         try{
             sb.append("a");
+            //sb.delete()
             return sb.append("b").toString();
         }finally {
             sb=null;
@@ -610,7 +611,7 @@ class SelectedJavaClassApi{
         List<Character> chars = new ArrayList<>();
         chars.add('a'); chars.add('b');
         chars.set(1, 'c');
-        chars.remove(0);
+        chars.remove(0);//this remove index cannot > list size or else will throw indexOutOfBoundsException
         System.out.print(chars.size() + " " + chars.contains('b'));
 
         //if use  Arrays.asList , cannot alter the list, orelse throw runtime exception
@@ -621,7 +622,8 @@ class SelectedJavaClassApi{
 //            museums.add(s);
 //        }
 
-        //char cha=Integer.parseInt("2");//not allow
+        Integer.valueOf(1);//return Integer wraper object
+        //char cha=Integer.parseInt("2");//not allow//return primitives int
         char cha1=2;//allow
         List<String> museums = Arrays.asList(array);//return a final array
         museums.remove(2);
@@ -3811,12 +3813,29 @@ class ElectricCar extends Auto {
 //      - overridden method declared checked exception cannot be new or broader exception from parent method(it can omit or sub-class of the declared exception)
 //      - overridden method access modifier can only be same or broader
 // there is no static method override, it it exists then its 2 diff method with same name and params in 2 classes
+class ChooseGrandParent{
 
+}
+class ChooseWisely1 extends ChooseGrandParent{
+    public ChooseWisely1(){
+
+    }
+    public ChooseWisely1(int a) {
+        this();
+    }
+}
 //same method name & same parameter cannot exist in same class
 class ChooseWisely extends ChooseParent{
+    public ChooseWisely(){
+        super(0);
+    }
     public ChooseWisely(int a) {
         super(a);//since ChooseParent has no constructor ,
         //so this constructor and super is a must, else compile time error : "There is no default constructor available in ChooseParent...."
+        String name = "Desiree";
+        int _number = 694;
+        boolean profit$$$; //might not have been initialized
+        //System.out.println(name + " won. " + _number + " profit? " + profit$$$);
     }
     @Override
     Integer choose(Number choice) { return 5; }//Override base, covariant
