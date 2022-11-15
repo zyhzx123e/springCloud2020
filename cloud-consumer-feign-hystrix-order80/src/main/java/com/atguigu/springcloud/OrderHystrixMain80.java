@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.lang.ref.WeakReference;
@@ -1808,6 +1809,7 @@ class User{
  * @create 2020-02-20 11:55
  */
 @SpringBootApplication
+@ComponentScan(basePackageClasses = OrderHystrixMain80.class)
 @EnableFeignClients
 @EnableHystrix
 public class OrderHystrixMain80

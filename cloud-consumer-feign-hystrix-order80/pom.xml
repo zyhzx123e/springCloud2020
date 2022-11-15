@@ -148,6 +148,7 @@
                     <outjar>${project.build.finalName}.jar</outjar>
                     <!-- 是否混淆-->
                     <obfuscate>true</obfuscate>
+                    <addMavenDescriptor>true</addMavenDescriptor>
                     <options>
                         <option>-target 1.8</option> <!--指定java版本号-->
                         <option>-dontshrink</option> <!--默认开启，不做收缩（删除注释、未被引用代码）-->
@@ -177,12 +178,15 @@
                         <option>-dontnote org.aopalliance.aop.**</option>
                         <option>-dontnote org.apache.logging.log4j.**</option>
 
-                        <!--  ##### 以下为需要根据项目情况修改 comment by 郭秀志 20200719 ##### -->
+                        <!--  ##### 以下为需要根据项目情况修改 ##### -->
                         <!--入口程序类不能混淆，混淆会导致springboot启动不了-->
                         <option>-keep class com.atguigu.springcloud.OrderHystrixMain80</option>
                         <option>-keep class com.atguigu.springcloud.service.* {*;}</option>
                         <option>-keep class com.atguigu.springcloud.controller.* {*;}</option>
-                        <!--  ##### 以上为需要根据项目情况修改  comment by 郭秀志 20200719 ##### -->
+                        <option>-keep class com.atguigu.springcloud.interceptor.* {*;}</option>
+                        <option>-keep class com.atguigu.springcloud.config.* {*;}</option>
+                        <option>-keep class com.atguigu.springcloud.exception.* {*;}</option>
+                        <!--  ##### 以上为需要根据项目情况修改 ##### -->
 
                         <option>-keep interface * extends * { *; }</option>
                         <!--不混淆所有类,保存原始定义的注释-->
@@ -194,8 +198,8 @@
                     </options>
                     <libs>
                         <!-- 添加依赖 java8-->
-                        <lib>${java.home}/lib/rt.jar</lib>
-                        <lib>${java.home}/lib/jce.jar</lib>
+                        <lib>D:/Java/jdk1.8.0_202/jre/lib/rt.jar</lib>
+                        <lib>D:/Java/jdk1.8.0_202/jre/lib/jce.jar</lib>
                     </libs>
                 </configuration>
                 <dependencies>
@@ -206,6 +210,23 @@
                         <version>6.1.1</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <!--Springboot repackage 打包-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <!-- spingboot 打包需要repackage否则不是可执行jar -->
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.atguigu.springcloud.OrderHystrixMain80</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>

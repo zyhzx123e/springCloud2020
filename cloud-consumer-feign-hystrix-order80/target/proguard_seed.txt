@@ -1,7 +1,64 @@
 com.atguigu.springcloud.OrderHystrixMain80
 com.atguigu.springcloud.OrderHystrixMain80: java.lang.String osName
 com.atguigu.springcloud.OrderHystrixMain80: void main(java.lang.String[])
+com.atguigu.springcloud.config.AsynchConfiguration
+com.atguigu.springcloud.config.AsynchConfiguration: AsynchConfiguration()
+com.atguigu.springcloud.config.AsynchConfiguration: java.util.concurrent.Executor asyncExecutor()
+com.atguigu.springcloud.config.HttpPoolProperties
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer maxTotal
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer defaultMaxPerRoute
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer connectTimeout
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer connectionRequestTimeout
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer socketTimeout
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer validateAfterInactivity
+com.atguigu.springcloud.config.HttpPoolProperties: HttpPoolProperties()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer getMaxTotal()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer getDefaultMaxPerRoute()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer getConnectTimeout()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer getConnectionRequestTimeout()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer getSocketTimeout()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.Integer getValidateAfterInactivity()
+com.atguigu.springcloud.config.HttpPoolProperties: void setMaxTotal(java.lang.Integer)
+com.atguigu.springcloud.config.HttpPoolProperties: void setDefaultMaxPerRoute(java.lang.Integer)
+com.atguigu.springcloud.config.HttpPoolProperties: void setConnectTimeout(java.lang.Integer)
+com.atguigu.springcloud.config.HttpPoolProperties: void setConnectionRequestTimeout(java.lang.Integer)
+com.atguigu.springcloud.config.HttpPoolProperties: void setSocketTimeout(java.lang.Integer)
+com.atguigu.springcloud.config.HttpPoolProperties: void setValidateAfterInactivity(java.lang.Integer)
+com.atguigu.springcloud.config.HttpPoolProperties: boolean equals(java.lang.Object)
+com.atguigu.springcloud.config.HttpPoolProperties: boolean canEqual(java.lang.Object)
+com.atguigu.springcloud.config.HttpPoolProperties: int hashCode()
+com.atguigu.springcloud.config.HttpPoolProperties: java.lang.String toString()
+com.atguigu.springcloud.config.RestTemplateConfig
 com.atguigu.springcloud.config.RestTemplateConfig: com.atguigu.springcloud.config.HttpPoolProperties httpPoolProperties
+com.atguigu.springcloud.config.RestTemplateConfig: RestTemplateConfig()
+com.atguigu.springcloud.config.RestTemplateConfig: org.springframework.web.client.RestTemplate restTemplate()
+com.atguigu.springcloud.config.RestTemplateConfig: org.springframework.http.client.ClientHttpRequestFactory httpRequestFactory()
+com.atguigu.springcloud.config.RestTemplateConfig: org.apache.http.client.HttpClient httpClient()
+com.atguigu.springcloud.config.WebMvcConfig
+com.atguigu.springcloud.config.WebMvcConfig: WebMvcConfig()
+com.atguigu.springcloud.config.WebMvcConfig: org.springframework.web.filter.HiddenHttpMethodFilter hiddenHttpFilter()
+com.atguigu.springcloud.config.WebMvcConfig: org.springframework.web.servlet.config.annotation.WebMvcConfigurer webMvcConfigurer()
+com.atguigu.springcloud.config.WebMvcConfig$1
+com.atguigu.springcloud.config.WebMvcConfig$1: com.atguigu.springcloud.config.WebMvcConfig this$0
+com.atguigu.springcloud.config.WebMvcConfig$1: WebMvcConfig$1(com.atguigu.springcloud.config.WebMvcConfig)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addInterceptors(org.springframework.web.servlet.config.annotation.InterceptorRegistry)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configurePathMatch(org.springframework.web.servlet.config.annotation.PathMatchConfigurer)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configureContentNegotiation(org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configureAsyncSupport(org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configureDefaultServletHandling(org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addFormatters(org.springframework.format.FormatterRegistry)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addResourceHandlers(org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addCorsMappings(org.springframework.web.servlet.config.annotation.CorsRegistry)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addViewControllers(org.springframework.web.servlet.config.annotation.ViewControllerRegistry)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configureViewResolvers(org.springframework.web.servlet.config.annotation.ViewResolverRegistry)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addArgumentResolvers(java.util.List)
+com.atguigu.springcloud.config.WebMvcConfig$1: void addReturnValueHandlers(java.util.List)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configureMessageConverters(java.util.List)
+com.atguigu.springcloud.config.WebMvcConfig$1: void extendMessageConverters(java.util.List)
+com.atguigu.springcloud.config.WebMvcConfig$1: void configureHandlerExceptionResolvers(java.util.List)
+com.atguigu.springcloud.config.WebMvcConfig$1: void extendHandlerExceptionResolvers(java.util.List)
+com.atguigu.springcloud.config.WebMvcConfig$1: org.springframework.validation.Validator getValidator()
+com.atguigu.springcloud.config.WebMvcConfig$1: org.springframework.validation.MessageCodesResolver getMessageCodesResolver()
 com.atguigu.springcloud.controller.AsyncController
 com.atguigu.springcloud.controller.AsyncController: org.slf4j.Logger log
 com.atguigu.springcloud.controller.AsyncController: com.atguigu.springcloud.service.AsyncService service
@@ -25,6 +82,23 @@ com.atguigu.springcloud.controller.OrderHystirxController: java.lang.String paym
 com.atguigu.springcloud.controller.OrderHystirxController: java.lang.String paymentTimeOutFallbackMethod(java.lang.Integer)
 com.atguigu.springcloud.controller.OrderHystirxController: java.lang.String payment_Global_FallbackMethod()
 com.atguigu.springcloud.controller.OrderHystirxController: void <clinit>()
+com.atguigu.springcloud.exception.CustomHandlerExceptionResolver
+com.atguigu.springcloud.exception.CustomHandlerExceptionResolver: CustomHandlerExceptionResolver()
+com.atguigu.springcloud.exception.CustomHandlerExceptionResolver: org.springframework.web.servlet.ModelAndView resolveException(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object,java.lang.Exception)
+com.atguigu.springcloud.exception.GlobalExceptionHandler
+com.atguigu.springcloud.exception.GlobalExceptionHandler: org.slf4j.Logger log
+com.atguigu.springcloud.exception.GlobalExceptionHandler: GlobalExceptionHandler()
+com.atguigu.springcloud.exception.GlobalExceptionHandler: java.lang.String handleArithmeticException(java.lang.Exception)
+com.atguigu.springcloud.exception.GlobalExceptionHandler: void <clinit>()
+com.atguigu.springcloud.exception.UserTooManyException
+com.atguigu.springcloud.exception.UserTooManyException: UserTooManyException(java.lang.String)
+com.atguigu.springcloud.interceptor.LoginInterceptor
+com.atguigu.springcloud.interceptor.LoginInterceptor: org.slf4j.Logger log
+com.atguigu.springcloud.interceptor.LoginInterceptor: LoginInterceptor()
+com.atguigu.springcloud.interceptor.LoginInterceptor: boolean preHandle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object)
+com.atguigu.springcloud.interceptor.LoginInterceptor: void postHandle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object,org.springframework.web.servlet.ModelAndView)
+com.atguigu.springcloud.interceptor.LoginInterceptor: void afterCompletion(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object,java.lang.Exception)
+com.atguigu.springcloud.interceptor.LoginInterceptor: void <clinit>()
 com.atguigu.springcloud.service.Alex
 com.atguigu.springcloud.service.Alex: void write()
 com.atguigu.springcloud.service.Alex: void publish()

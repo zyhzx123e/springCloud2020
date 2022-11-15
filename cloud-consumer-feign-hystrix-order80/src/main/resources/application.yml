@@ -1,7 +1,8 @@
 debug: true
 
 server:
-  port: 83
+  port: 89
+  #server-header: KING
 
 http-pool:
   max-total: 200
