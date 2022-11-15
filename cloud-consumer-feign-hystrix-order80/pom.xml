@@ -177,15 +177,18 @@
                         <option>-dontnote org.aopalliance.intercept.**</option>
                         <option>-dontnote org.aopalliance.aop.**</option>
                         <option>-dontnote org.apache.logging.log4j.**</option>
+                        <option>-obfuscationdictionary src/main/resources/obfuscation/keywords.txt</option>
+                        <option>-classobfuscationdictionary src/main/resources/obfuscation/keywords.txt</option>
+                        <option>-packageobfuscationdictionary src/main/resources/obfuscation/keywords.txt</option>
 
                         <!--  ##### 以下为需要根据项目情况修改 ##### -->
                         <!--入口程序类不能混淆，混淆会导致springboot启动不了-->
                         <option>-keep class com.atguigu.springcloud.OrderHystrixMain80</option>
-                        <option>-keep class com.atguigu.springcloud.service.* {*;}</option>
+<!--                        <option>-keep class com.atguigu.springcloud.service.* {*;}</option>-->
                         <option>-keep class com.atguigu.springcloud.controller.* {*;}</option>
-                        <option>-keep class com.atguigu.springcloud.interceptor.* {*;}</option>
+<!--                        <option>-keep class com.atguigu.springcloud.interceptor.* {*;}</option>-->
                         <option>-keep class com.atguigu.springcloud.config.* {*;}</option>
-                        <option>-keep class com.atguigu.springcloud.exception.* {*;}</option>
+<!--                        <option>-keep class com.atguigu.springcloud.exception.* {*;}</option>-->
                         <!--  ##### 以上为需要根据项目情况修改 ##### -->
 
                         <option>-keep interface * extends * { *; }</option>
