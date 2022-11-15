@@ -1,0 +1,1366 @@
+com.atguigu.springcloud.Apple -> com.atguigu.springcloud.a:
+    int id -> a
+    java.lang.String color -> b
+    float weight -> c
+    java.lang.String origin -> d
+    7:7:void <init>(int,java.lang.String,float,java.lang.String) -> <init>
+    8:8:void <init>() -> <init>
+    11:11:int getId() -> a
+    12:12:java.lang.String getColor() -> b
+    13:13:float getWeight() -> c
+    14:14:java.lang.String getOrigin() -> d
+    9:9:void setId(int) -> a
+    9:9:void setColor(java.lang.String) -> a
+    9:9:void setWeight(float) -> a
+    9:9:void setOrigin(java.lang.String) -> b
+    9:9:boolean equals(java.lang.Object) -> equals
+    9:9:boolean canEqual(java.lang.Object) -> a
+    9:9:int hashCode() -> hashCode
+    9:9:java.lang.String toString() -> toString
+com.atguigu.springcloud.LRUCache -> com.atguigu.springcloud.b:
+    int maxCapacity -> a
+    1081:1083:void <init>(int) -> <init>
+    1087:1087:boolean removeEldestEntry(java.util.Map$Entry) -> removeEldestEntry
+    1091:1092:void printAk() -> a
+    1099:1112:void main(java.lang.String[]) -> a
+com.atguigu.springcloud.LRUCacheDemo -> com.atguigu.springcloud.c:
+    int maxSize -> a
+    java.util.Map map -> b
+    com.atguigu.springcloud.LRUCacheDemo$DoublelyLinkedList doublelyLinkedList -> c
+    1143:1151:com.atguigu.springcloud.LRUCacheDemo$Node reverNodeList(com.atguigu.springcloud.LRUCacheDemo$Node) -> a
+    1193:1197:void <init>(int) -> <init>
+    1200:1206:int get(int) -> a
+    1211:1228:void put(int,int) -> a
+    1233:1254:void main(java.lang.String[]) -> a
+com.atguigu.springcloud.LRUCacheDemo$1 -> com.atguigu.springcloud.c$1:
+    1233:1236:void <init>() -> <init>
+com.atguigu.springcloud.LRUCacheDemo$2 -> com.atguigu.springcloud.c$2:
+    1237:1239:void <init>() -> <init>
+com.atguigu.springcloud.LRUCacheDemo$DoublelyLinkedList -> com.atguigu.springcloud.c$a:
+    com.atguigu.springcloud.LRUCacheDemo$Node head -> a
+    com.atguigu.springcloud.LRUCacheDemo$Node tail -> b
+    com.atguigu.springcloud.LRUCacheDemo this$0 -> c
+    1160:1165:void <init>(com.atguigu.springcloud.LRUCacheDemo) -> <init>
+    1168:1173:void addHead(com.atguigu.springcloud.LRUCacheDemo$Node) -> a
+    1176:1180:void removeNode(com.atguigu.springcloud.LRUCacheDemo$Node) -> b
+    1183:1183:com.atguigu.springcloud.LRUCacheDemo$Node getLast() -> a
+com.atguigu.springcloud.LRUCacheDemo$Node -> com.atguigu.springcloud.c$b:
+    java.lang.Object key -> a
+    java.lang.Object value -> b
+    com.atguigu.springcloud.LRUCacheDemo$Node next -> c
+    com.atguigu.springcloud.LRUCacheDemo$Node prev -> d
+    com.atguigu.springcloud.LRUCacheDemo this$0 -> e
+    1132:1134:void <init>(com.atguigu.springcloud.LRUCacheDemo) -> <init>
+    1135:1139:void <init>(com.atguigu.springcloud.LRUCacheDemo,java.lang.Object,java.lang.Object) -> <init>
+com.atguigu.springcloud.ListNode -> com.atguigu.springcloud.d:
+    int val -> a
+    com.atguigu.springcloud.ListNode next -> b
+    46:46:void <init>() -> <init>
+    47:47:void <init>(int) -> <init>
+    48:48:void <init>(int,com.atguigu.springcloud.ListNode) -> <init>
+com.atguigu.springcloud.MergeSort_QuickSort -> com.atguigu.springcloud.e:
+    66:66:void <init>() -> <init>
+    72:89:void deque() -> a
+    94:131:void main(java.lang.String[]) -> a
+    138:161:void mergeSort(int[],boolean) -> a
+    166:216:int[] mergeTwoSortedArr(int[],int[],int[],boolean) -> a
+    223:239:void quickSort(int[],int,int,boolean) -> a
+    242:265:int getPartitionIndex(int[],int,int,int,boolean) -> a
+    269:272:void swap(int[],int,int) -> a
+    104:104:void lambda$main$1(java.util.HashMap,java.lang.String,java.math.BigDecimal) -> a
+    104:104:java.math.BigDecimal lambda$null$0(java.math.BigDecimal,java.math.BigDecimal) -> a
+com.atguigu.springcloud.OrderHystrixMain80 -> com.atguigu.springcloud.OrderHystrixMain80:
+    java.util.List appleStore -> a
+    java.lang.String osName -> osName
+    org.slf4j.Logger logger -> b
+    1813:1813:void <init>() -> <init>
+    1829:1834:int reverse(int) -> a
+    1840:1911:int firstUniqChar(java.lang.String) -> a
+    1917:1941:java.lang.String convertZigZag(java.lang.String,int) -> a
+    1945:1955:int[] sortArrBubbleSort(int[],boolean) -> a
+    1959:1979:int[] sortArrPivot(int[],boolean) -> b
+    1983:2012:double getMedian(int[],boolean) -> c
+    2016:2040:int lengthOfLongestSubstring(java.lang.String) -> b
+    2046:2072:com.atguigu.springcloud.ListNode addTwoNumbers(com.atguigu.springcloud.ListNode,com.atguigu.springcloud.ListNode) -> a
+    2081:2106:int calculateStr(java.lang.String) -> c
+    2126:2167:void loadInitialDrivers() -> a
+    2175:2518:void main(java.lang.String[]) -> main
+    2441:2441:boolean lambda$main$9(java.util.Map$Entry) -> a
+    2438:2438:void lambda$main$8(java.util.Map$Entry) -> b
+    2417:2418:boolean lambda$main$7(java.lang.Integer) -> a
+    2331:2331:double lambda$main$6(com.atguigu.springcloud.Apple) -> a
+    2330:2330:java.lang.String lambda$main$5(com.atguigu.springcloud.Apple) -> b
+    2311:2311:java.lang.String lambda$main$4(com.atguigu.springcloud.Apple) -> c
+    2303:2303:java.util.List lambda$main$3(java.lang.String) -> d
+    1893:1893:java.lang.Character lambda$firstUniqChar$2(java.util.Map$Entry) -> c
+    1890:1892:boolean lambda$firstUniqChar$1(java.util.Map$Entry) -> d
+    1892:1892:boolean lambda$null$0(java.util.Map$Entry) -> e
+    1818:2109:void <clinit>() -> <clinit>
+com.atguigu.springcloud.OrderHystrixMain80$1 -> com.atguigu.springcloud.OrderHystrixMain80$1:
+    2126:2126:void <init>() -> <init>
+    2128:2128:java.lang.String run() -> a
+    2126:2126:java.lang.Object run() -> run
+com.atguigu.springcloud.OrderHystrixMain80$1MyCallable -> com.atguigu.springcloud.OrderHystrixMain80$a:
+    long waitTime -> a
+    2472:2474:void <init>(int) -> <init>
+    2477:2479:java.lang.String call() -> a
+    2468:2468:java.lang.Object call() -> call
+com.atguigu.springcloud.OrderHystrixMain80$2 -> com.atguigu.springcloud.OrderHystrixMain80$2:
+    2135:2135:void <init>() -> <init>
+    2138:2147:java.lang.Void run() -> a
+    2135:2135:java.lang.Object run() -> run
+com.atguigu.springcloud.OrderHystrixMain80$3 -> com.atguigu.springcloud.OrderHystrixMain80$3:
+    2323:2323:void <init>() -> <init>
+    2326:2327:com.atguigu.springcloud.Apple apply(com.atguigu.springcloud.Apple) -> a
+    2323:2323:java.lang.Object apply(java.lang.Object) -> apply
+com.atguigu.springcloud.OrderHystrixMain80$4 -> com.atguigu.springcloud.OrderHystrixMain80$4:
+    2317:2317:void <init>() -> <init>
+    2320:2320:boolean test(com.atguigu.springcloud.Apple) -> a
+    2317:2317:boolean test(java.lang.Object) -> test
+com.atguigu.springcloud.OrderHystrixMain80$5 -> com.atguigu.springcloud.OrderHystrixMain80$5:
+    2350:2350:void <init>() -> <init>
+    2353:2354:java.lang.Integer apply(java.lang.Integer) -> a
+    2350:2350:java.lang.Object apply(java.lang.Object) -> apply
+com.atguigu.springcloud.OrderHystrixMain80$6 -> com.atguigu.springcloud.OrderHystrixMain80$6:
+    2344:2344:void <init>() -> <init>
+    2347:2348:boolean test(java.lang.Integer) -> a
+    2344:2344:boolean test(java.lang.Object) -> test
+com.atguigu.springcloud.OrderHystrixMain80$7 -> com.atguigu.springcloud.OrderHystrixMain80$7:
+    2424:2424:void <init>() -> <init>
+com.atguigu.springcloud.OrderHystrixMain80$8 -> com.atguigu.springcloud.OrderHystrixMain80$8:
+    2425:2425:void <init>() -> <init>
+com.atguigu.springcloud.SharedData -> com.atguigu.springcloud.f:
+    int number -> a
+    java.util.concurrent.locks.Lock lock -> b
+    java.util.concurrent.locks.Condition condition -> c
+    java.util.concurrent.locks.Condition c1 -> d
+    java.util.concurrent.locks.Condition c2 -> e
+    java.util.concurrent.locks.Condition c3 -> f
+    1602:1675:void <init>() -> <init>
+    1622:1642:void incrementLock() -> a
+    1647:1667:void decrementLock() -> b
+    1678:1696:void print5() -> c
+    1699:1717:void print10() -> d
+    1720:1738:void print15() -> e
+com.atguigu.springcloud.SharedData$blockingQConsumerProducer -> com.atguigu.springcloud.f$a:
+    boolean FLAG -> c
+    java.util.concurrent.atomic.AtomicInteger atomicI -> d
+    java.util.concurrent.BlockingQueue blockingQ -> a
+    com.atguigu.springcloud.SharedData this$0 -> b
+    1743:1750:void <init>(com.atguigu.springcloud.SharedData,java.util.concurrent.BlockingQueue) -> <init>
+    1752:1765:void produce() -> a
+    1769:1770:void stop() -> b
+    1773:1789:void consume() -> c
+com.atguigu.springcloud.TreeNode -> com.atguigu.springcloud.g:
+    int val -> a
+    com.atguigu.springcloud.TreeNode left -> b
+    com.atguigu.springcloud.TreeNode right -> c
+    int maxPathSum_total -> d
+    java.util.List mainlist -> e
+    int unitLen -> f
+    int maxLen -> g
+    int leftPalindrome -> h
+    277:287:void <init>(int) -> <init>
+    290:310:int maxDepth(com.atguigu.springcloud.TreeNode) -> a
+    315:321:int maxDepth_DFS(com.atguigu.springcloud.TreeNode) -> b
+    328:329:int maxPathSum(com.atguigu.springcloud.TreeNode) -> c
+    332:338:int maxPathSum_DFS(com.atguigu.springcloud.TreeNode) -> d
+    343:365:java.util.List levelOrder(com.atguigu.springcloud.TreeNode) -> e
+    369:394:java.util.List rightSideView(com.atguigu.springcloud.TreeNode) -> f
+    400:405:void preOrderDFS(com.atguigu.springcloud.TreeNode) -> g
+    408:413:void inOrderDFS(com.atguigu.springcloud.TreeNode) -> h
+    416:421:void postOrderDFS(com.atguigu.springcloud.TreeNode) -> i
+    426:428:java.util.List permute1(int[]) -> a
+    433:445:void helperPermute(java.util.List,int[],java.util.Set,java.util.List) -> a
+    449:456:int[] removeEleFromArr(int[],int) -> a
+    459:486:java.util.List permuteA(int[]) -> b
+    491:515:int totalFruit(int[]) -> c
+    520:538:boolean isValidParenteses(java.lang.String) -> a
+    544:546:java.util.List permute(int[]) -> d
+    549:576:java.util.List calculatePermutation(java.util.List) -> a
+    584:586:java.util.List permuteUnique(int[]) -> e
+    590:625:java.util.List calculatePermutationUnique(java.util.List) -> b
+    631:639:java.util.List combination_(int,int) -> a
+    645:658:void backtrackCom(int,java.util.LinkedList,int,int,java.util.List) -> a
+    662:677:void getShortestUniqueSubstring(char[],java.lang.String) -> a
+    683:695:boolean hasCycle(com.atguigu.springcloud.ListNode) -> a
+    701:712:boolean hasCycle2(com.atguigu.springcloud.ListNode) -> b
+    721:789:java.util.List threeSumSlow(int[]) -> f
+    793:797:boolean listEqualsIgnoreOrder(java.util.List,java.util.List) -> a
+    804:838:java.util.List threeSum(int[]) -> g
+    843:859:java.util.List threeSumHashSet(int[]) -> h
+    865:881:com.atguigu.springcloud.ListNode mergeKLists(com.atguigu.springcloud.ListNode[]) -> a
+    888:928:int lengthOfLongestSubstring(java.lang.String) -> b
+    933:949:int longestSubstringLeetcode(java.lang.String) -> c
+    954:974:int longestSubstringHashset(java.lang.String) -> d
+    980:1001:com.atguigu.springcloud.TreeNode constructMaximumBinaryTree(int[]) -> i
+    1009:1021:java.lang.String longestPalindrome(java.lang.String) -> e
+    1025:1035:void longestPalindromExpandFromCenter(int,int,java.lang.String) -> a
+    1041:1050:int[][] rotate(int[][]) -> a
+    1056:1062:java.util.List combine(int,int) -> b
+    1065:1073:void comb(int,java.util.LinkedList,int,int,java.util.List) -> b
+    275:277:void <init>(int,com.atguigu.springcloud.TreeNode,com.atguigu.springcloud.TreeNode,java.util.List,int,int,int) -> <init>
+    276:277:void <init>() -> <init>
+    280:280:int getVal() -> a
+    281:281:com.atguigu.springcloud.TreeNode getLeft() -> b
+    282:282:com.atguigu.springcloud.TreeNode getRight() -> c
+    581:581:java.util.List getMainlist() -> d
+    582:582:int getUnitLen() -> e
+    1005:1005:int getMaxLen() -> f
+    1006:1006:int getLeftPalindrome() -> g
+    277:277:void setVal(int) -> a
+    277:277:void setLeft(com.atguigu.springcloud.TreeNode) -> j
+    277:277:void setRight(com.atguigu.springcloud.TreeNode) -> k
+    277:277:void setMainlist(java.util.List) -> c
+    277:277:void setUnitLen(int) -> b
+    277:277:void setMaxLen(int) -> c
+    277:277:void setLeftPalindrome(int) -> d
+    277:277:boolean equals(java.lang.Object) -> equals
+    277:277:boolean canEqual(java.lang.Object) -> a
+    277:277:int hashCode() -> hashCode
+    277:277:java.lang.String toString() -> toString
+    867:867:int lambda$mergeKLists$4(com.atguigu.springcloud.ListNode,com.atguigu.springcloud.ListNode) -> a
+    762:764:boolean lambda$threeSumSlow$3(int[],int,int,int,java.util.List) -> a
+    744:744:boolean lambda$threeSumSlow$2(java.util.List,java.util.List) -> b
+    671:671:java.util.ArrayList lambda$getShortestUniqueSubstring$1(java.lang.Character) -> a
+    500:500:java.lang.Integer lambda$totalFruit$0(java.util.Map$Entry) -> a
+    326:326:void <clinit>() -> <clinit>
+com.atguigu.springcloud.User -> com.atguigu.springcloud.h:
+    java.lang.String uid -> a
+    java.lang.String name -> b
+    1802:1802:java.lang.String getUid() -> a
+    1803:1803:java.lang.String getName() -> b
+    1798:1798:void setUid(java.lang.String) -> a
+    1798:1798:void setName(java.lang.String) -> b
+    1798:1798:boolean equals(java.lang.Object) -> equals
+    1798:1798:boolean canEqual(java.lang.Object) -> a
+    1798:1798:int hashCode() -> hashCode
+    1798:1798:java.lang.String toString() -> toString
+    1799:1799:void <init>(java.lang.String,java.lang.String) -> <init>
+    1800:1800:void <init>() -> <init>
+com.atguigu.springcloud.ZeroEvenOdd -> com.atguigu.springcloud.i:
+    int n -> d
+    java.util.concurrent.locks.ReentrantLock lock -> a
+    java.util.concurrent.locks.Condition condition -> b
+    java.lang.String[] methods -> c
+    java.lang.String curentMethod -> e
+    1552:1558:void <init>(int) -> <init>
+    1562:1564:void zero(java.util.function.IntConsumer) -> a
+    1567:1569:void even(java.util.function.IntConsumer) -> b
+    1572:1574:void odd(java.util.function.IntConsumer) -> c
+    1578:1598:void job(java.util.function.IntConsumer,int,java.lang.String) -> a
+com.atguigu.springcloud.ZeroEvenOddBlockingQ -> com.atguigu.springcloud.j:
+    int n -> d
+    java.util.concurrent.BlockingQueue bq -> a
+    java.util.concurrent.atomic.AtomicInteger stateC -> b
+    java.util.concurrent.atomic.AtomicBoolean stateB -> c
+    1262:1274:void <init>(int) -> <init>
+    1278:1309:void zero(java.util.function.IntConsumer) -> a
+    1313:1333:void odd(java.util.function.IntConsumer) -> b
+    1336:1358:void even(java.util.function.IntConsumer) -> c
+    1364:1455:void threadPoolExecutor(java.lang.String[]) -> a
+    1381:1385:java.lang.Integer lambda$threadPoolExecutor$0(java.lang.String[],int) -> a
+com.atguigu.springcloud.ZeroEvenOddBlockingQ$Fibonacci -> com.atguigu.springcloud.j$a:
+    int number -> a
+    1490:1492:void <init>(int) -> <init>
+    1496:1502:java.lang.Integer compute() -> a
+    1486:1486:java.lang.Object compute() -> compute
+com.atguigu.springcloud.ZeroEvenOddBlockingQ$Testl1 -> com.atguigu.springcloud.j$b:
+    int st -> a
+    int end -> b
+    int[] arr -> c
+    1463:1467:void <init>(int[],int,int) -> <init>
+    1470:1480:java.lang.Integer compute() -> a
+    1458:1458:java.lang.Object compute() -> compute
+com.atguigu.springcloud.ZeroEvenOddSemaphore -> com.atguigu.springcloud.k:
+    int n -> a
+    java.util.concurrent.Semaphore zero -> b
+    java.util.concurrent.Semaphore even -> c
+    java.util.concurrent.Semaphore odd -> d
+    1511:1517:void <init>(int) -> <init>
+    1522:1529:void zero(java.util.function.IntConsumer) -> a
+    1532:1538:void even(java.util.function.IntConsumer) -> b
+    1541:1547:void odd(java.util.function.IntConsumer) -> c
+com.atguigu.springcloud.config.AsynchConfiguration -> com.atguigu.springcloud.a.a:
+    12:12:void <init>() -> <init>
+    17:23:java.util.concurrent.Executor asyncExecutor() -> a
+com.atguigu.springcloud.config.HttpPoolProperties -> com.atguigu.springcloud.a.b:
+    java.lang.Integer maxTotal -> a
+    java.lang.Integer defaultMaxPerRoute -> b
+    java.lang.Integer connectTimeout -> c
+    java.lang.Integer connectionRequestTimeout -> d
+    java.lang.Integer socketTimeout -> e
+    java.lang.Integer validateAfterInactivity -> f
+    9:9:void <init>() -> <init>
+    11:11:java.lang.Integer getMaxTotal() -> a
+    12:12:java.lang.Integer getDefaultMaxPerRoute() -> b
+    13:13:java.lang.Integer getConnectTimeout() -> c
+    14:14:java.lang.Integer getConnectionRequestTimeout() -> d
+    15:15:java.lang.Integer getSocketTimeout() -> e
+    16:16:java.lang.Integer getValidateAfterInactivity() -> f
+    9:9:void setMaxTotal(java.lang.Integer) -> a
+    9:9:void setDefaultMaxPerRoute(java.lang.Integer) -> b
+    9:9:void setConnectTimeout(java.lang.Integer) -> c
+    9:9:void setConnectionRequestTimeout(java.lang.Integer) -> d
+    9:9:void setSocketTimeout(java.lang.Integer) -> e
+    9:9:void setValidateAfterInactivity(java.lang.Integer) -> f
+    9:9:boolean equals(java.lang.Object) -> equals
+    9:9:boolean canEqual(java.lang.Object) -> a
+    9:9:int hashCode() -> hashCode
+    9:9:java.lang.String toString() -> toString
+com.atguigu.springcloud.config.RestTemplateConfig -> com.atguigu.springcloud.a.c:
+    com.atguigu.springcloud.config.HttpPoolProperties httpPoolProperties -> httpPoolProperties
+    20:20:void <init>() -> <init>
+    26:26:org.springframework.web.client.RestTemplate restTemplate() -> a
+    31:31:org.springframework.http.client.ClientHttpRequestFactory httpRequestFactory() -> b
+    36:56:org.apache.http.client.HttpClient httpClient() -> c
+com.atguigu.springcloud.config.WebMvcConfig -> com.atguigu.springcloud.a.d:
+    29:29:void <init>() -> <init>
+    35:37:org.springframework.web.filter.HiddenHttpMethodFilter hiddenHttpFilter() -> a
+    41:41:org.springframework.web.servlet.config.annotation.WebMvcConfigurer webMvcConfigurer() -> b
+com.atguigu.springcloud.config.WebMvcConfig$1 -> com.atguigu.springcloud.a.d$1:
+    com.atguigu.springcloud.config.WebMvcConfig this$0 -> a
+    41:41:void <init>(com.atguigu.springcloud.config.WebMvcConfig) -> <init>
+    46:55:void addInterceptors(org.springframework.web.servlet.config.annotation.InterceptorRegistry) -> addInterceptors
+    60:64:void configurePathMatch(org.springframework.web.servlet.config.annotation.PathMatchConfigurer) -> configurePathMatch
+    70:82:void configureContentNegotiation(org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer) -> configureContentNegotiation
+    86:87:void configureAsyncSupport(org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer) -> configureAsyncSupport
+    91:92:void configureDefaultServletHandling(org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer) -> configureDefaultServletHandling
+    96:97:void addFormatters(org.springframework.format.FormatterRegistry) -> addFormatters
+    104:107:void addResourceHandlers(org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry) -> addResourceHandlers
+    111:112:void addCorsMappings(org.springframework.web.servlet.config.annotation.CorsRegistry) -> addCorsMappings
+    116:117:void addViewControllers(org.springframework.web.servlet.config.annotation.ViewControllerRegistry) -> addViewControllers
+    121:122:void configureViewResolvers(org.springframework.web.servlet.config.annotation.ViewResolverRegistry) -> configureViewResolvers
+    126:127:void addArgumentResolvers(java.util.List) -> addArgumentResolvers
+    131:132:void addReturnValueHandlers(java.util.List) -> addReturnValueHandlers
+    136:137:void configureMessageConverters(java.util.List) -> configureMessageConverters
+    141:142:void extendMessageConverters(java.util.List) -> extendMessageConverters
+    146:147:void configureHandlerExceptionResolvers(java.util.List) -> configureHandlerExceptionResolvers
+    151:152:void extendHandlerExceptionResolvers(java.util.List) -> extendHandlerExceptionResolvers
+    156:156:org.springframework.validation.Validator getValidator() -> getValidator
+    161:161:org.springframework.validation.MessageCodesResolver getMessageCodesResolver() -> getMessageCodesResolver
+com.atguigu.springcloud.controller.AsyncController -> com.atguigu.springcloud.controller.AsyncController:
+    org.slf4j.Logger log -> log
+    com.atguigu.springcloud.service.AsyncService service -> service
+    15:15:void <init>() -> <init>
+    25:37:void testAsynch() -> testAsynch
+    17:17:void <clinit>() -> <clinit>
+com.atguigu.springcloud.controller.EmployeeDataController -> com.atguigu.springcloud.controller.EmployeeDataController:
+    org.slf4j.Logger log -> log
+    10:10:void <init>() -> <init>
+    17:27:java.lang.String getAddresses() -> getAddresses
+    33:41:java.lang.String getPhoneNumbers() -> getPhoneNumbers
+    47:56:java.lang.String getEmployeeName() -> getEmployeeName
+    12:12:void <clinit>() -> <clinit>
+com.atguigu.springcloud.controller.OrderHystirxController -> com.atguigu.springcloud.controller.OrderHystirxController:
+    org.slf4j.Logger log -> log
+    com.atguigu.springcloud.service.PaymentHystrixService paymentHystrixService -> paymentHystrixService
+    23:23:void <init>() -> <init>
+    34:46:java.lang.String upload(org.springframework.web.multipart.MultipartFile[]) -> upload
+    52:53:java.lang.String paymentInfo_OK(java.lang.Integer) -> paymentInfo_OK
+    63:65:java.lang.String paymentInfo_TimeOut(java.lang.Integer) -> paymentInfo_TimeOut
+    69:69:java.lang.String paymentTimeOutFallbackMethod(java.lang.Integer) -> paymentTimeOutFallbackMethod
+    75:75:java.lang.String payment_Global_FallbackMethod() -> payment_Global_FallbackMethod
+    21:21:void <clinit>() -> <clinit>
+com.atguigu.springcloud.demoa -> com.atguigu.springcloud.l:
+    5:9:void <init>() -> <init>
+    12:13:void <clinit>() -> <clinit>
+com.atguigu.springcloud.exception.CustomHandlerExceptionResolver -> com.atguigu.springcloud.b.a:
+    18:18:void <init>() -> <init>
+    23:27:org.springframework.web.servlet.ModelAndView resolveException(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object,java.lang.Exception) -> resolveException
+com.atguigu.springcloud.exception.GlobalExceptionHandler -> com.atguigu.springcloud.b.b:
+    org.slf4j.Logger log -> a
+    10:10:void <init>() -> <init>
+    19:20:java.lang.String handleArithmeticException(java.lang.Exception) -> a
+    8:8:void <clinit>() -> <clinit>
+com.atguigu.springcloud.exception.UserTooManyException -> com.atguigu.springcloud.b.c:
+    9:10:void <init>(java.lang.String) -> <init>
+com.atguigu.springcloud.http.HttpPool -> com.atguigu.springcloud.c.a:
+    3:3:void <init>() -> <init>
+com.atguigu.springcloud.interceptor.LoginInterceptor -> com.atguigu.springcloud.d.a:
+    org.slf4j.Logger log -> a
+    14:14:void <init>() -> <init>
+    24:33:boolean preHandle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object) -> preHandle
+    38:39:void postHandle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object,org.springframework.web.servlet.ModelAndView) -> postHandle
+    43:44:void afterCompletion(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Object,java.lang.Exception) -> afterCompletion
+    13:13:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Alex -> com.atguigu.springcloud.service.Alex:
+    1234:1234:void write() -> write
+    1235:1235:void publish() -> publish
+    void think() -> think
+com.atguigu.springcloud.service.Animal -> com.atguigu.springcloud.service.Animal:
+    java.lang.Object obj -> obj
+    3872:3877:void <init>(java.lang.Object) -> <init>
+    3878:3881:void <init>() -> <init>
+com.atguigu.springcloud.service.Asteroid -> com.atguigu.springcloud.service.Asteroid:
+    1829:1829:void <init>() -> <init>
+    1832:1832:void mine(java.util.function.BiFunction) -> mine
+    1836:1840:void main(java.lang.String[]) -> main
+    1839:1839:void lambda$main$4(java.lang.Integer) -> lambda$main$4
+    1838:1838:void lambda$main$3(java.lang.Integer) -> lambda$main$3
+    1838:1838:void lambda$main$2(java.lang.Integer) -> lambda$main$2
+    1838:1838:java.lang.Integer lambda$main$1(java.lang.Integer) -> lambda$main$1
+    1836:1836:java.lang.Double lambda$main$0(java.lang.Double,java.lang.Integer) -> lambda$main$0
+com.atguigu.springcloud.service.AsyncService -> com.atguigu.springcloud.service.AsyncService:
+    org.slf4j.Logger log -> log
+    org.springframework.web.client.RestTemplate restTemplate -> restTemplate
+    14:14:void <init>() -> <init>
+    29:36:java.util.concurrent.CompletableFuture getEmployeeName() -> getEmployeeName
+    42:49:java.util.concurrent.CompletableFuture getEmployeeAddress() -> getEmployeeAddress
+    55:62:java.util.concurrent.CompletableFuture getEmployeePhone() -> getEmployeePhone
+    16:16:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Athlete -> com.atguigu.springcloud.service.Athlete:
+    int stroke -> stroke
+    3571:3572:void <init>() -> <init>
+    3573:3573:void swimming() -> swimming
+    3575:3591:void main(java.lang.String[]) -> main
+    3578:3578:void lambda$main$0(com.atguigu.springcloud.service.Athlete) -> lambda$main$0
+com.atguigu.springcloud.service.Auto -> com.atguigu.springcloud.service.Auto:
+    int speed -> speed
+    java.lang.Object contents -> contents
+    3929:3934:void <init>(int) -> <init>
+    3937:3938:java.lang.String drive() -> drive
+com.atguigu.springcloud.service.Automobile -> com.atguigu.springcloud.service.Automobile:
+    int speed -> speed
+    3921:3924:void <init>(int) -> <init>
+    3925:3925:void test(int) -> test
+    3926:3926:java.lang.String drive() -> drive
+com.atguigu.springcloud.service.B.TestB -> com.atguigu.springcloud.service.a.a:
+    com.atguigu.springcloud.service.TestService wn -> a
+    6:8:void <init>() -> <init>
+com.atguigu.springcloud.service.BadCatchException -> com.atguigu.springcloud.service.BadCatchException:
+    588:588:void <init>() -> <init>
+com.atguigu.springcloud.service.Ball -> com.atguigu.springcloud.service.Ball:
+    int size -> size
+    191:191:void <init>(int) -> <init>
+com.atguigu.springcloud.service.Bank -> com.atguigu.springcloud.service.Bank:
+    java.lang.String name -> name
+    int savingsInCents -> savingsInCents
+    1971:1971:void <init>() -> <init>
+    1985:1991:long secondsAgo(java.util.Date) -> secondsAgo
+    1995:2015:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Bank$1 -> com.atguigu.springcloud.service.Bank$1:
+    1999:1999:void <init>() -> <init>
+com.atguigu.springcloud.service.Bank$ConvertToCents -> com.atguigu.springcloud.service.Bank$ConvertToCents:
+    int gg -> gg
+    java.util.function.DoubleToIntFunction f -> f
+    java.util.function.DoubleFunction ff -> ff
+    1978:1978:void <init>() -> <init>
+    1982:1982:java.lang.Object lambda$static$1(double) -> lambda$static$1
+    1981:1981:int lambda$static$0(double) -> lambda$static$0
+    1980:1982:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.BankConcurrent -> com.atguigu.springcloud.service.BankConcurrent:
+    int cookies -> cookies
+    3632:3632:void <init>() -> <init>
+    3635:3636:void deposit(int) -> deposit
+    3640:3641:void withdrawal(int) -> withdrawal
+    3643:3652:void main(java.lang.String[]) -> main
+    3647:3647:void lambda$main$1(com.atguigu.springcloud.service.BankConcurrent) -> lambda$main$1
+    3646:3646:void lambda$main$0(com.atguigu.springcloud.service.BankConcurrent) -> lambda$main$0
+    3633:3633:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Bear -> com.atguigu.springcloud.service.Bear:
+    int sing -> sing
+    362:364:void <init>(int) -> <init>
+    int grunt() -> grunt
+    368:368:int sing() -> sing
+com.atguigu.springcloud.service.BiologyMaterial -> com.atguigu.springcloud.service.BiologyMaterial:
+    1311:1311:void <init>() -> <init>
+    1315:1318:int learn(java.lang.String,int) -> learn
+com.atguigu.springcloud.service.BlueCar -> com.atguigu.springcloud.service.BlueCar:
+    int no -> no
+    177:182:void <init>() -> <init>
+    184:185:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Bottle -> com.atguigu.springcloud.service.Bottle:
+    1161:1161:void <init>() -> <init>
+    1174:1178:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Bottle$1 -> com.atguigu.springcloud.service.Bottle$1:
+com.atguigu.springcloud.service.Bottle$Ship -> com.atguigu.springcloud.service.Bottle$Ship:
+    1162:1162:void <init>() -> <init>
+    1170:1170:com.atguigu.springcloud.service.Bottle$Ship$Sail getSail() -> getSail
+com.atguigu.springcloud.service.Bottle$Ship$Sail -> com.atguigu.springcloud.service.Bottle$Ship$Sail:
+    com.atguigu.springcloud.service.Bottle$Ship$Sail TALL -> TALL
+    com.atguigu.springcloud.service.Bottle$Ship$Sail SHORT -> SHORT
+    com.atguigu.springcloud.service.Bottle$Ship$Sail[] $VALUES -> $VALUES
+    1163:1163:com.atguigu.springcloud.service.Bottle$Ship$Sail[] values() -> values
+    1163:1163:com.atguigu.springcloud.service.Bottle$Ship$Sail valueOf(java.lang.String) -> valueOf
+    1163:1163:void <init>(java.lang.String,int) -> <init>
+    int getHeight() -> getHeight
+    1163:1163:void <init>(java.lang.String,int,com.atguigu.springcloud.service.Bottle$1) -> <init>
+    1163:1165:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Bottle$Ship$Sail$1 -> com.atguigu.springcloud.service.Bottle$Ship$Sail$1:
+    1164:1164:void <init>(java.lang.String,int) -> <init>
+    1164:1164:int getHeight() -> getHeight
+com.atguigu.springcloud.service.Bottle$Ship$Sail$2 -> com.atguigu.springcloud.service.Bottle$Ship$Sail$2:
+    1165:1165:void <init>(java.lang.String,int) -> <init>
+    1165:1165:int getHeight() -> getHeight
+com.atguigu.springcloud.service.BubbleException -> com.atguigu.springcloud.service.BubbleException:
+    4798:4798:void <init>() -> <init>
+com.atguigu.springcloud.service.Building -> com.atguigu.springcloud.service.Building:
+    914:914:void <init>() -> <init>
+com.atguigu.springcloud.service.Cacti -> com.atguigu.springcloud.service.Cacti:
+    3806:3806:void <init>() -> <init>
+    3809:3809:void open(java.lang.Object) -> open
+    3815:3815:java.lang.Integer fly(java.lang.Object) -> fly
+    3806:3806:java.lang.Number fly(java.lang.Object) -> fly
+com.atguigu.springcloud.service.Cactus -> com.atguigu.springcloud.service.Cactus:
+    3787:3787:void <init>() -> <init>
+    3793:3793:void open(java.lang.Object) -> open
+    3800:3800:java.lang.Integer fly(java.lang.Object) -> fly
+    3787:3787:java.lang.Number fly(java.lang.Object) -> fly
+com.atguigu.springcloud.service.Canine -> com.atguigu.springcloud.service.Canine:
+    331:331:void <init>() -> <init>
+com.atguigu.springcloud.service.Car -> com.atguigu.springcloud.service.Car:
+    int no -> no
+    169:175:void <init>(java.lang.String) -> <init>
+    170:170:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.CartoonCat -> com.atguigu.springcloud.service.CartoonCat:
+    3256:3256:void <init>() -> <init>
+    3282:3291:void ForkJoinExample() -> ForkJoinExample
+    3329:3336:void await(java.util.concurrent.CyclicBarrier) -> await
+    3338:3348:void march(java.util.concurrent.CyclicBarrier) -> march
+    3367:3390:void main(java.lang.String[]) -> main
+    3381:3383:java.lang.Integer lambda$main$2(java.lang.Integer,java.lang.Integer) -> lambda$main$2
+    3372:3374:java.lang.Integer lambda$main$1(java.lang.Integer,java.lang.Integer) -> lambda$main$1
+    3345:3345:void lambda$march$0(java.util.concurrent.CyclicBarrier) -> lambda$march$0
+com.atguigu.springcloud.service.CartoonCat$Fibonacci -> com.atguigu.springcloud.service.CartoonCat$Fibonacci:
+    int n -> n
+    3260:3260:void <init>(int) -> <init>
+    3264:3271:java.lang.Integer compute() -> compute
+    3274:3278:void init() -> init
+    3258:3258:java.lang.Object compute() -> compute
+com.atguigu.springcloud.service.CartoonCat$Sum -> com.atguigu.springcloud.service.CartoonCat$Sum:
+    int seqThreshold -> seqThreshold
+    double[] data -> data
+    int start -> start
+    int end -> end
+    com.atguigu.springcloud.service.CartoonCat this$0 -> this$0
+    3293:3302:void <init>(com.atguigu.springcloud.service.CartoonCat,double[],int,int) -> <init>
+    3307:3323:java.lang.Double compute() -> compute
+    3292:3292:java.lang.Object compute() -> compute
+com.atguigu.springcloud.service.CastleUnderSiegeException -> com.atguigu.springcloud.service.CastleUnderSiegeException:
+    441:441:void <init>() -> <init>
+com.atguigu.springcloud.service.Catctip -> com.atguigu.springcloud.service.Catctip:
+    3803:3803:void <init>() -> <init>
+com.atguigu.springcloud.service.ChooseGrandParent -> com.atguigu.springcloud.service.ChooseGrandParent:
+    4041:4041:void <init>() -> <init>
+com.atguigu.springcloud.service.ChooseParent -> com.atguigu.springcloud.service.ChooseParent:
+    int root -> root
+    int cal -> cal
+    java.lang.Object obj -> obj
+    int kj -> kj
+    int jk -> jk
+    4122:4132:void <init>(int) -> <init>
+    4133:4133:void choose(char) -> choose
+    4136:4142:java.lang.Number choose(java.lang.Number) -> choose
+    4148:4153:void main(java.lang.String[]) -> main
+    4117:4118:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.ChooseWisely -> com.atguigu.springcloud.service.ChooseWisely:
+    4055:4056:void <init>() -> <init>
+    4058:4064:void <init>(int) -> <init>
+    4066:4066:java.lang.Integer choose(java.lang.Number) -> choose
+    4069:4069:int choose(java.lang.Integer) -> choose
+    4071:4071:java.lang.Object choose(int,java.lang.String) -> choose
+    4073:4073:java.lang.String choose(short) -> choose
+    4074:4074:int choose(java.lang.CharSequence) -> choose
+    4075:4075:int choose(java.lang.String) -> choose
+    4076:4076:int choose(long) -> choose
+    4077:4077:void choose(double) -> choose
+    4078:4078:int choose(int) -> choose
+    4080:4082:void testLong(long) -> testLong
+    4085:4085:void choose(char) -> choose
+    4086:4086:void choose(java.lang.Object) -> choose
+    4088:4112:void main(java.lang.String[]) -> main
+    4053:4053:java.lang.Number choose(java.lang.Number) -> choose
+com.atguigu.springcloud.service.ChooseWisely1 -> com.atguigu.springcloud.service.ChooseWisely1:
+    4045:4047:void <init>() -> <init>
+    4049:4050:void <init>(int) -> <init>
+com.atguigu.springcloud.service.Citadel -> com.atguigu.springcloud.service.Citadel:
+    443:443:void <init>() -> <init>
+    448:462:void openDrawbridge() -> openDrawbridge
+    465:468:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Clownfish -> com.atguigu.springcloud.service.Clownfish:
+    4804:4804:void <init>() -> <init>
+    4806:4806:com.atguigu.springcloud.service.Clownfish getFish() -> getFish
+    4808:4813:void main(java.lang.String[]) -> main
+    4804:4804:com.atguigu.springcloud.service.Fish getFish() -> getFish
+com.atguigu.springcloud.service.Coat -> com.atguigu.springcloud.service.Coat:
+    569:569:void <init>() -> <init>
+    572:576:java.lang.Long zipper() -> zipper
+    580:583:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Comic -> com.atguigu.springcloud.service.Comic:
+    int jo -> jo
+    void draw(java.lang.Object) -> draw
+com.atguigu.springcloud.service.ComicClass -> com.atguigu.springcloud.service.ComicClass:
+    1527:1527:void <init>() -> <init>
+    1529:1530:void draw(java.lang.Object) -> draw
+com.atguigu.springcloud.service.ComplexMath -> com.atguigu.springcloud.service.ComplexMath:
+    double secret -> secret
+    302:306:void <init>() -> <init>
+    308:309:void calculate() -> calculate
+com.atguigu.springcloud.service.Computer -> com.atguigu.springcloud.service.Computer:
+    473:473:void <init>() -> <init>
+    475:475:void compute() -> compute
+    479:488:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.CountSheep -> com.atguigu.springcloud.service.CountSheep:
+    int[] sheep -> sheep
+    int start -> start
+    int end -> end
+    int count -> count
+    3600:3604:void <init>(int,int) -> <init>
+    3606:3614:void compute() -> compute
+    3616:3628:void main(java.lang.String[]) -> main
+    3596:3599:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Cowboy -> com.atguigu.springcloud.service.Cowboy:
+    int space -> space
+    double ship -> ship
+    882:884:void <init>() -> <init>
+    886:893:void printMessage() -> printMessage
+    895:896:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Dance -> com.atguigu.springcloud.service.Dance:
+    1922:1922:void <init>() -> <init>
+    1928:1928:java.lang.Integer rest(java.util.function.BiFunction) -> rest
+    1932:1932:java.util.function.Consumer consumerChain() -> consumerChain
+    1942:1966:void main(java.lang.String[]) -> main
+    1964:1964:java.lang.Integer lambda$main$4(java.lang.Integer,java.lang.Double) -> lambda$main$4
+    1960:1960:void lambda$main$3(java.util.HashMap) -> lambda$main$3
+    1956:1956:void lambda$main$2(java.util.Map) -> lambda$main$2
+    1957:1959:void lambda$null$1(java.lang.String,java.lang.String) -> lambda$null$1
+    1934:1937:void lambda$consumerChain$0(java.util.HashMap) -> lambda$consumerChain$0
+com.atguigu.springcloud.service.Dance$ConstantToken -> com.atguigu.springcloud.service.Dance$ConstantToken:
+    java.lang.String token -> token
+    com.atguigu.springcloud.service.Dance this$0 -> this$0
+    1924:1924:void <init>(com.atguigu.springcloud.service.Dance) -> <init>
+com.atguigu.springcloud.service.Dog -> com.atguigu.springcloud.service.Dog:
+    332:332:void <init>() -> <init>
+com.atguigu.springcloud.service.DogSearch -> com.atguigu.springcloud.service.DogSearch:
+    2019:2019:void <init>() -> <init>
+    2023:2032:void printnn(java.util.stream.Stream) -> printnn
+    2035:2036:void reduceList(java.util.List,java.util.function.Predicate) -> reduceList
+    2038:2311:void main(java.lang.String[]) -> main
+    2307:2307:java.lang.String lambda$main$35(java.lang.String) -> lambda$main$35
+    2307:2307:boolean lambda$main$34(java.lang.String) -> lambda$main$34
+    2306:2306:java.util.Deque lambda$main$33(java.util.Deque) -> lambda$main$33
+    2306:2306:boolean lambda$main$32(java.util.Deque) -> lambda$main$32
+    2305:2305:void lambda$main$31(java.lang.String) -> lambda$main$31
+    2305:2305:java.util.stream.Stream lambda$main$30(java.util.Deque) -> lambda$main$30
+    2267:2267:java.util.stream.IntStream lambda$main$29(java.util.stream.IntStream) -> lambda$main$29
+    2251:2251:void lambda$main$28(java.lang.Boolean,java.util.List) -> lambda$main$28
+    2250:2250:java.lang.Boolean lambda$main$27(java.lang.String) -> lambda$main$27
+    2246:2246:void lambda$main$26(java.lang.Boolean,java.util.List) -> lambda$main$26
+    2245:2245:boolean lambda$main$25(java.lang.String) -> lambda$main$25
+    2223:2223:int lambda$main$24(java.lang.String,java.lang.String) -> lambda$main$24
+    2221:2221:boolean lambda$main$23(java.lang.String) -> lambda$main$23
+    2216:2216:int lambda$main$22(java.lang.String,java.lang.String) -> lambda$main$22
+    2207:2207:long lambda$main$21(java.lang.Integer) -> lambda$main$21
+    2197:2197:java.util.stream.Stream lambda$main$20(java.util.Collection) -> lambda$main$20
+    2185:2185:boolean lambda$main$19(java.lang.Boolean) -> lambda$main$19
+    2181:2181:java.lang.Boolean lambda$main$18(java.lang.Boolean) -> lambda$main$18
+    2170:2170:java.lang.String lambda$main$17(java.lang.String) -> lambda$main$17
+    2169:2169:java.lang.String lambda$main$16(java.lang.String) -> lambda$main$16
+    2153:2153:boolean lambda$main$15(java.lang.Integer) -> lambda$main$15
+    2151:2151:java.lang.Integer lambda$main$14(java.lang.Integer) -> lambda$main$14
+    2132:2134:void lambda$main$13(java.util.HashMap,java.lang.Integer,java.lang.String) -> lambda$main$13
+    2133:2133:java.lang.String lambda$null$12(java.lang.String,java.lang.String) -> lambda$null$12
+    2102:2102:java.lang.String lambda$main$11(java.lang.String) -> lambda$main$11
+    2101:2101:java.lang.Integer lambda$main$10(java.lang.String) -> lambda$main$10
+    2097:2097:java.lang.String lambda$main$9(java.lang.String,java.lang.String) -> lambda$main$9
+    2061:2061:boolean lambda$main$8(java.lang.Integer) -> lambda$main$8
+    2057:2057:boolean lambda$main$7(java.lang.Integer) -> lambda$main$7
+    2051:2051:boolean lambda$main$6(java.lang.String) -> lambda$main$6
+    2031:2031:void lambda$printnn$5(java.lang.String) -> lambda$printnn$5
+    2029:2029:void lambda$printnn$4(java.lang.String) -> lambda$printnn$4
+    2027:2027:java.lang.String lambda$printnn$3(java.lang.String) -> lambda$printnn$3
+    2026:2026:void lambda$printnn$2(java.lang.String) -> lambda$printnn$2
+    2025:2025:int lambda$printnn$1(java.lang.String,java.lang.String) -> lambda$printnn$1
+    2024:2024:void lambda$printnn$0(java.lang.String) -> lambda$printnn$0
+com.atguigu.springcloud.service.ElectricCar -> com.atguigu.springcloud.service.ElectricCar:
+    int speed -> speed
+    com.atguigu.springcloud.service.Auto carToy -> carToy
+    char sbchar -> sbchar
+    3947:3947:java.lang.String drive() -> drive
+    3950:3951:void <init>(int) -> <init>
+    3944:3954:void <init>() -> <init>
+    3957:3961:void testfunc(com.atguigu.springcloud.service.Auto) -> testfunc
+    3966:4016:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.EmptyTable -> com.atguigu.springcloud.service.EmptyTable:
+    3669:3669:void <init>() -> <init>
+    3679:3719:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.EnumAnimal -> com.atguigu.springcloud.service.EnumAnimal:
+    com.atguigu.springcloud.service.EnumAnimal CAT -> CAT
+    com.atguigu.springcloud.service.EnumAnimal DOG -> DOG
+    com.atguigu.springcloud.service.EnumAnimal[] $VALUES -> $VALUES
+    946:946:com.atguigu.springcloud.service.EnumAnimal[] values() -> values
+    946:946:com.atguigu.springcloud.service.EnumAnimal valueOf(java.lang.String) -> valueOf
+    946:946:void <init>(java.lang.String,int) -> <init>
+    java.lang.String makeNoise() -> makeNoise
+    946:946:void <init>(java.lang.String,int,com.atguigu.springcloud.service.EnumAnimal$1) -> <init>
+    946:950:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.EnumAnimal$1 -> com.atguigu.springcloud.service.EnumAnimal$1:
+    947:947:void <init>(java.lang.String,int) -> <init>
+    948:948:java.lang.String makeNoise() -> makeNoise
+com.atguigu.springcloud.service.EnumAnimal$2 -> com.atguigu.springcloud.service.EnumAnimal$2:
+    950:950:void <init>(java.lang.String,int) -> <init>
+    951:951:java.lang.String makeNoise() -> makeNoise
+com.atguigu.springcloud.service.Equipment -> com.atguigu.springcloud.service.Equipment:
+com.atguigu.springcloud.service.ExtendingGenerics -> com.atguigu.springcloud.service.ExtendingGenerics:
+    1657:1657:void <init>() -> <init>
+    1660:1661:java.lang.Object add(java.util.Collection,java.lang.Object) -> add
+    1667:1673:void minus(java.util.List) -> minus
+    1678:1681:void minus1(java.util.List) -> minus1
+    1683:1729:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Fish -> com.atguigu.springcloud.service.Fish:
+    4799:4799:void <init>() -> <init>
+    4801:4801:com.atguigu.springcloud.service.Fish getFish() -> getFish
+com.atguigu.springcloud.service.Flo -> com.atguigu.springcloud.service.Flo:
+    java.lang.Number fly(java.lang.Object) -> fly
+    3778:3779:void open(java.lang.Object) -> open
+com.atguigu.springcloud.service.Flora -> com.atguigu.springcloud.service.Flora:
+    java.lang.Number fly(java.lang.Object) -> fly
+    3766:3767:void open(java.lang.Object) -> open
+    3770:3771:java.util.function.Consumer andThen(java.util.function.Consumer) -> andThen
+    3771:3771:void lambda$andThen$0(java.util.function.Consumer,java.lang.Object) -> lambda$andThen$0
+com.atguigu.springcloud.service.Football -> com.atguigu.springcloud.service.Football:
+    3885:3885:void <init>() -> <init>
+    3887:3891:java.lang.Long getScore(java.lang.Long) -> getScore
+    3895:3895:void $test() -> $test
+    3897:3897:java.lang.Integer getScore(java.lang.Integer) -> getScore
+    3900:3914:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Forest -> com.atguigu.springcloud.service.Forest:
+    long treeCount -> treeCount
+    4203:4205:void <init>(long) -> <init>
+com.atguigu.springcloud.service.Fortress -> com.atguigu.springcloud.service.Fortress:
+    403:403:void <init>() -> <init>
+    407:417:void openDrawbridge() -> openDrawbridge
+    421:431:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Guitar -> com.atguigu.springcloud.service.Guitar:
+    2979:2979:void <init>() -> <init>
+    2981:2990:void readMusic(java.io.File) -> readMusic
+com.atguigu.springcloud.service.Hammer -> com.atguigu.springcloud.service.Hammer:
+    908:908:void <init>() -> <init>
+    909:909:void use(java.lang.String) -> use
+    910:910:void bang() -> bang
+com.atguigu.springcloud.service.Heart -> com.atguigu.springcloud.service.Heart:
+    550:550:void <init>() -> <init>
+    554:555:void operate() -> operate
+    557:565:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Helicopter -> com.atguigu.springcloud.service.Helicopter:
+    int height -> height
+    237:238:void <init>() -> <init>
+    243:243:java.lang.Integer talk() -> talk
+    245:245:java.lang.Integer see() -> see
+    247:247:int fly() -> fly
+    249:251:void main(java.lang.String[]) -> main
+    237:237:java.lang.Number see() -> see
+com.atguigu.springcloud.service.House -> com.atguigu.springcloud.service.House:
+    915:915:void <init>() -> <init>
+    917:940:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Husky -> com.atguigu.springcloud.service.Husky:
+    334:334:void <init>() -> <init>
+com.atguigu.springcloud.service.Igloo -> com.atguigu.springcloud.service.Igloo:
+    boolean $assertionsDisabled -> $assertionsDisabled
+    2315:2315:void <init>() -> <init>
+    2319:2352:void main(java.lang.String[]) -> main
+    2315:2315:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.InconvenientImplementation -> com.atguigu.springcloud.service.InconvenientImplementation:
+    2626:2626:void <init>() -> <init>
+    2632:2644:void tendGarden(java.nio.file.Path) -> tendGarden
+    2646:2722:void printNotes() -> printNotes
+    2724:2957:void main(java.lang.String[]) -> main
+    2635:2635:java.nio.file.Path lambda$tendGarden$0(java.nio.file.Path) -> lambda$tendGarden$0
+com.atguigu.springcloud.service.InconvenientImplementation$1 -> com.atguigu.springcloud.service.InconvenientImplementation$1:
+    2678:2678:void <init>() -> <init>
+    2681:2681:java.lang.String name() -> name
+    2686:2686:java.nio.file.attribute.DosFileAttributes readAttributes() -> readAttributes
+    2692:2692:void setReadOnly(boolean) -> setReadOnly
+    2697:2697:void setHidden(boolean) -> setHidden
+    2702:2702:void setSystem(boolean) -> setSystem
+    2707:2707:void setArchive(boolean) -> setArchive
+    2712:2712:void setTimes(java.nio.file.attribute.FileTime,java.nio.file.attribute.FileTime,java.nio.file.attribute.FileTime) -> setTimes
+    2678:2678:java.nio.file.attribute.BasicFileAttributes readAttributes() -> readAttributes
+com.atguigu.springcloud.service.InconvenientImplementation$2 -> com.atguigu.springcloud.service.InconvenientImplementation$2:
+    2801:2801:void <init>() -> <init>
+    2804:2804:java.nio.file.FileSystem getFileSystem() -> getFileSystem
+    2809:2809:boolean isAbsolute() -> isAbsolute
+    2814:2814:java.nio.file.Path getRoot() -> getRoot
+    2819:2819:java.nio.file.Path getFileName() -> getFileName
+    2824:2824:java.nio.file.Path getParent() -> getParent
+    2829:2829:int getNameCount() -> getNameCount
+    2834:2834:java.nio.file.Path getName(int) -> getName
+    2839:2839:java.nio.file.Path subpath(int,int) -> subpath
+    2844:2844:boolean startsWith(java.nio.file.Path) -> startsWith
+    2849:2849:boolean startsWith(java.lang.String) -> startsWith
+    2854:2854:boolean endsWith(java.nio.file.Path) -> endsWith
+    2859:2859:boolean endsWith(java.lang.String) -> endsWith
+    2864:2864:java.nio.file.Path normalize() -> normalize
+    2869:2869:java.nio.file.Path resolve(java.nio.file.Path) -> resolve
+    2874:2874:java.nio.file.Path resolve(java.lang.String) -> resolve
+    2879:2879:java.nio.file.Path resolveSibling(java.nio.file.Path) -> resolveSibling
+    2884:2884:java.nio.file.Path resolveSibling(java.lang.String) -> resolveSibling
+    2889:2889:java.nio.file.Path relativize(java.nio.file.Path) -> relativize
+    2894:2894:java.net.URI toUri() -> toUri
+    2899:2899:java.nio.file.Path toAbsolutePath() -> toAbsolutePath
+    2904:2904:java.nio.file.Path toRealPath(java.nio.file.LinkOption[]) -> toRealPath
+    2909:2909:java.io.File toFile() -> toFile
+    2914:2914:java.nio.file.WatchKey register(java.nio.file.WatchService,java.nio.file.WatchEvent$Kind[],java.nio.file.WatchEvent$Modifier[]) -> register
+    2919:2919:java.nio.file.WatchKey register(java.nio.file.WatchService,java.nio.file.WatchEvent$Kind[]) -> register
+    2924:2924:java.util.Iterator iterator() -> iterator
+    2929:2929:int compareTo(java.nio.file.Path) -> compareTo
+    2801:2801:int compareTo(java.lang.Object) -> compareTo
+com.atguigu.springcloud.service.InfiniteMath -> com.atguigu.springcloud.service.InfiniteMath:
+    double secret -> secret
+    311:312:void <init>() -> <init>
+    318:327:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.KnightAttackingException -> com.atguigu.springcloud.service.KnightAttackingException:
+    442:442:void <init>() -> <init>
+com.atguigu.springcloud.service.LaundryTime -> com.atguigu.springcloud.service.LaundryTime:
+    1738:1738:void <init>() -> <init>
+    1740:1755:void main(java.lang.String[]) -> main
+    1754:1754:java.util.stream.IntStream lambda$main$0(java.util.stream.IntStream) -> lambda$main$0
+com.atguigu.springcloud.service.ListType -> com.atguigu.springcloud.service.ListType:
+    3730:3730:void <init>() -> <init>
+    3732:3732:java.lang.Object[][] getContents() -> getContents
+    3737:3756:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Magazine -> com.atguigu.springcloud.service.Magazine:
+    java.lang.String name -> name
+    1461:1463:void <init>(java.lang.String) -> <init>
+    1465:1465:java.lang.String toString() -> toString
+    1468:1512:void main(java.lang.String[]) -> main
+    1514:1514:int compareTo(com.atguigu.springcloud.service.Magazine) -> compareTo
+    1457:1457:int compareTo(java.lang.Object) -> compareTo
+    1471:1471:int lambda$main$0(java.lang.Character,java.lang.Character) -> lambda$main$0
+    1457:1457:java.lang.String access$000(com.atguigu.springcloud.service.Magazine) -> access$000
+com.atguigu.springcloud.service.Magazine$1 -> com.atguigu.springcloud.service.Magazine$1:
+    1485:1485:void <init>() -> <init>
+    1489:1491:int compare(com.atguigu.springcloud.service.Magazine,com.atguigu.springcloud.service.Magazine) -> compare
+    1485:1485:int compare(java.lang.Object,java.lang.Object) -> compare
+com.atguigu.springcloud.service.Mars -> com.atguigu.springcloud.service.Mars:
+    128:128:void <init>() -> <init>
+    133:133:void flyHigh() -> flyHigh
+    136:139:int getG() -> getG
+    142:143:int talk(java.lang.String[]) -> talk
+    146:147:int talk() -> talk
+    151:151:java.lang.String getName() -> getName
+    156:164:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Math -> com.atguigu.springcloud.service.Math:
+    double secret -> secret
+    292:297:void <init>() -> <init>
+    299:300:void calculate() -> calculate
+com.atguigu.springcloud.service.Matrix -> com.atguigu.springcloud.service.Matrix:
+    int level -> level
+    1123:1124:void <init>() -> <init>
+    1141:1157:void main(java.lang.String[]) -> main
+    1123:1123:int access$100(com.atguigu.springcloud.service.Matrix) -> access$100
+com.atguigu.springcloud.service.Matrix$1RaceCar -> com.atguigu.springcloud.service.Matrix$1RaceCar:
+    1147:1147:void <init>() -> <init>
+    1149:1149:java.lang.String makeNoise() -> makeNoise
+com.atguigu.springcloud.service.Matrix$Deep -> com.atguigu.springcloud.service.Matrix$Deep:
+    int level -> level
+    com.atguigu.springcloud.service.Matrix this$0 -> this$0
+    1125:1126:void <init>(com.atguigu.springcloud.service.Matrix) -> <init>
+    1125:1125:int access$000(com.atguigu.springcloud.service.Matrix$Deep) -> access$000
+com.atguigu.springcloud.service.Matrix$Deep$Deeper -> com.atguigu.springcloud.service.Matrix$Deep$Deeper:
+    int level -> level
+    com.atguigu.springcloud.service.Matrix$Deep this$1 -> this$1
+    1127:1128:void <init>(com.atguigu.springcloud.service.Matrix$Deep) -> <init>
+    1130:1135:void printReality() -> printReality
+com.atguigu.springcloud.service.Matrix$VC -> com.atguigu.springcloud.service.Matrix$VC:
+    1138:1138:void <init>() -> <init>
+com.atguigu.springcloud.service.Michael -> com.atguigu.springcloud.service.Michael:
+    1239:1239:void write() -> write
+    1240:1240:void publish() -> publish
+    void think() -> think
+com.atguigu.springcloud.service.MyThread -> com.atguigu.springcloud.service.MyThread:
+    int ia -> ia
+    1590:1590:void <init>() -> <init>
+    1595:1599:void run() -> run
+    1602:1607:void start() -> start
+com.atguigu.springcloud.service.MyThread1 -> com.atguigu.springcloud.service.MyThread1:
+    1609:1609:void <init>() -> <init>
+    1613:1614:void run() -> run
+    1616:1617:void start() -> start
+com.atguigu.springcloud.service.News -> com.atguigu.springcloud.service.News:
+    1621:1621:void <init>() -> <init>
+com.atguigu.springcloud.service.News1 -> com.atguigu.springcloud.service.News1:
+    1622:1622:void <init>() -> <init>
+com.atguigu.springcloud.service.News2 -> com.atguigu.springcloud.service.News2:
+    1622:1622:void <init>() -> <init>
+com.atguigu.springcloud.service.Organ -> com.atguigu.springcloud.service.Organ:
+    544:544:void <init>() -> <init>
+    547:547:void operate() -> operate
+com.atguigu.springcloud.service.Organism -> com.atguigu.springcloud.service.Organism:
+    int live -> live
+    int blood -> blood
+    void talk() -> talk
+    3838:3838:void open() -> open
+    3841:3841:void opens() -> opens
+    java.lang.Object live(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object) -> live
+    int go() -> go
+    3849:3850:void see() -> see
+com.atguigu.springcloud.service.OutOfBoundsException -> com.atguigu.springcloud.service.OutOfBoundsException:
+    587:587:void <init>() -> <init>
+com.atguigu.springcloud.service.Outfielder -> com.atguigu.springcloud.service.Outfielder:
+    void catchBall() -> catchBall
+com.atguigu.springcloud.service.OutfielderIml -> com.atguigu.springcloud.service.OutfielderIml:
+    592:592:void <init>() -> <init>
+    597:597:void catchBall() -> catchBall
+com.atguigu.springcloud.service.Parallelogram -> com.atguigu.springcloud.service.Parallelogram:
+    210:210:void <init>() -> <init>
+    211:211:int getEqualSides() -> getEqualSides
+com.atguigu.springcloud.service.PaymentFallbackService -> com.atguigu.springcloud.service.PaymentFallbackService:
+    10:10:void <init>() -> <init>
+    15:15:java.lang.String paymentInfo_OK(java.lang.Integer) -> paymentInfo_OK
+    21:21:java.lang.String paymentInfo_TimeOut(java.lang.Integer) -> paymentInfo_TimeOut
+com.atguigu.springcloud.service.PaymentHystrixService -> com.atguigu.springcloud.service.PaymentHystrixService:
+    java.lang.String paymentInfo_OK(java.lang.Integer) -> paymentInfo_OK
+    java.lang.String paymentInfo_TimeOut(java.lang.Integer) -> paymentInfo_TimeOut
+com.atguigu.springcloud.service.Penguin -> com.atguigu.springcloud.service.Penguin:
+    int volume -> volume
+    1213:1214:void <init>() -> <init>
+    1225:1228:void main(java.lang.String[]) -> main
+    1213:1213:int access$000(com.atguigu.springcloud.service.Penguin) -> access$000
+com.atguigu.springcloud.service.Penguin$1 -> com.atguigu.springcloud.service.Penguin$1:
+com.atguigu.springcloud.service.Penguin$Chick -> com.atguigu.springcloud.service.Penguin$Chick:
+    int volume -> volume
+    com.atguigu.springcloud.service.Penguin this$0 -> this$0
+    1215:1217:void <init>(com.atguigu.springcloud.service.Penguin) -> <init>
+    1219:1221:void chick() -> chick
+    1215:1215:void <init>(com.atguigu.springcloud.service.Penguin,com.atguigu.springcloud.service.Penguin$1) -> <init>
+com.atguigu.springcloud.service.Performance -> com.atguigu.springcloud.service.Performance:
+    270:270:void <init>() -> <init>
+    273:273:void canCall() -> canCall
+    274:274:int walk() -> walk
+    275:275:int talk() -> talk
+    282:282:int talk(java.lang.String[]) -> talk
+    285:288:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Pidgin -> com.atguigu.springcloud.service.Pidgin:
+    2572:2572:void <init>() -> <init>
+    2574:2587:void copyPidgin(java.io.File,java.io.File) -> copyPidgin
+com.atguigu.springcloud.service.Planet -> com.atguigu.springcloud.service.Planet:
+    int gl -> gl
+    int ng -> ng
+    117:119:void <init>() -> <init>
+    121:121:int getG() -> getG
+    java.lang.String getName() -> getName
+    111:113:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Playground -> com.atguigu.springcloud.service.Playground:
+    com.atguigu.springcloud.service.Playground pgl -> pgl
+    int oa -> oa
+    char c -> c
+    int start -> start
+    int end -> end
+    int ok -> ok
+    int pint -> pint
+    int[][] zza -> zza
+    int[][] game -> game
+    java.lang.Object[] objgn -> objgn
+    java.lang.Object objgo -> objgo
+    4257:4257:void talk() -> talk
+    4261:4265:java.lang.Object live(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object) -> live
+    4270:4270:int go() -> go
+    4286:4308:void <init>() -> <init>
+    4310:4311:void callPint() -> callPint
+    4313:4334:void <init>(int) -> <init>
+    4336:4341:void fly(int) -> fly
+    4351:4352:java.lang.String runTest(boolean,boolean,java.lang.String[]) -> runTest
+    4362:4362:void testMe() -> testMe
+    4364:4364:void voidMethod() -> voidMethod
+    4367:4791:void main(java.lang.String[]) -> main
+    4369:4369:void lambda$main$1(java.lang.Integer) -> lambda$main$1
+    4368:4368:boolean lambda$main$0(java.lang.Integer) -> lambda$main$0
+    4282:4359:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Playground$1Invoice -> com.atguigu.springcloud.service.Playground$1Invoice:
+    4371:4371:void <init>() -> <init>
+    4372:4372:void print() -> print
+com.atguigu.springcloud.service.Playground$play -> com.atguigu.springcloud.service.Playground$play:
+com.atguigu.springcloud.service.PolarBear -> com.atguigu.springcloud.service.PolarBear:
+    373:374:void <init>() -> <init>
+    376:381:int grunt() -> grunt
+    385:396:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.PrimeReader -> com.atguigu.springcloud.service.PrimeReader:
+    2531:2531:void <init>() -> <init>
+    2545:2568:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.PrintCompany -> com.atguigu.springcloud.service.PrintCompany:
+    2381:2381:void <init>() -> <init>
+    2407:2434:void printHeadlines() -> printHeadlines
+    2436:2438:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.PrintCompany$Printer -> com.atguigu.springcloud.service.PrintCompany$Printer:
+    int ak -> ak
+    java.lang.String instanceName -> instanceName
+    com.atguigu.springcloud.service.PrintCompany this$0 -> this$0
+    2384:2394:void <init>(com.atguigu.springcloud.service.PrintCompany,java.lang.String) -> <init>
+    2396:2397:void print() -> print
+    2400:2401:void close() -> close
+com.atguigu.springcloud.service.PrintNegative -> com.atguigu.springcloud.service.PrintNegative:
+    4816:4816:void <init>() -> <init>
+    4818:4821:void main(java.lang.String[]) -> main
+    4823:4826:void print(java.util.List,java.util.function.Predicate) -> print
+    4820:4820:boolean lambda$main$0(java.lang.Integer) -> lambda$main$0
+com.atguigu.springcloud.service.Proposition -> com.atguigu.springcloud.service.Proposition:
+    com.atguigu.springcloud.service.Proposition TRUE -> TRUE
+    com.atguigu.springcloud.service.Proposition FALSE -> FALSE
+    com.atguigu.springcloud.service.Proposition UNKNOWN -> UNKNOWN
+    int value -> value
+    com.atguigu.springcloud.service.Proposition[] $VALUES -> $VALUES
+    1257:1257:com.atguigu.springcloud.service.Proposition[] values() -> values
+    1257:1257:com.atguigu.springcloud.service.Proposition valueOf(java.lang.String) -> valueOf
+    1274:1274:void method() -> method
+    1279:1283:void <init>(java.lang.String,int,int) -> <init>
+    1285:1285:int getValue() -> getValue
+    java.lang.String getNickName() -> getNickName
+    1290:1303:void main(java.lang.String[]) -> main
+    1257:1257:void <init>(java.lang.String,int,int,com.atguigu.springcloud.service.Proposition$1) -> <init>
+    1257:1265:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Proposition$1 -> com.atguigu.springcloud.service.Proposition$1:
+    1258:1258:void <init>(java.lang.String,int,int) -> <init>
+    1260:1260:java.lang.String getNickName() -> getNickName
+com.atguigu.springcloud.service.Proposition$2 -> com.atguigu.springcloud.service.Proposition$2:
+    1262:1262:void <init>(java.lang.String,int,int) -> <init>
+    1263:1263:java.lang.String getNickName() -> getNickName
+com.atguigu.springcloud.service.Proposition$3 -> com.atguigu.springcloud.service.Proposition$3:
+    1265:1265:void <init>(java.lang.String,int,int) -> <init>
+    1267:1267:java.lang.String getNickName() -> getNickName
+    1270:1270:int getValue() -> getValue
+com.atguigu.springcloud.service.ProviderAnim -> com.atguigu.springcloud.service.ProviderAnim:
+    com.atguigu.springcloud.service.EnumAnimal c -> c
+    956:957:void <init>() -> <init>
+    958:958:void callg() -> callg
+    void kok() -> kok
+com.atguigu.springcloud.service.Race -> com.atguigu.springcloud.service.Race:
+    java.util.concurrent.ExecutorService service -> service
+    3394:3394:void <init>() -> <init>
+    3398:3401:int sleep(java.lang.String) -> sleep
+    3405:3422:void hare() -> hare
+    3425:3442:void tortoise() -> tortoise
+    3468:3478:void main(java.lang.String[]) -> main
+    3469:3469:void lambda$main$3() -> lambda$main$3
+    3468:3468:void lambda$main$2() -> lambda$main$2
+    3425:3425:java.lang.Object lambda$tortoise$1() -> lambda$tortoise$1
+    3405:3405:java.lang.Object lambda$hare$0() -> lambda$hare$0
+    3395:3395:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.RainForest -> com.atguigu.springcloud.service.RainForest:
+    com.atguigu.springcloud.service.RainForest sc -> sc
+    4160:4161:void <init>() -> <init>
+    4164:4166:void <init>(int) -> <init>
+    4169:4169:com.atguigu.springcloud.service.RainForest asv() -> asv
+    4171:4171:void $___() -> $___
+    4174:4180:void <init>(long) -> <init>
+    4184:4199:void main(java.lang.String[]) -> main
+    4167:4167:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Ready -> com.atguigu.springcloud.service.Ready:
+    int first -> first
+    short DEFAULT_VALUE -> DEFAULT_VALUE
+    com.atguigu.springcloud.service.Ready re -> re
+    com.atguigu.springcloud.service.Ready$GetSet go -> go
+    int schCount -> schCount
+    java.util.concurrent.ScheduledExecutorService executor -> executor
+    1344:1358:void <init>() -> <init>
+    1361:1363:reactor.core.publisher.Mono flux1() -> flux1
+    1366:1368:reactor.core.publisher.Mono flux2() -> flux2
+    1371:1375:reactor.core.publisher.Mono flux3() -> flux3
+    1379:1382:reactor.core.publisher.ParallelFlux doSomething() -> doSomething
+    1389:1428:void main(java.lang.String[]) -> main
+    1432:1446:void scheduleTask(java.lang.String) -> scheduleTask
+    1392:1394:void lambda$main$1(java.util.List,java.lang.Object) -> lambda$main$1
+    1384:1384:java.lang.Object lambda$doSomething$0(java.lang.Object) -> lambda$doSomething$0
+    1345:1429:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Ready$1 -> com.atguigu.springcloud.service.Ready$1:
+    java.lang.String val$str -> val$str
+    1432:1432:void <init>(java.lang.String) -> <init>
+    1434:1440:void run() -> run
+com.atguigu.springcloud.service.Ready$GetSet -> com.atguigu.springcloud.service.Ready$GetSet:
+    int firsta -> firsta
+    int second -> second
+    1348:1349:void <init>() -> <init>
+    1355:1356:void gof() -> gof
+    1348:1348:void <init>(com.atguigu.springcloud.service.Ready$1) -> <init>
+    1352:1352:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Rectangle -> com.atguigu.springcloud.service.Rectangle:
+    213:213:void <init>() -> <init>
+    214:214:int getEqualSides() -> getEqualSides
+com.atguigu.springcloud.service.Reptiles -> com.atguigu.springcloud.service.Reptiles:
+    3853:3853:void <init>() -> <init>
+    3859:3859:java.lang.Object live(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object) -> live
+    3864:3864:int go() -> go
+com.atguigu.springcloud.service.Rewriter -> com.atguigu.springcloud.service.Rewriter:
+    2994:2994:void <init>() -> <init>
+    2996:3005:void copy(java.nio.file.Path,java.nio.file.Path) -> copy
+    3007:3009:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Riddle -> com.atguigu.springcloud.service.Riddle:
+    3498:3498:void <init>() -> <init>
+    3499:3499:void sleep() -> sleep
+    3501:3515:java.lang.String getQuestion(com.atguigu.springcloud.service.Riddle) -> getQuestion
+    3518:3533:java.lang.String getAnswer(com.atguigu.springcloud.service.Riddle) -> getAnswer
+    3551:3567:void main(java.lang.String[]) -> main
+    3555:3555:java.lang.String lambda$main$1(com.atguigu.springcloud.service.Riddle,com.atguigu.springcloud.service.Riddle) -> lambda$main$1
+    3554:3554:java.lang.String lambda$main$0(com.atguigu.springcloud.service.Riddle,com.atguigu.springcloud.service.Riddle) -> lambda$main$0
+com.atguigu.springcloud.service.Roster -> com.atguigu.springcloud.service.Roster:
+    2517:2517:void <init>() -> <init>
+    2520:2525:void printRoster(java.nio.file.Path) -> printRoster
+    2527:2528:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Rotorcraft -> com.atguigu.springcloud.service.Rotorcraft:
+    int height -> height
+    227:228:void <init>() -> <init>
+    229:229:java.lang.Number talk() -> talk
+    230:230:java.lang.Number see() -> see
+    int fly() -> fly
+com.atguigu.springcloud.service.Scientist -> com.atguigu.springcloud.service.Scientist:
+    1321:1321:void <init>() -> <init>
+    1324:1340:void main(java.lang.String[]) -> main
+    1331:1331:int lambda$main$0(java.lang.String,int) -> lambda$main$0
+com.atguigu.springcloud.service.Scientist$1 -> com.atguigu.springcloud.service.Scientist$1:
+    1324:1324:void <init>() -> <init>
+com.atguigu.springcloud.service.Scientist$2 -> com.atguigu.springcloud.service.Scientist$2:
+    1325:1325:void <init>() -> <init>
+    1328:1328:int learn(java.lang.String,int) -> learn
+com.atguigu.springcloud.service.Scientist$3 -> com.atguigu.springcloud.service.Scientist$3:
+    1332:1332:void <init>() -> <init>
+    1335:1335:int learn(java.lang.String,int) -> learn
+com.atguigu.springcloud.service.SelectedJavaClassApi -> com.atguigu.springcloud.service.SelectedJavaClassApi:
+    603:603:void <init>() -> <init>
+    606:657:void main(java.lang.String[]) -> main
+    625:625:boolean lambda$main$3(java.lang.StringBuilder) -> lambda$main$3
+    624:624:boolean lambda$main$2(java.lang.StringBuilder) -> lambda$main$2
+    622:622:boolean lambda$main$1(java.lang.StringBuilder) -> lambda$main$1
+    620:620:boolean lambda$main$0(java.lang.StringBuilder) -> lambda$main$0
+com.atguigu.springcloud.service.Shoot -> com.atguigu.springcloud.service.Shoot:
+    659:659:void <init>() -> <init>
+    667:669:void prepare(double,com.atguigu.springcloud.service.Shoot$Target) -> prepare
+    672:879:void main(java.lang.String[]) -> main
+    716:716:boolean lambda$main$2(double) -> lambda$main$2
+    714:714:boolean lambda$main$1(java.lang.String) -> lambda$main$1
+    711:711:boolean lambda$main$0(java.lang.String) -> lambda$main$0
+com.atguigu.springcloud.service.Shoot$1 -> com.atguigu.springcloud.service.Shoot$1:
+    829:829:void <init>() -> <init>
+    832:832:int length() -> length
+    837:837:char charAt(int) -> charAt
+    842:842:java.lang.CharSequence subSequence(int,int) -> subSequence
+com.atguigu.springcloud.service.Shoot$Target -> com.atguigu.springcloud.service.Shoot$Target:
+    boolean needToAim(double) -> needToAim
+com.atguigu.springcloud.service.SingMonologue -> com.atguigu.springcloud.service.SingMonologue:
+    int walk() -> walk
+    265:265:int talk() -> talk
+com.atguigu.springcloud.service.Ski -> com.atguigu.springcloud.service.Ski:
+    int age -> age
+    int[] arri -> arri
+    4210:4212:void <init>() -> <init>
+    4214:4215:java.lang.Integer play(int) -> play
+    4221:4222:java.lang.Long play(int,int) -> play
+    4226:4235:void slalom(com.atguigu.springcloud.service.Ski,int[],java.lang.String,int[]) -> slalom
+    4238:4249:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Smoke -> com.atguigu.springcloud.service.Smoke:
+    2444:2444:void <init>() -> <init>
+    2446:2467:void sendAlert(java.io.File) -> sendAlert
+    2472:2514:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Sneaker -> com.atguigu.springcloud.service.Sneaker:
+    2959:2959:void <init>() -> <init>
+    2961:2969:void setupInventory(java.nio.file.Path) -> setupInventory
+    2972:2976:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Snoopy -> com.atguigu.springcloud.service.Snoopy:
+    1549:1549:void <init>() -> <init>
+    1559:1587:void main(java.lang.String[]) -> main
+    1583:1583:void lambda$main$1(com.atguigu.springcloud.service.Snoopy) -> lambda$main$1
+    1563:1570:void lambda$main$0() -> lambda$main$0
+com.atguigu.springcloud.service.SnoopyClass -> com.atguigu.springcloud.service.SnoopyClass:
+    1532:1532:void <init>() -> <init>
+    1534:1535:void draw(com.atguigu.springcloud.service.Snoopy) -> draw
+    1532:1532:void draw(java.lang.Object) -> draw
+com.atguigu.springcloud.service.SoccerBall -> com.atguigu.springcloud.service.SoccerBall:
+    196:197:void <init>() -> <init>
+    200:200:com.atguigu.springcloud.service.Ball get() -> get
+    204:206:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.SpeakDialogue -> com.atguigu.springcloud.service.SpeakDialogue:
+    int h -> h
+    259:259:void canCall() -> canCall
+    int walk() -> walk
+    261:261:int talk() -> talk
+com.atguigu.springcloud.service.Sphere -> com.atguigu.springcloud.service.Sphere:
+    int a -> a
+    100:100:void fly() -> fly
+    void flyHigh() -> flyHigh
+    102:102:java.lang.String getName() -> getName
+    103:103:java.lang.String getName1() -> getName1
+com.atguigu.springcloud.service.Square -> com.atguigu.springcloud.service.Square:
+    216:216:void <init>() -> <init>
+    221:223:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Stranger -> com.atguigu.springcloud.service.Stranger:
+    492:492:void <init>() -> <init>
+    495:504:java.lang.String getFullName(java.lang.String,java.lang.String) -> getFullName
+    507:514:java.lang.String testStringRe() -> testStringRe
+    518:523:void getName(java.lang.String,java.lang.String) -> getName
+    530:539:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.StringTest -> com.atguigu.springcloud.service.StringTest:
+    java.lang.String str_const -> str_const
+    5049:5049:void <init>() -> <init>
+    5052:5114:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Study -> com.atguigu.springcloud.service.Study:
+    int learn(java.lang.String,int) -> learn
+com.atguigu.springcloud.service.Surgeon -> com.atguigu.springcloud.service.Surgeon:
+    3013:3013:void <init>() -> <init>
+    3015:3029:void updateFileAttribute(java.nio.file.Path,java.nio.file.Path) -> updateFileAttribute
+    3031:3047:java.nio.file.Path rebuild(java.nio.file.Path) -> rebuild
+    3050:3071:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.TestJDBC -> com.atguigu.springcloud.service.TestJDBC:
+    72:72:void <init>() -> <init>
+    76:89:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.TestOverride -> com.atguigu.springcloud.service.TestOverride:
+    1758:1758:void <init>() -> <init>
+    1760:1761:void doCalc(byte[]) -> doCalc
+    1763:1764:void doCalc(long,long) -> doCalc
+    1766:1767:void doCalc(java.lang.Byte,int) -> doCalc
+    1769:1770:void doCalc(short,int) -> doCalc
+    1775:1788:void main(java.lang.String[]) -> main
+    1792:1808:void getData(java.lang.String,java.lang.String) -> getData
+    1812:1824:org.apache.http.impl.client.CloseableHttpClient createHttpClientForAPI() -> createHttpClientForAPI
+com.atguigu.springcloud.service.TestService -> com.atguigu.springcloud.service.TestService:
+    int ji -> ji
+    int jie -> jie
+    char x1 -> x1
+    char x -> x
+    int z -> z
+    char c -> c
+    org.springframework.web.client.RestTemplate restTemplate -> restTemplate
+    4834:4834:java.lang.Object[][] getContents() -> getContents
+    4848:4862:void <init>() -> <init>
+    4957:4978:java.lang.Object genericInvokeMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> genericInvokeMethod
+    4985:5021:void main(java.lang.String[]) -> main
+    5030:5046:void startTest() -> startTest
+    4998:4999:void lambda$main$0(java.lang.Object) -> lambda$main$0
+    4842:4870:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.TestService$Orca -> com.atguigu.springcloud.service.TestService$Orca:
+    int depth -> depth
+    int $aint -> $aint
+    java.util.ArrayList lal -> lal
+    com.atguigu.springcloud.service.TestService this$0 -> this$0
+    4871:4876:void <init>(com.atguigu.springcloud.service.TestService) -> <init>
+    4881:4882:void ne() -> ne
+    4887:4952:void dive() -> dive
+com.atguigu.springcloud.service.TestService$Whale -> com.atguigu.springcloud.service.TestService$Whale:
+    int height -> height
+    int weight -> weight
+    com.atguigu.springcloud.service.TestService this$0 -> this$0
+    4863:4865:void <init>(com.atguigu.springcloud.service.TestService) -> <init>
+    void dive() -> dive
+    void ne() -> ne
+com.atguigu.springcloud.service.TicketTaker -> com.atguigu.springcloud.service.TicketTaker:
+    int AT_CAPACITY -> AT_CAPACITY
+    1843:1843:void <init>() -> <init>
+    1846:1847:void checkPrices(java.util.List,java.util.function.Consumer) -> checkPrices
+    1875:1875:int takeTicket(int,java.util.function.IntUnaryOperator) -> takeTicket
+    1880:1918:void main(java.lang.String[]) -> main
+    1892:1895:int lambda$main$1(int) -> lambda$main$1
+    1883:1887:void lambda$main$0(java.lang.Double) -> lambda$main$0
+    1848:1848:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.TicketTakerConcurrency -> com.atguigu.springcloud.service.TicketTakerConcurrency:
+    long ticketsSold -> ticketsSold
+    java.util.concurrent.atomic.AtomicInteger ticketsTaken -> ticketsTaken
+    3079:3082:void <init>() -> <init>
+    3085:3116:void performJob() -> performJob
+    3118:3206:void main(java.lang.String[]) -> main
+    3209:3227:void submitReports() -> submitReports
+    3230:3251:void ExecutorsShutdownCompare() -> ExecutorsShutdownCompare
+    3218:3220:void lambda$submitReports$6() -> lambda$submitReports$6
+    3150:3150:boolean lambda$main$5(java.lang.Integer) -> lambda$main$5
+    3088:3105:void lambda$performJob$4(java.util.concurrent.CountDownLatch) -> lambda$performJob$4
+    3102:3104:void lambda$null$3(int) -> lambda$null$3
+    3097:3097:int lambda$null$2(int) -> lambda$null$2
+    3092:3095:void lambda$null$1(java.util.concurrent.CountDownLatch,int) -> lambda$null$1
+    3088:3088:int lambda$null$0(int) -> lambda$null$0
+com.atguigu.springcloud.service.TicketTakerConcurrency$1 -> com.atguigu.springcloud.service.TicketTakerConcurrency$1:
+    3210:3210:void <init>() -> <init>
+    3213:3214:java.lang.Integer call() -> call
+    3210:3210:java.lang.Object call() -> call
+com.atguigu.springcloud.service.TicketTakerConcurrency$2 -> com.atguigu.springcloud.service.TicketTakerConcurrency$2:
+    3231:3231:void <init>() -> <init>
+    3236:3241:void run() -> run
+com.atguigu.springcloud.service.Tool -> com.atguigu.springcloud.service.Tool:
+    905:905:void <init>() -> <init>
+    906:906:void use() -> use
+com.atguigu.springcloud.service.Twins -> com.atguigu.springcloud.service.Twins:
+    1243:1243:void <init>() -> <init>
+    1244:1244:void write() -> write
+    1247:1247:void publish() -> publish
+    1252:1253:void think() -> think
+com.atguigu.springcloud.service.Vacation -> com.atguigu.springcloud.service.Vacation:
+    int Integer -> Integer
+    int Integer_instance -> Integer_instance
+    961:961:void <init>() -> <init>
+    970:972:void enjoy() -> enjoy
+    1003:1118:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Vacation$1 -> com.atguigu.springcloud.service.Vacation$1:
+    int[] $SwitchMap$com$atguigu$springcloud$service$Vacation$DaysOff -> $SwitchMap$com$atguigu$springcloud$service$Vacation$DaysOff
+    1045:1045:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Vacation$1RaceCar -> com.atguigu.springcloud.service.Vacation$1RaceCar:
+    964:964:void <init>() -> <init>
+    967:968:void drive() -> drive
+com.atguigu.springcloud.service.Vacation$2RaceCar -> com.atguigu.springcloud.service.Vacation$2RaceCar:
+    1010:1020:void <init>() -> <init>
+    1016:1017:void drive() -> drive
+com.atguigu.springcloud.service.Vacation$DaysOff -> com.atguigu.springcloud.service.Vacation$DaysOff:
+    com.atguigu.springcloud.service.Vacation$DaysOff Thanksgiving -> Thanksgiving
+    com.atguigu.springcloud.service.Vacation$DaysOff PresidentsDay -> PresidentsDay
+    com.atguigu.springcloud.service.Vacation$DaysOff ValentinesDay -> ValentinesDay
+    com.atguigu.springcloud.service.Vacation$DaysOff[] $VALUES -> $VALUES
+    973:973:com.atguigu.springcloud.service.Vacation$DaysOff[] values() -> values
+    973:973:com.atguigu.springcloud.service.Vacation$DaysOff valueOf(java.lang.String) -> valueOf
+    991:993:void <init>(java.lang.String,int) -> <init>
+    void walk() -> walk
+    997:997:void drive() -> drive
+    973:973:void <init>(java.lang.String,int,com.atguigu.springcloud.service.Vacation$1) -> <init>
+    973:985:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Vacation$DaysOff$1 -> com.atguigu.springcloud.service.Vacation$DaysOff$1:
+    975:975:void <init>(java.lang.String,int) -> <init>
+    978:978:void walk() -> walk
+com.atguigu.springcloud.service.Vacation$DaysOff$2 -> com.atguigu.springcloud.service.Vacation$DaysOff$2:
+    980:980:void <init>(java.lang.String,int) -> <init>
+    983:983:void walk() -> walk
+com.atguigu.springcloud.service.Vacation$DaysOff$3 -> com.atguigu.springcloud.service.Vacation$DaysOff$3:
+    985:985:void <init>(java.lang.String,int) -> <init>
+    988:988:void walk() -> walk
+com.atguigu.springcloud.service.Valve -> com.atguigu.springcloud.service.Valve:
+    int chambers -> chambers
+    java.lang.Double size -> size
+    java.lang.String color -> color
+    2593:2620:void <init>() -> <init>
+    2601:2617:void main(java.lang.String[]) -> main
+    2595:2595:void <clinit>() -> <clinit>
+com.atguigu.springcloud.service.Wash -> com.atguigu.springcloud.service.Wash:
+    java.lang.Object item -> item
+    1542:1542:void <init>() -> <init>
+    1546:1547:void clean(java.lang.Object) -> clean
+com.atguigu.springcloud.service.Washx -> com.atguigu.springcloud.service.Washx:
+    java.util.Collection item -> item
+    1732:1732:void <init>() -> <init>
+    1735:1736:void clean(java.util.Collection) -> clean
+com.atguigu.springcloud.service.Week -> com.atguigu.springcloud.service.Week:
+    java.lang.String monday -> monday
+    java.lang.String tuesday -> tuesday
+    int wednesday -> wednesday
+    int thursday -> thursday
+    1449:1453:void <init>() -> <init>
+com.atguigu.springcloud.service.WhaleSharkException -> com.atguigu.springcloud.service.WhaleSharkException:
+    2359:2360:void <init>() -> <init>
+    2362:2363:void <init>(java.lang.String) -> <init>
+    2364:2366:void <init>(java.lang.Exception) -> <init>
+    2368:2370:void <init>(java.lang.Exception,java.lang.String) -> <init>
+com.atguigu.springcloud.service.Wolf -> com.atguigu.springcloud.service.Wolf:
+    333:333:void <init>() -> <init>
+com.atguigu.springcloud.service.Woods -> com.atguigu.springcloud.service.Woods:
+    1182:1182:void <init>() -> <init>
+    1193:1208:void main(java.lang.String[]) -> main
+com.atguigu.springcloud.service.Woods$1 -> com.atguigu.springcloud.service.Woods$1:
+com.atguigu.springcloud.service.Woods$1Oak -> com.atguigu.springcloud.service.Woods$1Oak:
+    int val$water -> val$water
+    1196:1198:void <init>(int,int) -> <init>
+    1199:1201:void <init>(int) -> <init>
+    1204:1204:int getWater() -> getWater
+com.atguigu.springcloud.service.Woods$Tree -> com.atguigu.springcloud.service.Woods$Tree:
+    1185:1187:void <init>(int) -> <init>
+    1188:1190:void <init>() -> <init>
+    1183:1183:void <init>(com.atguigu.springcloud.service.Woods$1) -> <init>
+com.atguigu.springcloud.service.Zoologist -> com.atguigu.springcloud.service.Zoologist:
+    com.atguigu.springcloud.service.Canine animal -> animal
+    335:335:void <init>() -> <init>
+    338:343:void setAnimal(com.atguigu.springcloud.service.Dog) -> setAnimal
+    346:346:void calc(long) -> calc
+    348:349:void calcc(int) -> calcc
+    353:357:void main(java.lang.String[]) -> main

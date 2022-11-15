@@ -2,10 +2,22 @@ package com.atguigu.springcloud.service;
 
 import cn.hutool.json.JSONException;
 import cn.hutool.json.JSONObject;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.SneakyThrows;
+import org.apache.commons.lang.StringUtils;
 import org.apache.http.annotation.Contract;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.cglib.core.Local;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -13,7 +25,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 //import sun.misc.SharedSecrets;
-import sun.util.resources.LocaleData;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.core.publisher.ParallelFlux;
+//import sun.util.resources.LocaleData;
 
 import javax.annotation.Resource;
 import javax.el.MethodNotFoundException;
@@ -28,6 +43,7 @@ import java.net.URI;
 import java.nio.file.*;
 import java.nio.file.attribute.*;
 import java.sql.*;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
@@ -40,6 +56,7 @@ import java.util.*;
 import java.util.Date;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.LockSupport;
 import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -115,7 +132,7 @@ class Mars extends Planet implements Sphere{
 
     }
     @Override
-    public synchronized int getG() throws Error{
+    public synchronized int getG() throws RuntimeException{
         synchronized(this){
             return gl;
             //return 1;//cannot have 2 return in one function-> unreachable statement
@@ -652,6 +669,17 @@ class Shoot {
     }
     public static void main(String[] args) {
 
+        String[][] naf= new String[5][2];
+        naf[0] = new String[5];
+        naf[1] = new String[15];//its valid even if declared array has only 2 in 2nd dimension
+        naf[1][14]="ok";
+        //naf[1][15]="ok";//runtimeException
+        //naf[10] = new String[10];
+        System.out.println("passed string array:"+Arrays.toString(naf));
+        for (String[] strings : naf) {
+            System.out.println("passed string inner array:"+Arrays.toString(strings));
+        }
+
 
         List li= new ArrayList();
         List li2= new ArrayList<Integer>();
@@ -712,6 +740,7 @@ class Shoot {
 
 
         LocalDate newYears = LocalDate.of(2017, 1, 1);
+        //newYears.plusMonths()//will return new LocalDate
         //note LocalDate is immutable, no setter method like setYear(), etc.
         java.time.LocalDateTime newYearst = java.time.LocalDateTime.of(2017, 1, 1,0,0,0);
         java.time.LocalDateTime newYearst1 = java.time.LocalDateTime.of(2017, 1, 1,1,0,0);
@@ -738,6 +767,8 @@ class Shoot {
         //[java.time.temporal.UnsupportedTemporalTypeException: Unsupported field: ClockHourOfAmPm]
         System.out.println(formatDateTime.format(newYearst.minus(duration)));
 
+//        System.out.println("new Date() => "+new Date());//Sat Aug 13 21:02:52 SGT 2022
+        System.out.println("LocalDate.now() => "+java.time.LocalDateTime.now());//2022-08-13T21:05:11.766
         SimpleDateFormat sdf =new SimpleDateFormat("MM-dd-yyyy");
         System.out.println("SimpleDateFormat=> "+sdf.format(new Date()));
 //        for (Locale availableLocale : Locale.getAvailableLocales()) {
@@ -920,11 +951,12 @@ class House extends Building{
         public String makeNoise() { return "WOOF!"; }
     };
 
-     abstract String makeNoise();
+    abstract String makeNoise();
 }
 abstract class ProviderAnim {
     protected EnumAnimal c = EnumAnimal.CAT;
     static void callg(){}
+     abstract void kok();
 }
 class Vacation {
     //enum is default static
@@ -938,7 +970,7 @@ class Vacation {
         final RaceCar raceCar = new RaceCar();
         raceCar.drive();
     }
-    private static  enum  DaysOff  {//enum cannot be abstract
+    private static  enum  DaysOff implements Serializable {//enum cannot be abstract
 
         Thanksgiving{
             public void walk(){
@@ -1056,10 +1088,16 @@ class Vacation {
 
         String fnals ="a";
         switch(fnals) {//switch if without break, even value not match it will also execute
-            default: System.out.println("fnals default"); break;
-            case "b": System.out.println("fnals b"); break;
+            default:
+                int gg=10;
+                System.out.println("fnals default");
+                break;
+            case "b":
+                gg=100;
+                System.out.println("fnals b"+gg); break;
             case "c": System.out.println("fnals c"); break;
         }
+
         //while(1==1);
         System.out.println("All comparison with NaN returns false ======>");
         System.out.println(10>Float.NaN);
@@ -1068,10 +1106,12 @@ class Vacation {
         System.out.println(10==Float.NaN);
         System.out.println(Float.NaN==Float.NaN);
 
+
         System.out.println("divide by 0 with floating point ======>");
         System.out.println(10.0/0);//Infinity
         //System.out.println(0/0);//java.lang.ArithmeticException: / by zero
         System.out.println(0/0.0);//NaN
+        System.out.println(0/0.1);//0.0
         System.out.println(Float.POSITIVE_INFINITY/Float.POSITIVE_INFINITY);//NaN
         System.out.println(Float.POSITIVE_INFINITY/0);//Infinity
         System.out.println(Float.POSITIVE_INFINITY/1);//Infinity
@@ -1101,6 +1141,8 @@ class Matrix {
         new Matrix.VC();
         Matrix.Deep.Deeper simulation = new Matrix().new Deep().new Deeper();
         simulation.printReality();
+
+
 
         class RaceCar  {
             public String makeNoise() {
@@ -1138,11 +1180,25 @@ class Bottle {
 
 //inner class effectively final access
  class Woods {
-    static class Tree {}
+    static class Tree {
+
+        private Tree(int h){
+
+        }
+        private Tree(){
+
+        }
+    }
     public static void main(String[] leaves) {
         int water = 10+5;//effectively final
         final class Oak extends Tree { // p1
             //water=2;
+            private Oak(int j){
+                //super(j);
+            }
+            public Oak(){
+                //super(j);
+            }
             public int getWater() {
                // water=2;//variable accessed from inner class must be final/effectively final
                 return water; // p2
@@ -1175,9 +1231,9 @@ class Bottle {
 
 //override interface static method
 interface Alex {
-    default void write() {}
-    static void publish() {}
-    void think();
+    public default void write() {}
+    public static void publish() {}
+    public abstract void think();
 }
 interface Michael {
     public default  void write() {}
@@ -1300,7 +1356,47 @@ class Ready {
         }
     }
     private GetSet go = new GetSet();
-    public static void main(String[] begin) {
+
+    public static Mono<Object> flux1() throws InterruptedException {
+        Thread.sleep(3000);
+        System.out.println("flux1:");
+        return Mono.just(1);
+    }
+    public static Mono<Object> flux2() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println("flux2:");
+        return Mono.just(2);
+    }
+    public static Mono<Object> flux3() throws InterruptedException {
+        Thread.sleep(1000);
+
+        int f=1/0;
+        System.out.println("flux3:");
+        return Mono.just(3);
+    }
+
+    private static ParallelFlux<Object> doSomething() throws InterruptedException {
+        int i = Runtime.getRuntime().availableProcessors();
+        System.out.println("processor :"+i);
+        return Flux.merge(flux1(), flux2(),flux3()).parallel(256)
+                .map(string -> {
+                    //System.out.println("dosomething string:"+string);
+                    return string;
+                });
+    }
+    public static void main(String[] begin) throws InterruptedException {
+
+        System.out.println(java.time.LocalDateTime.now());
+        List<Object> list = new ArrayList<>();
+        doSomething().subscribe(mono-> {
+            System.out.println("doOnComplete:"+mono);
+            list.add(mono);
+        });
+        System.out.println(java.time.LocalDateTime.now());
+        System.out.printf("final list: %s", list);
+        System.out.println("=================================================");
+        System.out.println("=================================================");
+
         Ready r = new Ready();
         //System.out.print(r.go.first);
         System.out.print(", "+r.go.second);
@@ -1593,12 +1689,13 @@ class ExtendingGenerics {
         System.out.println(values);
 
         StringBuilder sb = new StringBuilder();//.insert(sb.length(),"");sb.length();
-        sb.append("red");
+        sb.append("red");  sb.append(1);
         sb.deleteCharAt(0);
         System.out.println("deleteCharAt:"+sb);
         sb.delete(1, 9);
         System.out.println(sb);
 
+        String sbs = "javas";
 
 
         //1. extends
@@ -1674,6 +1771,9 @@ class TestOverride {
 
     public static void main (String[] args) {
 
+        //w7qqzdhap3uzz2303fq042x6g4u6ixbl&format=json
+        getData("w7qqzdhap3uzz2303fq042x6g4u6ixbl","json");
+
         long bignu=2147483647l;
         byte b = 5;
         int gb = b << 1;//10
@@ -1683,6 +1783,45 @@ class TestOverride {
         final Object exception = new RuntimeException();
         final Exception data = (Exception)exception;
         System.out.print(data);//java.lang.RuntimeException
+
+
+    }
+
+
+    public static void getData(String accesscode, String responseType) {
+        String url = String.format("https://api.morningstar.com/v2/service/mf/ihc0q5ju746sozz8/universeid/axdsds59kqg203nv?accesscode=w7qqzdhap3uzz2303fq042x6g4u6ixbl&format=json");
+        System.out.println(url);
+        HttpGet get = new HttpGet(url);
+
+        try (CloseableHttpClient client = createHttpClientForAPI();
+             CloseableHttpResponse response = client.execute(get)) {
+            int status = response.getStatusLine().getStatusCode();
+            String content = EntityUtils.toString(response.getEntity());
+            if (status == 200) {
+                System.out.println(content);
+            } else {
+                System.err.println(String.format("Call API failed, url:%s, status:%s, content:%s", url, status, content));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static CloseableHttpClient createHttpClientForAPI() {
+        // try once is enough
+        DefaultHttpRequestRetryHandler retryHandler = new DefaultHttpRequestRetryHandler(1, false);
+        // you may adjust these parameters based on your local environment after testing
+        RequestConfig config = RequestConfig.custom()
+                .setConnectionRequestTimeout(10000)
+                .setConnectTimeout(10000)
+                .setSocketTimeout(20000)
+                .build();
+        // usually you do not need to set request configuration, let it as default unless you encounter access problem
+        CloseableHttpClient client = HttpClients.custom()
+                .setDefaultRequestConfig(config)
+                .setRetryHandler(retryHandler)
+                .build();
+        return client;
     }
 }
 
@@ -1692,6 +1831,7 @@ class Asteroid {
 
     }
     public static void main(String[] debris) {
+
 
         new Asteroid().mine((s,p) -> s+p);
         Stream<Integer> numStream = Stream.of(10, 20, 30);
@@ -1780,12 +1920,44 @@ class Asteroid {
 
 //BiFunction param
 class Dance {
+
+    public class ConstantToken{
+        public static final String token = "123";
+    }
 public static Integer rest(BiFunction<Integer,Double,Integer> takeABreak) {
     return takeABreak.apply(3, 10.2);
 }
+
+public static Consumer<HashMap<String,String>> consumerChain(){
+    return map -> {
+
+        map.put("1","1v");
+        map.put("2","2v");
+
+    };
+}
+
 public static void main(String[] participants) {
 
+    HashMap<String,String> map = new HashMap<>();
+    map.put("4", "4v"); map.put("5", "5v");map.put("ALL", "allv");
+    Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+    while(iterator.hasNext()){
+        Map.Entry<String, String> next = iterator.next();
+        System.out.println("1=="+next.getKey());
 
+    }
+    iterator = map.entrySet().iterator();
+    while(iterator.hasNext()){
+        Map.Entry<String, String> next = iterator.next();
+        System.out.println("2=="+next.getKey());
+
+    }
+    Consumer<Map<String,String>> printConsumer = list -> list.forEach((k,v)->{
+        System.out.println(k+":k");
+        System.out.println(v+":v");
+    });
+    consumerChain().andThen(m->{m.put("3","3v");}).andThen(printConsumer).accept(map);
     //rest((Integer n, Double e) -> (int)(n+e));
     //rest((n,w) -> (int)(n+w));
     //rest((s,w) -> (int)(2*w));
@@ -1795,7 +1967,13 @@ public static void main(String[] participants) {
 }
 
 //DoubleToIntFunction
+@JsonInclude(JsonInclude.Include.ALWAYS)
  class Bank {
+
+    @JsonProperty("name")
+    private String name;
+
+    @JsonProperty("savingsInCents")
     private int savingsInCents;
     private static class ConvertToCents {
 
@@ -1803,7 +1981,31 @@ public static void main(String[] participants) {
         static DoubleToIntFunction f = p -> (int)(p*100);
         static DoubleFunction ff=p->{gg+=1;  return p*gg;};
     }
-    public static void main(String... currency) {
+    public static long secondsAgo(java.util.Date datetime) {
+        System.out.println("secondsAgo:"+datetime);
+        Calendar date = Calendar.getInstance();
+        date.setTime(datetime); // Parse into Date object
+        Calendar now = Calendar.getInstance(); // Get time now
+        long differenceInMillis = now.getTimeInMillis() - date.getTimeInMillis();
+        long differenceInSeconds = (differenceInMillis) / 1000L; // Divide by millis/sec, secs/min, mins/hr
+        return differenceInSeconds;
+    }
+    public static void main(String... currency) throws ParseException {
+
+        Date thedate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).parse("2022-08-21 22:00:00");
+        //java.util.Date dt = new Date("2022-08-21T22:00:00");
+        System.out.println(secondsAgo(thedate));
+
+        Map<String,Object> map = new HashMap<String,Object>(){{put("student","1");}};
+
+        Bank b = new Bank();
+        ObjectMapper mapper = new ObjectMapper();
+        Map<String,Object> map1 = mapper.convertValue(b, Map.class);
+        map.putAll(map1);
+        System.out.println(map);System.out.println(map1);
+
+
+        System.out.println(Dance.ConstantToken.token);
         Bank creditUnion = new Bank();
         creditUnion.savingsInCents = 100;
         double deposit = 1.5;
@@ -1839,6 +2041,11 @@ public static void main(String[] participants) {
         DogSearch search = new DogSearch();
         List<String> names = new ArrayList<>();
         names.add("Lassie"); names.add("Benji"); names.add("Brian");
+        Object objarr=(Object)names;
+
+        names = (ArrayList<String>)objarr;
+        System.out.println(names.size()+" array");
+
         MAX_LENGTH += names.size();
         //search.reduceList(names, d -> d.length()>MAX_LENGTH);
         search.reduceList(names, d -> d.length()>5);
@@ -1873,6 +2080,7 @@ public static void main(String[] participants) {
 
         //3. Optional ofNullable
         Optional<String> optnullable = Optional.ofNullable(null);
+
         //if u pass null to ofNullable then underneath it create an empty Optional[new Optional<T>();]
         //empty optional isPresent is false
         // return value == null ? empty() : of(value);
@@ -1982,6 +2190,7 @@ public static void main(String[] participants) {
         System.out.println("\n ====== merge multiple collections via stream start =====");
         Set<String> sets = new HashSet<>(); sets.add("tire-");
         List<String> lists = new LinkedList<>();
+
         Deque<String> queues = new ArrayDeque<>();
         queues.push("wheel-");
         Stream.of(sets, lists, queues)
@@ -3622,6 +3831,7 @@ interface Organism{//interface var is implicitly public static final
 //        initialization block not allow in interface
 //    }
 
+    void talk();
 
     default void open(){
 
@@ -3637,6 +3847,21 @@ interface Organism{//interface var is implicitly public static final
         //interface can have static method=> static method must got body
         //
         System.out.println("Organism see see");
+    }
+}
+
+abstract class Reptiles implements Organism{
+
+    //public abstract void talk();
+
+    @Override
+    public <T, K, V, B> T live(T obj, K k, V v, B a) {
+        return null;
+    }
+
+    @Override
+    public int go() {
+        return 0;
     }
 }
 
@@ -3871,7 +4096,7 @@ class ChooseWisely extends ChooseParent{
 
         System.out.print(new ChooseWisely(1).choose(((long)2)+1));
         System.out.print(new ChooseWisely(2).choose(2+1));//default int
-        System.out.print(new ChooseWisely(3).choose((byte)2));
+        System.out.print(new ChooseWisely(3).choose(((byte)2)));
         if(2==2)
         if(1==2)
         if(2==2)
@@ -4027,6 +4252,11 @@ class Playground extends Animal implements Organism {
 
 
     @Override
+    public void talk() {
+
+    }
+
+    @Override
     public <T,K,V,A> T live(T obj,K k,V v,A a) {
         System.out.println("living obj:"+obj);
         System.out.println("living k:"+k);
@@ -4133,11 +4363,26 @@ class Playground extends Animal implements Organism {
     }
     public static void voidMethod(){}//<K,V>
     public static void main(String... args) {
+
+        Stream < Integer > numsa = Stream.of(1, 2, 3, 4, 5);
+        Stream<Integer> integerStream = numsa.filter(n -> n % 2 == 1);//stream can only be consumed once
+        integerStream.forEach(p -> System.out.println("===okok>>>>"+p));
+
+        class Invoice {
+            void print() {System.out.println("Invoice Printed");}
+        }
+        int a12 = 2;
+        boolean a12b = false;
+        a12b = a12++ == 2 || --a12 == 2 && --a12 == 2;//&& has higher precedence over || , postfix higher than prefix => short circuit
+        System.out.println("a12b => "+a12b);//true
+
+        //Playground ps = new Fish();
         //args[0]="";
         //System.out.println("args[0]"+args[0]);//java.lang.ArrayIndexOutOfBoundsException
         //System.out.println("args[1]"+args[1]);
         int[] nums[] = new int[][] { { 0, 0 } };
         int[] nums2[][] = new int[2][][];
+        int[] num1 = (int[])nums[0];
         nums2= new int[][][] {};
 
         int[] nums3 = new int[2];
@@ -4238,7 +4483,7 @@ class Playground extends Animal implements Organism {
         //game[3][3] = 6;
         //game[3]="";
         Object[] obj = game;//legal but dangerous
-        obj[3] = "X";//ArrayStoreException
+        //obj[3] = "X";//ArrayStoreException
         eachl:for (Object oj: obj) {
             System.out.println("test arr -->>> game:"+Arrays.toString((int[])oj));
         }
@@ -4285,7 +4530,23 @@ class Playground extends Animal implements Organism {
         //var stvar=1;//var available in java 10 onwards
         //System.out.println(" stvar :"+stvar);
 
-        short colorOfRainbow=10;
+        float hj=12;
+        //float hj1=1.2;//provided double, *** floating point default is double
+
+
+        //test num switch
+        int num = 0;
+        switch (num) {
+            default:
+                System.out.println("num switch default");
+            case 0:
+                System.out.println("num switch case 0");
+            case 1:
+                System.out.println("num switch case 1");
+                break;
+        }
+
+        short colorOfRainbow=3;
         final int red = 5;//must be constant
         switch(colorOfRainbow){
             //System.out.println("ok");
@@ -4297,6 +4558,8 @@ class Playground extends Animal implements Organism {
                 //break;
 //            case 2147483647://must be covariant type of colorOfRainbow
 //                System.out.print("2147483647");
+            case 10/3:
+                System.out.print("colorOfRainbow 10/3");
             case red://must be constant
                 System.out.print("Away");
         };
@@ -4310,9 +4573,15 @@ class Playground extends Animal implements Organism {
                 System.out.println("aswi:"+aswi);
                 //break;
             case 'A':
-                System.out.println('A');
+                System.out.println("char 65 -> A");
                 break;
         }
+
+//        boolean nn=true;//now allowed //enum only allowed after java 6, String only allowed after java 7
+//        switch (nn){
+//
+//        }
+
 
 
         //test switch case
@@ -4578,6 +4847,9 @@ public class TestService  extends ListResourceBundle{//_US
 //    }
     public TestService(){
 
+        double n = new Double(1.2);
+        boolean bb= new Boolean(true);
+        Boolean nb = true;
         jie=10;
         //ji=10;
         //Playground playground = new Playground(10);

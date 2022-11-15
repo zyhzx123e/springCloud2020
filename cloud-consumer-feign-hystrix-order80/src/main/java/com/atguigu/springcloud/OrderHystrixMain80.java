@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.ClassUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +17,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.lang.ref.WeakReference;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.nio.file.Files;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+import java.sql.Driver;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -83,6 +90,29 @@ class MergeSort_QuickSort{
 
      public static void main(String[] args) {
          //deque();
+
+         HashMap<String, BigDecimal> firstMap = new HashMap<>();
+         firstMap.put("USD", new BigDecimal(11.22).setScale(2,BigDecimal.ROUND_HALF_EVEN));
+
+            //map 2
+         HashMap<String, BigDecimal> secondMap = new HashMap<>();
+         secondMap.put("SGD", new BigDecimal(100.45).setScale(2,BigDecimal.ROUND_HALF_EVEN)); //It will replace D with F
+         secondMap.put("USD", new BigDecimal(11.33).setScale(2,BigDecimal.ROUND_HALF_EVEN)); //A new pair to be added
+
+        //Merge maps
+         firstMap.forEach(
+                 (key, value) -> secondMap.merge(key, value, (v1, v2) -> v1.add(v2).setScale(2,BigDecimal.ROUND_HALF_EVEN))
+         );
+
+         System.out.println("secondMap:"+secondMap);
+
+         BigDecimal b1= BigDecimal.valueOf(0.003);
+         BigDecimal b2= BigDecimal.valueOf(0.307);
+         System.out.println(b1.add(b2).setScale(2, RoundingMode.CEILING));
+
+
+         BigDecimal bd = new BigDecimal(5000);
+         System.out.println(bd.setScale(2,BigDecimal.ROUND_UP));
 
          int mid_odd=0+(3-0)/2;//takes floor
          int mid_even=0+(4-0)/2;
@@ -281,7 +311,7 @@ class TreeNode {//bfs
     }
 
     ////DFS - bottom up recursive
-    static int maxDepth_DFS(TreeNode root){//BFS -> queue
+    static int maxDepth_DFS(TreeNode root){//DFS -> queue
         if(root==null)return 0;
         //Time complexity: O(n)
 
@@ -1200,6 +1230,16 @@ class LRUCacheDemo {
 
 
     public static void main(String[] args) {
+        Set<String> ad = new HashSet<String>() {{
+            add("a");
+            add("b");
+        }};
+        Set<String> bd =  new HashSet<String>() {{
+            add("a");
+        }};
+        ad.removeAll(bd);
+        System.out.println(ad);
+
         LRUCacheDemo lru=new LRUCacheDemo(3);
         lru.put(1,1);
         lru.put(2,2);
@@ -1770,7 +1810,6 @@ class User{
 @SpringBootApplication
 @EnableFeignClients
 @EnableHystrix
-@Slf4j
 public class OrderHystrixMain80
 {
 
@@ -2067,8 +2106,78 @@ public class OrderHystrixMain80
         return result;
     }
 
+    static Logger logger = LoggerFactory.getLogger(OrderHystrixMain80.class);
+
+    private static void loadInitialDrivers() {//SPI Load mechanism:
+        //https://pdai.tech/md/java/advanced/java-advanced-spi.html
+        /*
+        1.
+        在JDBC4.0之前，我们开发有连接数据库的时候，通常会用Class.forName("com.mysql.jdbc.Driver")这句先加载数据库相关的驱动，然后再进行获取连接等的操作。而JDBC4.0之后不需要用Class.forName("com.mysql.jdbc.Driver")来加载驱动，直接获取连接就可以了，现在这种方式就是使用了Java的SPI扩展机制来实现。# JDBC接口定义
+
+        2.
+        common-logging（也称Jakarta Commons Logging，缩写 JCL）是常用的日志库门面，具体日志库相关可以看这篇。我们看下它是怎么解耦的。
+
+        3.
+        spring META-INF/spring.factories
+
+        * */
+        String drivers;
+        try {
+            drivers = AccessController.doPrivileged(new PrivilegedAction<String>() {
+                public String run() {
+                    return System.getProperty("jdbc.drivers");
+                }
+            });
+        } catch (Exception ex) {
+            drivers = null;
+        }
+
+        AccessController.doPrivileged(new PrivilegedAction<Void>() {
+            public Void run() {
+                //使用SPI的ServiceLoader来加载接口的实现
+                ServiceLoader<Driver> loadedDrivers = ServiceLoader.load(Driver.class);
+                Iterator<Driver> driversIterator = loadedDrivers.iterator();
+                try{
+                    while(driversIterator.hasNext()) {
+                        driversIterator.next();
+                    }
+                } catch(Throwable t) {
+                    // Do nothing
+                }
+                return null;
+            }
+        });
+
+        System.out.println("DriverManager.initialize: jdbc.drivers = " + drivers);
+
+        if (drivers == null || drivers.equals("")) {
+            return;
+        }
+        String[] driversList = drivers.split(":");
+        System.out.println("number of Drivers:" + driversList.length);
+        for (String aDriver : driversList) {
+            try {
+                System.out.println("DriverManager.Initialize: loading " + aDriver);
+                Class.forName(aDriver, true,
+                        ClassLoader.getSystemClassLoader());
+            } catch (Exception ex) {
+                System.out.println("DriverManager.Initialize: load failed: " + ex);
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception
     {
+
+        // SPI Service Provider Interface
+        // java.util.ServiceLoader serviceLoader = new java.util.ServiceLoader();
+
+        SpringApplication.run(OrderHystrixMain80.class, args);
+        logger.trace("OrderHystrixMain80 main entered trace",123);
+        logger.debug("OrderHystrixMain80 main entered debug ",123);
+        logger.info("OrderHystrixMain80 main entered info ",123);
+        logger.warn("OrderHystrixMain80 main entered warn ",123);
+        logger.error("OrderHystrixMain80 main entered error ",System.getProperty("LOGGING_FORMAT"));
 
         String testPwd_ak="12345_jason_pwd_67890";
         char[] testPwd_ak_char={'j','a','s','o','n','_','p','w','d'};
@@ -2080,6 +2189,7 @@ public class OrderHystrixMain80
         Deque<Integer> deque = new ArrayDeque<>();
         deque.push(1);//1 is the top
         deque.push(2);//2 is the top
+
         Iterator<Integer> iterator = deque.iterator();
         while (iterator.hasNext()){
             Integer a=iterator.next();
@@ -2147,9 +2257,9 @@ public class OrderHystrixMain80
         //Performance test to insert 10M elements in HashSet, LinkedHashSet and TreeSet
         Set<Integer> numbers = new HashSet<Integer>();
         long startTime = System.nanoTime();
-//        for(int i =0; i<10000000; i++){
-//            numbers.add(i);
-//        }
+        for(int i =0; i<10000000; i++){
+            numbers.add(i);
+        }
 
         long endTime = System.nanoTime();
         System.out.println("Total time to insert 10M elements in HashSet in sec : "
@@ -2159,9 +2269,9 @@ public class OrderHystrixMain80
         // LinkedHashSet performance Test – inserting 10M objects
         numbers = new LinkedHashSet<Integer>();
         startTime = System.nanoTime();
-//        for(int i =0; i<10000000; i++){
-//            numbers.add(i);
-//        }
+        for(int i =0; i<10000000; i++){
+            numbers.add(i);
+        }
         endTime = System.nanoTime();
         System.out.println("Total time to insert 10M elements in LinkedHashSet in sec : "
                 + (endTime - startTime));
@@ -2169,9 +2279,9 @@ public class OrderHystrixMain80
         // TreeSet performance Test – inserting 10M objects
         numbers = new TreeSet<Integer>();
         startTime = System.nanoTime();
-//        for(int i =0; i<10000000; i++){
-//            numbers.add(i);
-//        }
+        for(int i =0; i<10000000; i++){
+            numbers.add(i);
+        }
         endTime = System.nanoTime();
         System.out.println("Total time to insert 10M elements in TreeSet in sec : "
                 + (endTime - startTime));

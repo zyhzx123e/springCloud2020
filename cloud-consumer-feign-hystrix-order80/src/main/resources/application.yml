@@ -37,4 +37,8 @@ feign:
   hystrix:
     enabled: true
 
+#logging:
+#  level:
+#    root: "info"
+#    com.atguigu.springcloud: "debug"
 

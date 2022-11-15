@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE xml>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <appender name="STDOUT-json" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp>
+                    <fieldName>ts</fieldName>
+                    <timeZone>UTC+8</timeZone>
+                </timestamp>
+                <logLevel>
+                    <fieldName>level</fieldName>
+                </logLevel>
+                <threadName>
+                    <fieldName>thread</fieldName>
+                </threadName>
+                <loggerName>
+                    <fieldName>logger</fieldName>
+                </loggerName>
+                <mdc/>
+                <arguments>
+                    <includeNonStructuredArguments>false</includeNonStructuredArguments>
+                </arguments>
+                <message>
+                    <fieldName>message</fieldName>
+                </message>
+                <nestedField>
+                    <fieldName>throwable</fieldName>
+                    <providers>
+                        <throwableClassName>
+                            <fieldName>cause</fieldName>
+                        </throwableClassName>
+                        <throwableRootCauseClassName>
+                            <fieldName>rootCause</fieldName>
+                        </throwableRootCauseClassName>
+                        <stackTrace>
+                            <fieldName>stack</fieldName>
+                            <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+                                <maxDepthPerThrowable>50</maxDepthPerThrowable>
+                                <maxLength>4096</maxLength>
+                                <shortenedClassNameLength>20</shortenedClassNameLength>
+                                <exclude>^sun\.reflect\..*\.invoke</exclude>
+                                <exclude>^org\.springframework\.cglib\.proxy\.MethodProxy\.invoke</exclude>
+                                <rootCauseFirst>true</rootCauseFirst>
+                            </throwableConverter>
+                        </stackTrace>
+                    </providers>
+                </nestedField>
+            </providers>
+        </encoder>
+    </appender>
+    <appender name="STDOUT-default-sleuth" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{"yyyy-MM-dd HH:mm:ss.SSS", GMT+8} [%thread] %-5level %logger{36}.%M\(%line\) - %X{X-B3-TraceId:-} - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+    <appender name="STDOUT-default" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{"yyyy-MM-dd HH:mm:ss.SSS", GMT+8} [%thread] => %-5level %logger{36}.%M\(%line\) +++ %X{X-B3-TraceId:-} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="STDOUT-tas" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{"yyyy-MM-dd HH:mm:ss.SSS", GMT+8} [%thread] %-5level %logger{36}.%M\(%line\) - %X{X-B3-TraceId:-} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="STDOUT-tas" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{"yyyy-MM-dd HH:mm:ss.SSS", GMT+8} [%thread] %-5level %logger{36}.%M\(%line\) - %X{X-B3-TraceId:-} - %msg%n %replace(%xException){'\n','\u2028'}%nopex%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="info">
+        <appender-ref ref="STDOUT-${LOGGING_FORMAT:-default}"/>
+    </root>
+    <logger name="com.atguigu.springcloud" level="trace" />
+
+</configuration>
