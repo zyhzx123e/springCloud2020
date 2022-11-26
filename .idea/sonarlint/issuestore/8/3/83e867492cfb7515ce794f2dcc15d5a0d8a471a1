@@ -1,0 +1,46 @@
+
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(ªìŸ´ûÿÿÿÿ
+G
+java:S1905",Remove this unnecessary cast to "NativeDll".(–ºŸôûÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘É‰¯ûÿÿÿÿ
+R
+java:S18542"7Remove this useless assignment to local variable "atr".(á«Ëıÿÿÿÿ
+N
+java:S1854."8Remove this useless assignment to local variable "name".(£¦ú®
+X	java:S125"<This block of commented-out lines of code should be removed.(éŸ‚8ıÜ§öÈ0
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(¼£ÊÜ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(û®°şÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(ù¬Êˆıÿÿÿÿ
+E
+java:S1905,"/Remove this unnecessary cast to "CardTerminal".(ëÖ¼é
+?
+java:S1481.")Remove this unused "name" local variable.(£¦ú®
+C
+java:S14812"(Remove this unused "atr" local variable.(á«Ëıÿÿÿÿ
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(Ôé÷»
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(°š¿›ûÿÿÿÿ
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(®úé¦
+N	java:S106:"9Replace this use of System.out or System.err by a logger.(³‘Š×
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(š±Šü
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(•ÿ—Êùÿÿÿÿ
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(ÿç”¶üÿÿÿÿ
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(°š¿›ûÿÿÿÿ
+S	java:S106I"9Replace this use of System.out or System.err by a logger.(¹üáÛüÿÿÿÿ
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(³‘Š×
+S	java:S106M"9Replace this use of System.out or System.err by a logger.(—Ç­çşÿÿÿÿ
+S	java:S106R"9Replace this use of System.out or System.err by a logger.(•ÿ—Êùÿÿÿÿ
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(ÿç”¶üÿÿÿÿ
+h	java:S100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥†”£úÿÿÿÿ
+V
+java:S1128";Remove this unused import 'com.sun.security.sasl.Provider'.(äªî¯úÿÿÿÿ
+M
+java:S1128"7Remove this unused import 'sun.security.pkcs11.Secmod'.(Õš×Ú
+T
+java:S1128"9Remove this unused import 'java.io.ByteArrayInputStream'.(Ëôæ±ûÿÿÿÿ
+F
+java:S1128	"0Remove this unused import 'java.io.InputStream'.(¹»º
+`
+java:S1128"ERemove this unused import 'javax.security.cert.CertificateException'.(ù­ûÈùÿÿÿÿ
+V
+java:S1128"@Remove this unused import 'javax.security.cert.X509Certificate'.(¯°ÿ¨

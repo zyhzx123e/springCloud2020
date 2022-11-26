@@ -3,6 +3,11 @@ debug: true
 server:
   port: 89
   #server-header: KING
+  tomcat:
+    basedir: file:/testtomcat
+    accesslog:
+      enabled: true
+      pattern: '%t %a "%r" %s (%D ms)'
 
 http-pool:
   max-total: 200

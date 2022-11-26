@@ -31,6 +31,12 @@
 
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.12.1</version>
+        </dependency>
 
 
         <!--openfeign-->
@@ -58,17 +64,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-undertow</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -112,6 +118,15 @@
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>smart.card</groupId>
+            <artifactId>reader</artifactId>
+            <version>1.0.0</version>
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${basedir}/lib/smart-card-reader-z.jar</systemPath>-->
+        </dependency>
+
     </dependencies>
 
 
@@ -125,6 +140,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
+
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -188,11 +204,12 @@
                         <!--  ##### 以下为需要根据项目情况修改 ##### -->
                         <!--入口程序类不能混淆，混淆会导致springboot启动不了-->
                         <option>-keep class com.atguigu.springcloud.OrderHystrixMain80</option>
-<!--                        <option>-keep class com.atguigu.springcloud.service.* {*;}</option>-->
+                        <option>-keep class com.atguigu.springcloud.service.* {*;}</option>
                         <option>-keep class com.atguigu.springcloud.controller.* {*;}</option>
-<!--                        <option>-keep class com.atguigu.springcloud.interceptor.* {*;}</option>-->
+                        <option>-keep class com.atguigu.springcloud.interceptor.* {*;}</option>
                         <option>-keep class com.atguigu.springcloud.config.* {*;}</option>
-<!--                        <option>-keep class com.atguigu.springcloud.exception.* {*;}</option>-->
+                        <option>-keep class com.atguigu.springcloud.aop.* {*;}</option>
+                        <option>-keep class com.atguigu.springcloud.exception.* {*;}</option>
                         <!--  ##### 以上为需要根据项目情况修改 ##### -->
 
                         <option>-keep interface * extends * { *; }</option>
@@ -234,7 +251,35 @@
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>smart.card.SmartCard1</id>
+                        <phase>clean</phase>
+                        <configuration>
+                            <file>${basedir}/lib/smart-card-reader-z.jar</file>
+                            <repositoryLayout>default</repositoryLayout>
+                            <groupId>smart.card</groupId>
+                            <artifactId>reader</artifactId>
+                            <version>1.0.0</version>
+                            <packaging>jar</packaging>
+                            <generatePom>true</generatePom>
+                        </configuration>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
 
         </plugins>
     </build>

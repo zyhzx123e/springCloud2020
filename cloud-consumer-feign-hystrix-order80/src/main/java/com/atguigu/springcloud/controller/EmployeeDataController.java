@@ -1,10 +1,16 @@
 package com.atguigu.springcloud.controller;
 
+import com.atguigu.springcloud.entities.Payment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class EmployeeDataController
@@ -39,6 +45,20 @@ public class EmployeeDataController
         }
 
         return "phones---";
+    }
+
+    @RequestMapping(value = "/phones", method = RequestMethod.POST)
+    public String postTest(@RequestBody HashMap<String, Object> body)
+    {
+        log.info("get postTest");
+
+        if(!CollectionUtils.isEmpty(body)){
+            for (Map.Entry<String, Object> stringObjectEntry : body.entrySet()) {
+                log.info("getstringObjectEntry : key:{}, val:{}", stringObjectEntry.getKey(), stringObjectEntry.getValue());
+            }
+        }
+
+        return "postTest done---";
     }
 
     @RequestMapping(value = "/names", method = RequestMethod.GET)

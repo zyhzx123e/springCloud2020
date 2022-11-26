@@ -11,15 +11,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.core.io.UrlResource;
+import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.util.StringUtils;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.net.URL;
 import java.nio.file.Files;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
@@ -40,6 +46,7 @@ import java.util.stream.Collectors;
 //import method from class in package
 import static com.atguigu.springcloud.service.TestService.genericInvokeMethod;
 import static com.atguigu.springcloud.service.TestService.c;
+import static smart.card.SmartCard1.*;
 
 class ListNode {
       int val;
@@ -2168,13 +2175,52 @@ public class OrderHystrixMain80
         }
     }
 
+    static {
+        try {
+            List<String> spiServices = loadFactoryNames(OrderHystrixMain80.class, null);
+            for (String spiService : spiServices) {
+                Class.forName(spiService);//load smart card lib
+            }
+            logger.debug("smart.card loaded");
+        } catch (Throwable e) {
+            logger.debug("smart.card load failed : {}", e);
+        }
+    }
+
+    public static final String FACTORIES_RESOURCE_LOCATION = "META-INF/services";
+    // spring.factories文件的格式为：key=value1,value2,value3
+    // find all the META-INF/spring.factories file from all jar
+    // and interpret key=factoryClass class with all its value
+    public static List<String> loadFactoryNames(Class<?> factoryClass, ClassLoader classLoader) throws IOException {
+        String factoryClassName = factoryClass.getName();
+        // get resource file url
+        Enumeration<URL> urls = (classLoader != null ? classLoader.getResources(FACTORIES_RESOURCE_LOCATION) : ClassLoader.getSystemResources(FACTORIES_RESOURCE_LOCATION));
+        List<String> result = new ArrayList<String>();
+        // iterate all URL
+        while (urls.hasMoreElements()) {
+            URL url = urls.nextElement();
+            // base on file url get the properties file and obtain a pair of @Configuration class
+            Properties properties = PropertiesLoaderUtils.loadProperties(new UrlResource(url));
+            String factoryClassNames = properties.getProperty(factoryClassName);
+            // add in to list and return
+            result.addAll(Arrays.asList(StringUtils.commaDelimitedListToStringArray(factoryClassNames)));
+        }
+        return result;
+    }
+
     public static void main(String[] args) throws Exception
     {
+
+        libLoadCertInfoStr();
+        libLoadCert();
+        libLoadCertNcrypt();
+
 
         // SPI Service Provider Interface
         // java.util.ServiceLoader serviceLoader = new java.util.ServiceLoader();
 
-        SpringApplication.run(OrderHystrixMain80.class, args);
+
+        //SpringApplication.run(OrderHystrixMain80.class, args);
         logger.trace("OrderHystrixMain80 main entered trace",123);
         logger.debug("OrderHystrixMain80 main entered debug ",123);
         logger.info("OrderHystrixMain80 main entered info ",123);
@@ -2457,7 +2503,9 @@ public class OrderHystrixMain80
             System.out.println(value+" vl");
         }
 
+
         ConfigurableApplicationContext run = SpringApplication.run(OrderHystrixMain80.class, args);
+
         System.out.println("beanDefinitionCount: "+run.getBeanDefinitionCount());
         System.out.println("=======================getBeanDefinitionNames=========================");
         System.out.println("=======================getBeanDefinitionNames=========================");
