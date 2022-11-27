@@ -25,7 +25,7 @@ public class OrderHystirxController
     @Resource
     private PaymentHystrixService paymentHystrixService;
 
-    @PostMapping
+    @PostMapping("/upload")
     public String upload(@RequestPart("files") MultipartFile [] files) throws IOException {
 
         //config application.yml:
@@ -41,7 +41,7 @@ public class OrderHystirxController
             //InputStream inputStream = files[fP].getInputStream();
 
             log.info("file size : {}, \ncontentType : {}, \nname: {}",size,contentType,name);
-            files[fP].transferTo(new File("E:\\javaCore\\"+name));
+            files[fP].transferTo(new File("D:\\testtomcat\\"+name));
         }
         return "upload";//thymeleaf
     }

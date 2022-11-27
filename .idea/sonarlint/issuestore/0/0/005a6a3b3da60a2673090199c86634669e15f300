@@ -1,0 +1,9 @@
+
+c
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ï’„úÿÿÿÿ
+W
+java:S3457""AFormat specifiers should be used instead of string concatenation.(£Ë×ğ
+\
+java:S3457#"AFormat specifiers should be used instead of string concatenation.(Œ†ƒ™şÿÿÿÿ
+\
+java:S3457$"AFormat specifiers should be used instead of string concatenation.(ß”Æ€ùÿÿÿÿ

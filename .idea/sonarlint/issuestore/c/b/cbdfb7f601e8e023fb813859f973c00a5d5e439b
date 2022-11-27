@@ -1,0 +1,2421 @@
+
+`	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(çŞÁ¹ıÿÿÿÿ
+\	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(ôàúœ
+a	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(Ñ·şšûÿÿÿÿ
+\	java:S112¬"FDefine and throw a dedicated exception instead of using a generic one.(†©Ã“
+a	java:S112¾"FDefine and throw a dedicated exception instead of using a generic one.(íÌÏˆşÿÿÿÿ
+a	java:S112Û"FDefine and throw a dedicated exception instead of using a generic one.(›„¡¥ıÿÿÿÿ
+\	java:S112Ú"FDefine and throw a dedicated exception instead of using a generic one.(³ÆÇ©
+\	java:S112£"FDefine and throw a dedicated exception instead of using a generic one.(İµ­é
+\	java:S112¡"FDefine and throw a dedicated exception instead of using a generic one.(Ïù‰Ë
+a	java:S112¾"FDefine and throw a dedicated exception instead of using a generic one.(½Ü½Æÿÿÿÿÿ
+\	java:S112º"FDefine and throw a dedicated exception instead of using a generic one.(éÒõ€
+\	java:S112å"FDefine and throw a dedicated exception instead of using a generic one.(â”¨”
+\	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ã»¨¹
+a	java:S112Ã"FDefine and throw a dedicated exception instead of using a generic one.(âğ²“øÿÿÿÿ
+a	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ä’åÿÿÿÿÿ
+a	java:S112¬"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112³"FDefine and throw a dedicated exception instead of using a generic one.(ƒ¢ îşÿÿÿÿ
+\	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(†©Ã“
+\	java:S112à"FDefine and throw a dedicated exception instead of using a generic one.(±¯¯Ç
+\	java:S112Á%"FDefine and throw a dedicated exception instead of using a generic one.(–¬áé
+\	java:S112Æ%"FDefine and throw a dedicated exception instead of using a generic one.(ÄßÈú
+K
+java:S3740¬"/Provide the parametrized type for this generic.(ÛŸ˜ÿÿÿÿÿÿ
+K
+java:S3740¬"/Provide the parametrized type for this generic.(ÛŸ˜ÿÿÿÿÿÿ
+K
+java:S3740­"/Provide the parametrized type for this generic.(Ê•˜¢øÿÿÿÿ
+K
+java:S3740Ù"/Provide the parametrized type for this generic.(äìÍğÿÿÿÿÿ
+K
+java:S3740Ù"/Provide the parametrized type for this generic.(äìÍğÿÿÿÿÿ
+F
+java:S3740Æ"/Provide the parametrized type for this generic.(¾ÀÌ‹
+K
+java:S3740©"/Provide the parametrized type for this generic.(ãäƒÕùÿÿÿÿ
+K
+java:S3740©"/Provide the parametrized type for this generic.(ãäƒÕùÿÿÿÿ
+K
+java:S3740ª"/Provide the parametrized type for this generic.(çšáÂÿÿÿÿÿ
+K
+java:S3740ª"/Provide the parametrized type for this generic.(çšáÂÿÿÿÿÿ
+K
+java:S3740­"/Provide the parametrized type for this generic.(Õå¶ûşÿÿÿÿ
+E
+java:S3740Ì"/Provide the parametrized type for this generic.(íªÈJ
+E
+java:S3740Ì"/Provide the parametrized type for this generic.(íªÈJ
+F
+java:S3740Ï"/Provide the parametrized type for this generic.(Ë¼À
+F
+java:S3740Ï"/Provide the parametrized type for this generic.(Ë¼À
+F
+java:S3740Ò"/Provide the parametrized type for this generic.(ÿí‘—
+F
+java:S3740Ò"/Provide the parametrized type for this generic.(ÿí‘—
+E
+java:S3740Õ"/Provide the parametrized type for this generic.(ßàô
+E
+java:S3740Õ"/Provide the parametrized type for this generic.(ßàô
+E
+java:S3740ô"/Provide the parametrized type for this generic.(ŒóÿC
+K
+java:S3740¾"/Provide the parametrized type for this generic.(ëµ½üÿÿÿÿ
+K
+java:S3740‘"/Provide the parametrized type for this generic.(ÓÆ´Óûÿÿÿÿ
+F
+java:S3740•"/Provide the parametrized type for this generic.(øÎü©
+F
+java:S3740Í"/Provide the parametrized type for this generic.(´ÑŸ
+K
+java:S3740á"/Provide the parametrized type for this generic.(°ø¢úÿÿÿÿ
+K
+java:S3740Ë"/Provide the parametrized type for this generic.(¾¦şùøÿÿÿÿ
+K
+java:S3740Ë"/Provide the parametrized type for this generic.(¾¦şùøÿÿÿÿ
+K
+java:S3740›!"/Provide the parametrized type for this generic.(§ö–¡ùÿÿÿÿ
+F
+java:S3740Œ&"/Provide the parametrized type for this generic.(ó‰Š¦
+F
+java:S3740Œ&"/Provide the parametrized type for this generic.(ó‰Š¦
+F
+java:S3740ú&"/Provide the parametrized type for this generic.(ÁíÍ
+K
+java:S3740û&"/Provide the parametrized type for this generic.(Ü‰Èõüÿÿÿÿ
+F
+java:S3740ü&"/Provide the parametrized type for this generic.(¦™š
+F
+java:S3740ü&"/Provide the parametrized type for this generic.(¦™š
+F
+java:S3740ı&"/Provide the parametrized type for this generic.(«›
+F
+java:S3740ş&"/Provide the parametrized type for this generic.(—²Ò½
+u
+java:S2293«"YReplace the type specification in this constructor call with the diamond operator ("<>").(ıÙ™çùÿÿÿÿ
+p
+java:S2293¦"YReplace the type specification in this constructor call with the diamond operator ("<>").(èË†Ğ
+p
+java:S2293µ"YReplace the type specification in this constructor call with the diamond operator ("<>").(šµØ¿
+p
+java:S2293Ï"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ë¼À
+o
+java:S2293ñ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÛÇh
+g
+java:S1192Â'"KDefine a constant instead of duplicating this literal " change me" 3 times.(À×Íøÿÿÿÿ
+_
+java:S1192Ù"HDefine a constant instead of duplicating this literal "pom.xml" 3 times.(Áå 
+g
+java:S1192Â'"KDefine a constant instead of duplicating this literal "you cannot" 3 times.(À×Íøÿÿÿÿ
+k
+java:S1192¼'"OUse already-defined constant 'str_const' instead of duplicating its value here.(ı¯¡Ÿùÿÿÿÿ
+a
+java:S1192×"KDefine a constant instead of duplicating this literal "highlights" 4 times.(ö×¡
+J
+java:S1121ÿ!".Extract the assignment out of this expression.(†Çÿÿÿÿÿ
+F
+java:S1066… "/Merge this if statement with the enclosing one.(‡±¡«
+Q
+java:S1141§"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141Ô"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141è"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òõ¬ƒüÿÿÿÿ
+g	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìµôâ
+l	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…İÚ€ùÿÿÿÿ
+g	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„½·ö
+l	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚«˜úÿÿÿÿ
+l	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥¬óıÿÿÿÿ
+g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îüŠı
+l	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û»—Şüÿÿÿÿ
+l	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿Ê¾¦úÿÿÿÿ
+l	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ÷»úÿÿÿÿ
+g	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùœ‡˜
+g	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ÿ”
+l	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õûü³ûÿÿÿÿ
+l	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬µ“öúÿÿÿÿ
+g	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â©úØ
+l	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¿óüÿÿÿÿ
+g	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Ì•…
+l	java:S117É""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßî“šüÿÿÿÿ
+g	java:S117­%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËøŠŞ
+l	java:S117¯%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³çˆÍşÿÿÿÿ
+g	java:S117°%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÎÂŠ
+g	java:S117Ä&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËøŠŞ
+g	java:S117Å&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â˜î®
+g	java:S117Æ&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÜÄ
+g	java:S117Ç&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø£ˆÑ
+l	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦´šıÿÿÿÿ
+g	java:S117”'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¹ú•
+?
+java:S1604­
+"(Make this anonymous inner class a lambda(×½¼ß
+D
+java:S1604˜"(Make this anonymous inner class a lambda(¤œˆÚıÿÿÿÿ
+?
+java:S1604Í"(Make this anonymous inner class a lambda(¾‹™‚
+>
+java:S1604Ÿ"(Make this anonymous inner class a lambda(ù½ä>
+g
+java:S1301•"KReplace this "switch" statement by "if" statements to increase readability.(æì´’ÿÿÿÿÿ
+b
+java:S1301Ç#"KReplace this "switch" statement by "if" statements to increase readability.(ª”°€
+g
+java:S1301ë'"KReplace this "switch" statement by "if" statements to increase readability.(×–¸Èÿÿÿÿÿ
+3
+java:S1643ë""Use a StringBuilder instead.(íÈó˜
+z
+java:S1488œ"^Immediately return this expression instead of assigning it to the temporary variable "client".( Ùò‡üÿÿÿÿ
+‚
+java:S1488Æ"kImmediately return this expression instead of assigning it to the temporary variable "differenceInSeconds".(Î¹•…
+n
+java:S1104©"RMake secret a static final constant or non-public and provide accessors if needed.(±Ÿ£ªÿÿÿÿÿ
+i
+java:S1104²"RMake secret a static final constant or non-public and provide accessors if needed.(Â‘÷
+i
+java:S1104¸"RMake secret a static final constant or non-public and provide accessors if needed.(¢à¢†
+j
+java:S1104Ğ"NMake ak a static final constant or non-public and provide accessors if needed.(¶ÜÙ÷ÿÿÿÿÿ
+t
+java:S1104Ñ"XMake instanceName a static final constant or non-public and provide accessors if needed.(ƒÅÒöùÿÿÿÿ
+l
+java:S1104ê "UMake treeCount a static final constant or non-public and provide accessors if needed.(©­
+f
+java:S1104ó "OMake age a static final constant or non-public and provide accessors if needed.(ÉÅ„‡
+d
+java:S1104†&"MMake c a static final constant or non-public and provide accessors if needed.(”’¤–
+>
+java:S1444†&"'Make this "public static c" field final(”’¤–
+Y
+java:S1163Ç"=Refactor this code to not throw exceptions in finally blocks.(‰°‹üÿÿÿÿ
+P
+java:S1143Ç"4Remove this throw statement from this finally block.(‰°‹üÿÿÿÿ
+L
+java:S1143‹"5Remove this return statement from this finally block.(ûÁİ…
+S
+java:S4973¾'"<Strings and Boxed types should be compared using "equals()".(—±ÿé
+X
+java:S4973À'"<Strings and Boxed types should be compared using "equals()".(§¯ÄÊüÿÿÿÿ
+S
+java:S4973Ã'"<Strings and Boxed types should be compared using "equals()".(èÛíÚ
+S
+java:S4973Æ'"<Strings and Boxed types should be compared using "equals()".(¨¦©¹
+R
+java:S4973Ç'"<Strings and Boxed types should be compared using "equals()".(ëòäq
+X
+java:S4973Ê'"<Strings and Boxed types should be compared using "equals()".(ÁÌéÌüÿÿÿÿ
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(™¦èûÿÿÿÿ
+I
+java:S1199¸"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+I
+java:S1199˜ "-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+D
+java:S1199ã""-Extract this nested code block into a method.(åüƒÆ
+D
+java:S1199ä""-Extract this nested code block into a method.(°¨®Ò
+I
+java:S1199å""-Extract this nested code block into a method.(€Ã™¥ÿÿÿÿÿ
+^
+java:S3973„ "GUse indentation to denote the code conditionally executed by this "if".(ß¸Ğ¶
+^
+java:S3973… "GUse indentation to denote the code conditionally executed by this "if".(‡±¡«
+^
+java:S3973† "GUse indentation to denote the code conditionally executed by this "if".(ß¸Ğ¶
+e
+java:S3973‰ "IUse indentation to denote the code conditionally executed by this "else".(„¶áìøÿÿÿÿ
+g	java:S114±!"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(»„é¹
+
+java:S2681‹ "†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(¯§Íå
+]
+java:S1226ñ"AIntroduce a new variable instead of reusing the parameter "lval".(Äáïíúÿÿÿÿ
+X
+java:S1226ƒ!"AIntroduce a new variable instead of reusing the parameter "name".(®‹í
+`
+java:S1226ÿ!"DIntroduce a new variable instead of reusing the parameter "spinner".(†Çÿÿÿÿÿ
+Z
+java:S3518İ
+"CMake sure this expression can't be zero before doing this division.(¹¶Ëô
+_
+java:S3518×"CMake sure this expression can't be zero before doing this division.(‰±ëøûÿÿÿÿ
+Z
+java:S3518¨"CMake sure this expression can't be zero before doing this division.(ŠÒ‡ı
+Z
+java:S3518ğ"CMake sure this expression can't be zero before doing this division.(€Şˆ€
+Z
+java:S2095È"DUse try-with-resources or close this "Stream" in a "finally" clause.(ê‰øj
+[
+java:S2095Ø"DUse try-with-resources or close this "Stream" in a "finally" clause.(Ñ­¦²
+a
+java:S2095è"EUse try-with-resources or close this "Printer" in a "finally" clause.(ÎàÇŒúÿÿÿÿ
+d
+java:S2095Ê"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(÷Ê·™øÿÿÿÿ
+a
+java:S2095ç"EUse try-with-resources or close this "Printer" in a "finally" clause.(Âÿ²ûÿÿÿÿ
+N
+java:S3655‹"2Call "any.isPresent()" before accessing the value.(µ÷÷‚şÿÿÿÿ
+c
+java:S3959¯"GRefactor this code so that this consumed stream pipeline is not reused.(ôĞÎøÿÿÿÿ
+^
+java:S3959Ÿ"GRefactor this code so that this consumed stream pipeline is not reused.(ŸËï”
+w
+java:S4165¯"`Remove this useless assignment; "d1" already holds the assigned value along all execution paths.(øØ·Í
+|
+java:S4165±"`Remove this useless assignment; "d1" already holds the assigned value along all execution paths.(Ëší÷ûÿÿÿÿ
+
+java:S4165ş"cRemove this useless assignment; "names" already holds the assigned value along all execution paths.(Í¡õ£ıÿÿÿÿ
+N
+java:S2589±"7Remove this expression which always evaluates to "true"(ÅëÀ 
+N
+java:S2589Á"7Remove this expression which always evaluates to "true"(ßõÇõ
+`
+java:S2583¹"DChange this condition so that it does not always evaluate to "false"(ÕìœÁüÿÿÿÿ
+Z
+java:S2583€""DChange this condition so that it does not always evaluate to "false"(Ûâ¬
+I
+java:S3958É"2Refactor the code so this stream pipeline is used.(éã®—
+V	java:S125"<This block of commented-out lines of code should be removed.(¡ëª±üÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(“ø‚Ğ
+V	java:S125J"<This block of commented-out lines of code should be removed.(Ò‹éÂşÿÿÿÿ
+H
+java:S4925M"-Remove this "Class.forName()", it is useless.(öî¬ªûÿÿÿÿ
+S	java:S106X"9Replace this use of System.out or System.err by a logger.(•İŒ¶ıÿÿÿÿ
+o	java:S115`"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ö—‡Œ
+[
+java:S1124`"EReorder the modifiers to comply with the Java Language Specification.(ö—‡Œ
+Q	java:S125c"<This block of commented-out lines of code should be removed.(£¹½ï
+V	java:S125h"<This block of commented-out lines of code should be removed.(œ¡˜ûÿÿÿÿ
+t	java:S115m"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡©©åşÿÿÿÿ
+T
+java:S5993u"9Change the visibility of this constructor to "protected".(Ú¹Òûÿÿÿÿ
+t
+java:S1171r"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+V	java:S125s"<This block of commented-out lines of code should be removed.(Àıÿÿÿÿ
+V	java:S125v"<This block of commented-out lines of code should be removed.(Àıÿÿÿÿ
+‡
+java:S1130x"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(çŞÁ¹ıÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(âºÅıÿÿÿÿ
+T	java:S106’"9Replace this use of System.out or System.err by a logger.(äûëŠûÿÿÿÿ
+W	java:S125›"<This block of commented-out lines of code should be removed.(æã«Æøÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(’Å‹„
+T	java:S106¡"9Replace this use of System.out or System.err by a logger.(òÕ«Ğøÿÿÿÿ
+P
+java:S5993«"9Change the visibility of this constructor to "protected".(éàãŒ
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(ÆÜôÒ
+B
+java:S1172«"+Remove this unused method parameter "name".(éàãŒ
+T	java:S106­"9Replace this use of System.out or System.err by a logger.(ä®ª™üÿÿÿÿ
+p
+java:S1171¯"YMove the contents of this initializer to a standard constructor or to field initializers.(Øì”
+O	java:S106¯"9Replace this use of System.out or System.err by a logger.(Øì”
+A
+java:S2387±"%"no" is the name of a field in "Car".(ÏÍƒ„ÿÿÿÿÿ
+p
+java:S1171²"YMove the contents of this initializer to a standard constructor or to field initializers.(ú¨şÛ
+O	java:S106²"9Replace this use of System.out or System.err by a logger.(ú¨şÛ
+O	java:S106µ"9Replace this use of System.out or System.err by a logger.(¢¥¿‘
+P
+java:S5993¿"9Change the visibility of this constructor to "protected".(€ıí
+>
+java:S1905Ì"'Remove this unnecessary cast to "Ball".(­„ÿ•
+T	java:S106Í"9Replace this use of System.out or System.err by a logger.(Ø–§Úşÿÿÿÿ
+P
+java:S3400Ó"9Remove this method and declare a constant for this value.(åƒš®
+P
+java:S3400Ö"9Remove this method and declare a constant for this value.(ÀÔôÛ
+O	java:S106Ş"9Replace this use of System.out or System.err by a logger.(Ò¦ò¨
+n
+java:S3252Ş"WUse static access with "com.atguigu.springcloud.service.Rectangle" for "getEqualSides".(Ò¦ò¨
+L
+java:S2209Ş"5Change this instance-reference to a static reference.(Ò¦ò¨
+8
+java:S1170ä"!Make this final field static too.(…¿ˆ
+U
+java:S3400å"9Remove this method and declare a constant for this value.(©ûÿÿÿÿÿ
+U
+java:S3400æ"9Remove this method and declare a constant for this value.(èÉë˜ùÿÿÿÿ
+L
+java:S2387î"0"height" is the name of a field in "Rotorcraft".(ğÀŸÿÿÿÿÿ
+W	java:S125é"<This block of commented-out lines of code should be removed.(˜”Üêûÿÿÿÿ
+P
+java:S3400ó"9Remove this method and declare a constant for this value.(£§³‰
+D
+java:S1905ù"-Remove this unnecessary cast to "Helicopter".(ËïÖ¦
+O	java:S106ú"9Replace this use of System.out or System.err by a logger.(¾’íÉ
+p	java:S115€"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(É–”¦
+\
+java:S1124€"EReorder the modifiers to comply with the Java Language Specification.(É–”¦
+R	java:S125‹"<This block of commented-out lines of code should be removed.(Üîæİ
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»æğœıÿÿÿÿ
+Q
+java:S1161“":Add the "@Override" annotation above this method signature(ÄØÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(²Ód
+T	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(¯Åü…ùÿÿÿÿ
+R	java:S125¥"<This block of commented-out lines of code should be removed.(¦ß²—
+T	java:S106«"9Replace this use of System.out or System.err by a logger.(Á‡™ÿÿÿÿÿ
+A
+java:S2387²"*"secret" is the name of a field in "Math".(Â‘÷
+W	java:S125¯"<This block of commented-out lines of code should be removed.(øÁä÷ÿÿÿÿÿ
+V
+java:S1161³":Add the "@Override" annotation above this method signature(µèÁÄùÿÿÿÿ
+O	java:S106´"9Replace this use of System.out or System.err by a logger.(æãôã
+H
+java:S2387¸"1"secret" is the name of a field in "ComplexMath".(¢à¢†
+Q	java:S125¹"<This block of commented-out lines of code should be removed.(ãÚŸS
+T	java:S106¿"9Replace this use of System.out or System.err by a logger.(î°´Õıÿÿÿÿ
+O	java:S106Á"9Replace this use of System.out or System.err by a logger.(ˆ³ø…
+O	java:S106Å"9Replace this use of System.out or System.err by a logger.(†ÆßĞ
+^
+java:S2094Ë"BRemove this empty class, write its code or make it an "interface".(Ù€Åëşÿÿÿÿ
+U
+java:S5993ê"9Change the visibility of this constructor to "protected".(¨Ä–šûÿÿÿÿ
+O	java:S106ë"9Replace this use of System.out or System.err by a logger.(şë‚…
+W	java:S125ù"<This block of commented-out lines of code should be removed.(„”Ñûùÿÿÿÿ
+O	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(¿‰Ü×
+O	java:S106„"9Replace this use of System.out or System.err by a logger.(Öü¨—
+N	java:S106‡"9Replace this use of System.out or System.err by a logger.(‚¹¼X
+T	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(‚Ö°…ıÿÿÿÿ
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(¸ÜÂåüÿÿÿÿ
+O	java:S106‹"9Replace this use of System.out or System.err by a logger.(œÓ
+<
+java:S1181š"%Catch Exception instead of Throwable.(çãòó
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(Òğ“
+T	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(¾Ç¦ïùÿÿÿÿ
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(ä¹¿“
+O	java:S106«"9Replace this use of System.out or System.err by a logger.(İÒàš
+O	java:S106®"9Replace this use of System.out or System.err by a logger.(·é“è
+O	java:S106¯"9Replace this use of System.out or System.err by a logger.(µã°Ò
+T	java:S106á"9Replace this use of System.out or System.err by a logger.(ÿ²´Çøÿÿÿÿ
+T	java:S106ã"9Replace this use of System.out or System.err by a logger.(ÀÂúŸıÿÿÿÿ
+O	java:S106æ"9Replace this use of System.out or System.err by a logger.(õñïõ
+c
+java:S1858ï"L"firstName" is already a string, there's no need to call "toString()" on it.(ÃÂûŞ
+b
+java:S1858ï"K"lastName" is already a string, there's no need to call "toString()" on it.(ÃÂûŞ
+O	java:S106ó"9Replace this use of System.out or System.err by a logger.(Ø”Û­
+T	java:S106õ"9Replace this use of System.out or System.err by a logger.(ô×éíıÿÿÿÿ
+R	java:S125ö"<This block of commented-out lines of code should be removed.(Ï˜Ë¸
+M
+java:S1854"6Remove this useless assignment to local variable "sb".(½¬ı§
+2
+java:S3626‡"Remove this redundant jump.(¯ÎâÆ
+2
+java:S3626‹"Remove this redundant jump.(ûÁİ…
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(Ä¦Æªùÿÿÿÿ
+h
+java:S1858†"L"firstName" is already a string, there's no need to call "toString()" on it.(Ä¦Æªùÿÿÿÿ
+g
+java:S1858†"K"lastName" is already a string, there's no need to call "toString()" on it.(Ä¦Æªùÿÿÿÿ
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(ŠÑˆ³úÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(Ö“‚
+N	java:S106’"9Replace this use of System.out or System.err by a logger.(´ğÇ(
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(û±Ïµÿÿÿÿÿ
+K
+java:S1905—"5Remove this unnecessary cast to "ClassCastException".(êšf
+T	java:S106™"9Replace this use of System.out or System.err by a logger.(ô«ÿàøÿÿÿÿ
+Q
+java:S1161©":Add the "@Override" annotation above this method signature(ÕÙÍñ
+T	java:S106ª"9Replace this use of System.out or System.err by a logger.(¤ú«½øÿÿÿÿ
+W	java:S125®"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+V
+java:S1854¼"?Remove this useless assignment to local variable "checkZipper".(€®²
+G
+java:S1481¼"0Remove this unused "checkZipper" local variable.(€®²
+T	java:S106Å"9Replace this use of System.out or System.err by a logger.(ô×éíıÿÿÿÿ
+?	java:S108Æ")Either remove or fill this block of code.(õ„şë
+˜
+java:S1186Ó"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿úíÚ
+u
+java:S1149à"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(««
+T
+java:S1854„"8Remove this useless assignment to local variable "cha1".(Šô•Úşÿÿÿÿ
+Q
+java:S1854ñ"5Remove this useless assignment to local variable "p".(Ô”¨´úÿÿÿÿ
+Q
+java:S1854ğ"5Remove this useless assignment to local variable "p".(š™ŞÚıÿÿÿÿ
+Q
+java:S1854î"5Remove this useless assignment to local variable "p".(Úî„ûÿÿÿÿ
+L
+java:S1854ì"5Remove this useless assignment to local variable "p".(¯©¬å
+M
+java:S1854à"7Remove this useless assignment to local variable "buf".(««
+>
+java:S1481à"(Remove this unused "buf" local variable.(««
+O	java:S106â"9Replace this use of System.out or System.err by a logger.(‰Û‘
+O	java:S106ä"9Replace this use of System.out or System.err by a logger.(Û×‘¼
+O	java:S106å"9Replace this use of System.out or System.err by a logger.(×•œ²
+T	java:S106æ"9Replace this use of System.out or System.err by a logger.(ã‰Èùÿÿÿÿ
+T	java:S106ç"9Replace this use of System.out or System.err by a logger.(ÚÄ±Ìúÿÿÿÿ
+W	java:S125è"<This block of commented-out lines of code should be removed.(Ÿ·­—ıÿÿÿÿ
+j
+java:S1602ì"SRemove useless curly braces around statement and then remove useless return keyword(¯©¬å
+=
+java:S1481ì"&Remove this unused "p" local variable.(¯©¬å
+K
+java:S1611ğ"/Remove the parentheses around the "b" parameter(š™ŞÚıÿÿÿÿ
+O	java:S106ø"9Replace this use of System.out or System.err by a logger.(„Ñêğ
+G
+java:S2201‚"+The return value of "valueOf" must be used.(âº‚ûÿÿÿÿ
+R	java:S125ı"<This block of commented-out lines of code should be removed.(œ†…
+E
+java:S1481„")Remove this unused "cha1" local variable.(Šô•Úşÿÿÿÿ
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(™üÁûúÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ó•·øÿÿÿÿ
+`
+java:S1858"D"b" is already a string, there's no need to call "toString()" on it.(ó•·øÿÿÿÿ
+{
+java:S1149Õ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¾¿Èæşÿÿÿÿ
+W	java:S125˜"<This block of commented-out lines of code should be removed.(óÚ×úÿÿÿÿ
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(Üö”Á
+R
+java:S1854½"6Remove this useless assignment to local variable "cs".(ÙÓ¿Îûÿÿÿÿ
+U
+java:S1854¯"9Remove this useless assignment to local variable "datea".(ÃÕÿšùÿÿÿÿ
+A
+java:S1659"%Declare "current" on a separate line.(Ö÷Ê­øÿÿÿÿ
+T	java:S106¦"9Replace this use of System.out or System.err by a logger.(Ãêæ†ıÿÿÿÿ
+Q	java:S125¥"<This block of commented-out lines of code should be removed.(µÚÜt
+T	java:S106¨"9Replace this use of System.out or System.err by a logger.(èÄí¦ùÿÿÿÿ
+T	java:S106³"9Replace this use of System.out or System.err by a logger.(àºšşÿÿÿÿ
+O	java:S106¶"9Replace this use of System.out or System.err by a logger.(ŠÁ”
+A
+java:S1905¶"*Remove this unnecessary cast to "Integer".(ŠÁ”
+O	java:S106¹"9Replace this use of System.out or System.err by a logger.(‰í—¹
+?
+java:S1905¹"(Remove this unnecessary cast to "Float".(‰í—¹
+T	java:S106¼"9Replace this use of System.out or System.err by a logger.(ğ±ÄÔÿÿÿÿÿ
+E
+java:S1905¼")Remove this unnecessary cast to "Double".(ğ±ÄÔÿÿÿÿÿ
+O	java:S106¿"9Replace this use of System.out or System.err by a logger.(‚±ï
+T	java:S106À"9Replace this use of System.out or System.err by a logger.(¥ã‹¢şÿÿÿÿ
+W	java:S125Ã"<This block of commented-out lines of code should be removed.(é‘„¬ùÿÿÿÿ
+T	java:S106È"9Replace this use of System.out or System.err by a logger.(‰‚òÿÿÿÿÿ
+T	java:S106É"9Replace this use of System.out or System.err by a logger.(”Ú‰şÿÿÿÿ
+O	java:S106Ê"9Replace this use of System.out or System.err by a logger.(ŸóÄ
+T	java:S106Ò"9Replace this use of System.out or System.err by a logger.(ùÆ»üÿÿÿÿ
+T	java:S106Ô"9Replace this use of System.out or System.err by a logger.(©ú‹µüÿÿÿÿ
+O	java:S106Õ"9Replace this use of System.out or System.err by a logger.(¾„­
+T	java:S106Ö"9Replace this use of System.out or System.err by a logger.(õ·Òùÿÿÿÿ
+N	java:S106Ù"9Replace this use of System.out or System.err by a logger.(ßâ
+O	java:S106Ú"9Replace this use of System.out or System.err by a logger.(ÍœˆŠ
+T	java:S106à"9Replace this use of System.out or System.err by a logger.(²È”·øÿÿÿÿ
+D
+java:S2201ã"(The return value of "size" must be used.(Œñá®øÿÿÿÿ
+N	java:S106ı"9Replace this use of System.out or System.err by a logger.(ªãşS
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(Œ×­Õøÿÿÿÿ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(š¼‡Öøÿÿÿÿ
+T	java:S106…"9Replace this use of System.out or System.err by a logger.(ˆîçÂúÿÿÿÿ
+R	java:S125†"<This block of commented-out lines of code should be removed.(ÜšÚĞ
+R	java:S125‹"<This block of commented-out lines of code should be removed.(şÓ³”
+R	java:S125†"<This block of commented-out lines of code should be removed.(ÜšÚĞ
+R	java:S125‹"<This block of commented-out lines of code should be removed.(şÓ³”
+T	java:S106”"9Replace this use of System.out or System.err by a logger.( éÄ£ıÿÿÿÿ
+O	java:S106•"9Replace this use of System.out or System.err by a logger.(†ÎË’
+O	java:S106–"9Replace this use of System.out or System.err by a logger.(ÿªãß
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(¥‹Òûÿÿÿÿ
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(ôÕç²øÿÿÿÿ
+O	java:S106£"9Replace this use of System.out or System.err by a logger.(åËé’
+T	java:S106§"9Replace this use of System.out or System.err by a logger.(Ìã°Øûÿÿÿÿ
+G
+java:S2201«"+The return value of "isAfter" must be used.(˜ÃÅÑúÿÿÿÿ
+O	java:S106°"9Replace this use of System.out or System.err by a logger.(°°Ú¸
+O	java:S106¶"9Replace this use of System.out or System.err by a logger.(úÒè®
+R	java:S125²"<This block of commented-out lines of code should be removed.(Û•Ó
+O	java:S106¹"9Replace this use of System.out or System.err by a logger.(¨—êù
+C
+java:S1481½"'Remove this unused "cs" local variable.(ÙÓ¿Îûÿÿÿÿ
+O	java:S106Ï"9Replace this use of System.out or System.err by a logger.(Ò÷ã±
+O	java:S106×"9Replace this use of System.out or System.err by a logger.(Û”¸Å
+O	java:S106Û"9Replace this use of System.out or System.err by a logger.(à¥û¹
+K
+java:S2201Ü"/The return value of "toUpperCase" must be used.(†Øæ„úÿÿÿÿ
+O	java:S106à"9Replace this use of System.out or System.err by a logger.(ä‡³é
+=
+java:S2129æ"!Remove this "Integer" constructor(Ö«˜¦ÿÿÿÿÿ
+T	java:S106ë"9Replace this use of System.out or System.err by a logger.(éÉè‰şÿÿÿÿ
+T	java:S106÷"9Replace this use of System.out or System.err by a logger.(³ôèõıÿÿÿÿ
+T	java:S106ú"9Replace this use of System.out or System.err by a logger.(•Û›‹ùÿÿÿÿ
+O	java:S106ü"9Replace this use of System.out or System.err by a logger.(ã·Ì¯
+˜
+java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áõóœ
+R	java:S125„"<This block of commented-out lines of code should be removed.(ÀëåŒ
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿş§üÿÿÿÿ
+˜
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(êãÚı
+F
+java:S1172"*Remove this unused method parameter "str".(ÿş§üÿÿÿÿ
+Y
+java:S2094’"BRemove this empty class, write its code or make it an "interface".(ãü·§
+Q
+java:S1854œ"5Remove this useless assignment to local variable "r".(½´´ïøÿÿÿÿ
+M
+java:S1854›"6Remove this useless assignment to local variable "rp".(˜Ü×¢
+Q
+java:S1854•"5Remove this useless assignment to local variable "b".(ïˆëùÿÿÿÿ
+B
+java:S1481•"&Remove this unused "b" local variable.(ïˆëùÿÿÿÿ
+>
+java:S1481›"'Remove this unused "rp" local variable.(˜Ü×¢
+G
+java:S1905œ"+Remove this unnecessary cast to "Building".(½´´ïøÿÿÿÿ
+B
+java:S1481œ"&Remove this unused "r" local variable.(½´´ïøÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(à˜œØşÿÿÿÿ
+R
+java:S1119Ÿ";Refactor the code to remove this label and the need for it.(£Ôş¯
+0
+java:S1065Ÿ"Remove this unused label.(£Ôş¯
+O	java:S106¢"9Replace this use of System.out or System.err by a logger.(‡­»
+W	java:S125¡"<This block of commented-out lines of code should be removed.(íÄı¢üÿÿÿÿ
+O	java:S106¦"9Replace this use of System.out or System.err by a logger.(ªòÂ¯
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(¬Ô
+q	java:S116è"[Rename this field "Integer_instance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÔí³
+i
+java:S3008ç"RRename this field "Integer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸâÎî
+R	java:S125Å"<This block of commented-out lines of code should be removed.(ˆˆ·
+T	java:S106Ç"9Replace this use of System.out or System.err by a logger.(§­ºøüÿÿÿÿ
+u	java:S115Ï"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ƒ°Ââúÿÿÿÿ
+u	java:S115Ô"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ò²¨ùÿÿÿÿ
+p	java:S115Ù"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ú‰¬
+
+java:S1186ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(âµÊüÿÿÿÿ
+n
+java:S2786Í"RRemove this redundant "static" qualifier; nested enum types are implicitly static.(Ã³€ùøÿÿÿÿ
+˜
+java:S1186Ğ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿›œø
+˜
+java:S1186Õ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŞŠóñ
+˜
+java:S1186Ú"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŞŠóñ
+O	java:S106à"9Replace this use of System.out or System.err by a logger.(’›æº
+R
+java:S1854Œ";Remove this useless assignment to local variable "ordinal".(¥÷‰ä
+M
+java:S1854´"6Remove this useless assignment to local variable "i1".(âÜ£ã
+R
+java:S1854±"6Remove this useless assignment to local variable "d1".(Ëší÷ûÿÿÿÿ
+M
+java:S1854¯"6Remove this useless assignment to local variable "d1".(øØ·Í
+R
+java:S1854®"6Remove this useless assignment to local variable "d1".(óÁÂåüÿÿÿÿ
+M
+java:S1854¬"6Remove this useless assignment to local variable "l1".(»ÚìÕ
+R
+java:S1854ª"6Remove this useless assignment to local variable "d1".(÷áÖ–ıÿÿÿÿ
+R
+java:S1854©"6Remove this useless assignment to local variable "f1".(ÏÖáöùÿÿÿÿ
+R
+java:S1854Ä"6Remove this useless assignment to local variable "gg".(Õœ¤ùÿÿÿÿ
+Q
+java:S1854¾":Remove this useless assignment to local variable "Double".(„½·ö
+O	java:S106í"9Replace this use of System.out or System.err by a logger.(îÑÙ
+O	java:S106î"9Replace this use of System.out or System.err by a logger.(ÍÈ´Ş
+W	java:S125ñ"<This block of commented-out lines of code should be removed.(ŸëÍÀùÿÿÿÿ
+u
+java:S1171ô"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+N	java:S106õ"9Replace this use of System.out or System.err by a logger.(èœ¶@
+T	java:S106ø"9Replace this use of System.out or System.err by a logger.(œŠäüÿÿÿÿ
+u
+java:S1171ú"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+T	java:S106û"9Replace this use of System.out or System.err by a logger.(’¸‚„øÿÿÿÿ
+T	java:S106‚"9Replace this use of System.out or System.err by a logger.(Ú”¹»şÿÿÿÿ
+R	java:S125ƒ"<This block of commented-out lines of code should be removed.(ñÈ•Ò
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(ûöˆÈÿÿÿÿÿ
+C
+java:S1481Œ",Remove this unused "ordinal" local variable.(¥÷‰ä
+>
+java:S1481"'Remove this unused "gf" local variable.(€á¨“
+O	java:S106"9Replace this use of System.out or System.err by a logger.(ªå ƒ
+R	java:S125"<This block of commented-out lines of code should be removed.(·Ê‰
+g	java:S128™"LEnd this switch case with an unconditional break, return or throw statement.(çõçªüÿÿÿÿ
+t	java:S131•"YComplete cases by adding the missing enum constants or add a default case to this switch.(æì´’ÿÿÿÿÿ
+T	java:S106™"9Replace this use of System.out or System.err by a logger.(çõçªüÿÿÿÿ
+W	java:S125™"<This block of commented-out lines of code should be removed.(çõçªüÿÿÿÿ
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(ÄÅ•ˆ
+R	java:S125œ"<This block of commented-out lines of code should be removed.(ÄÅ•ˆ
+T	java:S106¢"9Replace this use of System.out or System.err by a logger.(ç’“Ñùÿÿÿÿ
+O	java:S106£"9Replace this use of System.out or System.err by a logger.(¤¸û™
+W	java:S125¥"<This block of commented-out lines of code should be removed.(¢üà‘ùÿÿÿÿ
+C
+java:S1481ª"'Remove this unused "d1" local variable.(÷áÖ–ıÿÿÿÿ
+=
+java:S2129²"!Remove this "Integer" constructor(Çƒ‘âøÿÿÿÿ
+7
+java:S2129³" Remove this "Double" constructor(öÙï
+R	java:S125µ"<This block of commented-out lines of code should be removed.(»Èÿ”
+D
+java:S1481·"(Remove this unused "ggi" local variable.(÷ÏòÖüÿÿÿÿ
+B
+java:S1481¾"+Remove this unused "Double" local variable.(„½·ö
+G
+java:S4524Ã"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ
+T	java:S106Å"9Replace this use of System.out or System.err by a logger.(ÏşúÍıÿÿÿÿ
+T	java:S106É"9Replace this use of System.out or System.err by a logger.(›˜”Ôûÿÿÿÿ
+T	java:S106Ê"9Replace this use of System.out or System.err by a logger.(®§‘ÿÿÿÿÿÿ
+N	java:S106Î"9Replace this use of System.out or System.err by a logger.(­ŸáV
+R	java:S125Í"<This block of commented-out lines of code should be removed.(œøäö
+O	java:S106Ï"9Replace this use of System.out or System.err by a logger.(ì‡×£
+N	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(ì¿5
+O	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(ˆøóÙ
+O	java:S106Ò"9Replace this use of System.out or System.err by a logger.(ò¾ü½
+T	java:S106Ó"9Replace this use of System.out or System.err by a logger.(º¡Èúüÿÿÿÿ
+g
+java:S1764Ó"KCorrect one of the identical sub-expressions on both sides of operator "=="(º¡Èúüÿÿÿÿ
+O	java:S106Ö"9Replace this use of System.out or System.err by a logger.(°¨Ğ
+T	java:S106×"9Replace this use of System.out or System.err by a logger.(‰±ëøûÿÿÿÿ
+O	java:S106Ù"9Replace this use of System.out or System.err by a logger.(¨¦†
+T	java:S106Ú"9Replace this use of System.out or System.err by a logger.(ıªøÿÿÿÿ
+O	java:S106Û"9Replace this use of System.out or System.err by a logger.(è»¿û
+a
+java:S1764Û"JCorrect one of the identical sub-expressions on both sides of operator "/"(è»¿û
+T	java:S106Ü"9Replace this use of System.out or System.err by a logger.(ö‡ĞÈùÿÿÿÿ
+T	java:S106İ"9Replace this use of System.out or System.err by a logger.(ûíĞûÿÿÿÿ
+T	java:S106ê"9Replace this use of System.out or System.err by a logger.(çõëçüÿÿÿÿ
+T	java:S106ë"9Replace this use of System.out or System.err by a logger.(è¦İ¡úÿÿÿÿ
+O	java:S106ì"9Replace this use of System.out or System.err by a logger.(Ñ¾Á®
+T	java:S106í"9Replace this use of System.out or System.err by a logger.(¼ŠÏşÿÿÿÿ
+T	java:S106î"9Replace this use of System.out or System.err by a logger.(ŸıÊ°ûÿÿÿÿ
+^
+java:S2094ò"BRemove this empty class, write its code or make it an "interface".(ò‰óßúÿÿÿÿ
+Q
+java:S1854€	"5Remove this useless assignment to local variable "r".(£¶Ü¬ÿÿÿÿÿ
+8
+java:S1116ş"Remove this empty statement.(ôŸìúÿÿÿÿ
+8
+java:S1116ÿ"Remove this empty statement.(ôŸìúÿÿÿÿ
+B
+java:S1481€	"&Remove this unused "r" local variable.(£¶Ü¬ÿÿÿÿÿ
+W	java:S125	"<This block of commented-out lines of code should be removed.(ªà€¦ÿÿÿÿÿ
+V
+java:S1854–	":Remove this useless assignment to local variable "bottle".(‰¨¬›øÿÿÿÿ
+G
+java:S1481–	"+Remove this unused "bottle" local variable.(‰¨¬›øÿÿÿÿ
+T	java:S106™	"9Replace this use of System.out or System.err by a logger.(î¿½˜ùÿÿÿÿ
+
+java:S1186¡	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ò›¨´øÿÿÿÿ
+D
+java:S1172¡	"(Remove this unused method parameter "h".(Ò›¨´øÿÿÿÿ
+?
+java:S1172¬	"(Remove this unused method parameter "j".(Ì¹ª
+R	java:S125«	"<This block of commented-out lines of code should be removed.(ïãâÖ
+W	java:S125­	"<This block of commented-out lines of code should be removed.(úÑâÆùÿÿÿÿ
+W	java:S125°	"<This block of commented-out lines of code should be removed.(úÑâÆùÿÿÿÿ
+T	java:S106·	"9Replace this use of System.out or System.err by a logger.(áĞäåıÿÿÿÿ
+W	java:S125À	"<This block of commented-out lines of code should be removed.(…„îûÿÿÿÿ
+O	java:S106Ã	"9Replace this use of System.out or System.err by a logger.(É¸Í¸
+O	java:S106Ä	"9Replace this use of System.out or System.err by a logger.(ÌÂÇö
+
+java:S1186Ü	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(íÿÍ ùÿÿÿÿ
+˜
+java:S1186ß	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(âìãø
+T	java:S106ä	"9Replace this use of System.out or System.err by a logger.(´ŸŒùÿÿÿÿ
+R	java:S125ñ	"<This block of commented-out lines of code should be removed.(¤®Úæ
+e
+java:S3551ö	"IMake this method "synchronized" to match the parent class implementation.(·áøøÿÿÿÿ
+2
+java:S3626ú	"Remove this redundant jump.(ûÁİ…
+O	java:S106
+"9Replace this use of System.out or System.err by a logger.(´´Şï
+O
+java:S1854
+"8Remove this useless assignment to local variable "list".(ºªõ
+T	java:S106
+"9Replace this use of System.out or System.err by a logger.(‡¯±’ùÿÿÿÿ
+@
+java:S1481
+")Remove this unused "list" local variable.(ºªõ
+Q	java:S125“
+"<This block of commented-out lines of code should be removed.(‰¹ŸE
+M
+java:S1854´
+"6Remove this useless assignment to local variable "s3".(­¾®ò
+M
+java:S1854³
+"6Remove this useless assignment to local variable "s2".(¦šû
+M
+java:S1854­
+"6Remove this useless assignment to local variable "s1".(×½¼ß
+>
+java:S1481­
+"'Remove this unused "s1" local variable.(×½¼ß
+>
+java:S1481³
+"'Remove this unused "s2" local variable.(¦šû
+>
+java:S1481´
+"'Remove this unused "s3" local variable.(­¾®ò
+T	java:S106º
+"9Replace this use of System.out or System.err by a logger.(—‰™¹úÿÿÿÿ
+s	java:S116Â
+"XRename this field "DEFAULT_VALUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï±ôúÿÿÿÿ
+=
+java:S1170Â
+"!Make this final field static too.(ï±ôúÿÿÿÿ
+R	java:S125Ç
+"<This block of commented-out lines of code should be removed.(Áí‹Ú
+O	java:S106Ë
+"9Replace this use of System.out or System.err by a logger.(£ÃÁÙ
+T	java:S106Ò
+"9Replace this use of System.out or System.err by a logger.(‘Íêƒşÿÿÿÿ
+N	java:S106×
+"9Replace this use of System.out or System.err by a logger.(é¹Äw
+L
+java:S1854İ
+"5Remove this useless assignment to local variable "f".(¹¶Ëô
+=
+java:S1481İ
+"&Remove this unused "f" local variable.(¹¶Ëô
+T	java:S106Ş
+"9Replace this use of System.out or System.err by a logger.(®‰™ùÿÿÿÿ
+O	java:S106ä
+"9Replace this use of System.out or System.err by a logger.(ßàáŸ
+j
+java:S1602æ
+"SRemove useless curly braces around statement and then remove useless return keyword(ÎÉÖà
+R	java:S125ç
+"<This block of commented-out lines of code should be removed.(¼ˆëğ
+T	java:S106í
+"9Replace this use of System.out or System.err by a logger.(ÕÁ³Òıÿÿÿÿ
+T	java:S106ğ
+"9Replace this use of System.out or System.err by a logger.(ê¸èøÿÿÿÿ
+T	java:S106ó
+"9Replace this use of System.out or System.err by a logger.(ÕÁ³Òıÿÿÿÿ
+O	java:S106ô
+"9Replace this use of System.out or System.err by a logger.(’â¹‹
+T	java:S106õ
+"9Replace this use of System.out or System.err by a logger.(§‡ßÊøÿÿÿÿ
+T	java:S106ö
+"9Replace this use of System.out or System.err by a logger.(§‡ßÊøÿÿÿÿ
+T	java:S106ú
+"9Replace this use of System.out or System.err by a logger.(ş®–«úÿÿÿÿ
+Q	java:S125ù
+"<This block of commented-out lines of code should be removed.(Ì¹†2
+Q
+java:S2209ú
+"5Change this instance-reference to a static reference.(ş®–«úÿÿÿÿ
+W	java:S125ÿ
+"<This block of commented-out lines of code should be removed.(›¿‡Ñÿÿÿÿÿ
+N	java:S106Š"9Replace this use of System.out or System.err by a logger.(î•“y
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ÿŞíüûÿÿÿÿ
+T	java:S106’"9Replace this use of System.out or System.err by a logger.(÷ÎÆÑÿÿÿÿÿ
+N	java:S106š"9Replace this use of System.out or System.err by a logger.(ûËåe
+N	java:S106"9Replace this use of System.out or System.err by a logger.(æ¡
+u	java:S115ª"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(“ğìùÿÿÿÿ
+u	java:S115¬"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡•Ûíÿÿÿÿÿ
+8
+java:S1170­"!Make this final field static too.(ö€´
+a
+java:S1124¬"EReorder the modifiers to comply with the Java Language Specification.(¡•Ûíÿÿÿÿÿ
+\
+java:S1124­"EReorder the modifiers to comply with the Java Language Specification.(ö€´
+p
+java:S1210é"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(êØü¶
+O
+java:S1854¿"8Remove this useless assignment to local variable "comp".(£°Ë¡
+O
+java:S1854¼"8Remove this useless assignment to local variable "ssss".(ˆŠë
+7
+java:S2129¼" Remove this "String" constructor(ˆŠë
+@
+java:S1481¼")Remove this unused "ssss" local variable.(ˆŠë
+@
+java:S1481¿")Remove this unused "comp" local variable.(£°Ë¡
+O	java:S106Ê"9Replace this use of System.out or System.err by a logger.(ù²ÿ
+W	java:S125Ğ"<This block of commented-out lines of code should be removed.(Èö™ƒüÿÿÿÿ
+T	java:S106Ò"9Replace this use of System.out or System.err by a logger.(¼èŠÖıÿÿÿÿ
+T	java:S106Ú"9Replace this use of System.out or System.err by a logger.(Éı’Õÿÿÿÿÿ
+T	java:S106Û"9Replace this use of System.out or System.err by a logger.(ÎŞ×Âüÿÿÿÿ
+O	java:S106æ"9Replace this use of System.out or System.err by a logger.(Öû³œ
+O	java:S106ç"9Replace this use of System.out or System.err by a logger.(ËĞŞà
+W	java:S125í"<This block of commented-out lines of code should be removed.(¦îŸ”şÿÿÿÿ
+p	java:S115ô"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ƒšÄÅ
+O	java:S106ù"9Replace this use of System.out or System.err by a logger.(Áß‡Ü
+O	java:S106ş"9Replace this use of System.out or System.err by a logger.(Áß‡Ü
+R	java:S125"<This block of commented-out lines of code should be removed.(ëçÇË
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(İ‘ÉÈşÿÿÿÿ
+L
+java:S1854±"6Remove this useless assignment to local variable "c3".(»ãÛG
+M
+java:S1854°"6Remove this useless assignment to local variable "c2".(ÿ‡ÕÛ
+R
+java:S1854¯"6Remove this useless assignment to local variable "c1".(ò¬˜¶ıÿÿÿÿ
+U
+java:S1854­"9Remove this useless assignment to local variable "wash3".(Õå¶ûşÿÿÿÿ
+P
+java:S1854¬"9Remove this useless assignment to local variable "wash2".(ïï£Û
+U
+java:S1854«"9Remove this useless assignment to local variable "wash1".(ıÙ™çùÿÿÿÿ
+T
+java:S1854ª"8Remove this useless assignment to local variable "wash".(çšáÂÿÿÿÿÿ
+R
+java:S1854©"6Remove this useless assignment to local variable "ar".(ãäƒÕùÿÿÿÿ
+L
+java:S1854¨"5Remove this useless assignment to local variable "a".(ŠÒ‡ı
+
+java:S1130–"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú7
+R	java:S125"<This block of commented-out lines of code should be removed.(ÏÊˆÏ
+T	java:S106›"9Replace this use of System.out or System.err by a logger.(ŠÖ¸Íúÿÿÿÿ
+u
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+O	java:S106¡"9Replace this use of System.out or System.err by a logger.(¿Øš«
+T	java:S106§"9Replace this use of System.out or System.err by a logger.(ó‰Ùüÿÿÿÿ
+W	java:S125¤"<This block of commented-out lines of code should be removed.(Û™ªŸıÿÿÿÿ
+=
+java:S1481¨"&Remove this unused "a" local variable.(ŠÒ‡ı
+C
+java:S1481©"'Remove this unused "ar" local variable.(ãäƒÕùÿÿÿÿ
+E
+java:S1481ª")Remove this unused "wash" local variable.(çšáÂÿÿÿÿÿ
+F
+java:S1481«"*Remove this unused "wash1" local variable.(ıÙ™çùÿÿÿÿ
+A
+java:S1481¬"*Remove this unused "wash2" local variable.(ïï£Û
+F
+java:S1481­"*Remove this unused "wash3" local variable.(Õå¶ûşÿÿÿÿ
+\
+java:S1612¯"@Replace this lambda with method reference 'System.out::println'.(ò¬˜¶ıÿÿÿÿ
+T	java:S106¯"9Replace this use of System.out or System.err by a logger.(ò¬˜¶ıÿÿÿÿ
+C
+java:S1481¯"'Remove this unused "c1" local variable.(ò¬˜¶ıÿÿÿÿ
+>
+java:S1481°"'Remove this unused "c2" local variable.(ÿ‡ÕÛ
+=
+java:S1481±"'Remove this unused "c3" local variable.(»ãÛG
+]
+java:S3078¼"AUse an "AtomicInteger" for this field; its operations are atomic.(÷±Öæùÿÿÿÿ
+O	java:S106¾"9Replace this use of System.out or System.err by a logger.(öû»›
+u
+java:S2142Ã"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+O	java:S106Æ"9Replace this use of System.out or System.err by a logger.(²ã¶Ï
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(ÏòÁ¦
+O	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(»Î™Ó
+^
+java:S2094Õ"BRemove this empty class, write its code or make it an "interface".(ôŒüÄøÿÿÿÿ
+J
+java:S2326Õ"._i_$1234567890_$$$$$ is not used in the class.(ôŒüÄøÿÿÿÿ
+d	java:S119Õ"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ôŒüÄøÿÿÿÿ
+^
+java:S2094Ö"BRemove this empty class, write its code or make it an "interface".(ò©ƒİûÿÿÿÿ
+7
+java:S2326Ö"T is not used in the class.(ò©ƒİûÿÿÿÿ
+^
+java:S2094Ö"BRemove this empty class, write its code or make it an "interface".(ò©ƒİûÿÿÿÿ
+7
+java:S2326Ö"t is not used in the class.(ò©ƒİûÿÿÿÿ
+d	java:S119Ö"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(ò©ƒİûÿÿÿÿ
+R	java:S125â"<This block of commented-out lines of code should be removed.(èË†Ğ
+=
+java:S2129ƒ"!Remove this "Integer" constructor(¶É½Êúÿÿÿÿ
+=
+java:S1481†"&Remove this unused "o" local variable.(‹ú“ë
+?	java:S108†")Either remove or fill this block of code.(‹ú“ë
+T	java:S106"9Replace this use of System.out or System.err by a logger.(·ùßóıÿÿÿÿ
+M
+java:S1854À"6Remove this useless assignment to local variable "oi".(Ã¶·î
+R
+java:S1854¹"6Remove this useless assignment to local variable "o1".(éÆşßÿÿÿÿÿ
+K
+java:S1854«"5Remove this useless assignment to local variable "o".(˜Ïf
+K
+java:S1854ª"5Remove this useless assignment to local variable "s".(äÔd
+L
+java:S1854©"5Remove this useless assignment to local variable "n".(Âˆ¢Õ
+S
+java:S1854¢"7Remove this useless assignment to local variable "sbs".(ş¤÷‡şÿÿÿÿ
+<
+java:S2129—" Remove this "String" constructor(‰¿‚˜ûÿÿÿÿ
+O	java:S106™"9Replace this use of System.out or System.err by a logger.(‡›–
+W	java:S125›"<This block of commented-out lines of code should be removed.(èèÄ¢øÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(ç‚é
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(­ËÖşÿÿÿÿ
+D
+java:S1481¢"(Remove this unused "sbs" local variable.(ş¤÷‡şÿÿÿÿ
+=
+java:S1481©"&Remove this unused "n" local variable.(Âˆ¢Õ
+<
+java:S1481ª"&Remove this unused "s" local variable.(äÔd
+<
+java:S1481«"&Remove this unused "o" local variable.(˜Ïf
+C
+java:S1481¹"'Remove this unused "o1" local variable.(éÆşßÿÿÿÿÿ
+=
+java:S2129»"!Remove this "Integer" constructor(¥ã•êÿÿÿÿÿ
+>
+java:S1481À"'Remove this unused "oi" local variable.(Ã¶·î
+T	java:S106Ç"9Replace this use of System.out or System.err by a logger.(¶ùö›úÿÿÿÿ
+T	java:S106Ú"9Replace this use of System.out or System.err by a logger.(Ì½à•øÿÿÿÿ
+D
+java:S1172ß"(Remove this unused method parameter "a".(áœİ¼ÿÿÿÿÿ
+T	java:S106à"9Replace this use of System.out or System.err by a logger.(¹½ÿŞşÿÿÿÿ
+F
+java:S1172â"/Remove these unused method parameters "a", "b".(®ñœŒ
+T	java:S106ã"9Replace this use of System.out or System.err by a logger.(‹µóúøÿÿÿÿ
+M
+java:S1172å"1Remove these unused method parameters "s1", "s2".(íô§°úÿÿÿÿ
+O	java:S106æ"9Replace this use of System.out or System.err by a logger.(·è¯Á
+H
+java:S1172è"1Remove these unused method parameters "s1", "s2".(ñœ–Ö
+N	java:S106é"9Replace this use of System.out or System.err by a logger.(çñ¼
+P
+java:S1854ñ"9Remove this useless assignment to local variable "bignu".(øÛï«
+A
+java:S1481ñ"*Remove this unused "bignu" local variable.(øÛï«
+T	java:S106ô"9Replace this use of System.out or System.err by a logger.(ğŸİìÿÿÿÿÿ
+O	java:S106ù"9Replace this use of System.out or System.err by a logger.(¿­Çï
+_
+java:S1172ÿ"CRemove these unused method parameters "accesscode", "responseType".(—÷‹úÿÿÿÿ
+A
+java:S3457€"%String contains no format specifiers.(Ó¹‰úÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ŞÆ­Ûşÿÿÿÿ
+O	java:S106‰"9Replace this use of System.out or System.err by a logger.(ù§é
+T	java:S106‹"9Replace this use of System.out or System.err by a logger.(ñ×˜¾úÿÿÿÿ
+N
+java:S1135¦"2Complete the task associated to this TODO comment.(†“”ƒüÿÿÿÿ
+8
+java:S3864®"!Remove this use of "Stream.peek".(¥Ø•Š
+U
+java:S1612®">Replace this lambda with method reference 'System.out::print'.(¥Ø•Š
+O	java:S106®"9Replace this use of System.out or System.err by a logger.(¥Ø•Š
+W
+java:S1612®"@Replace this lambda with method reference 'System.out::println'.(¥Ø•Š
+O	java:S106®"9Replace this use of System.out or System.err by a logger.(¥Ø•Š
+\
+java:S1612¯"@Replace this lambda with method reference 'System.out::println'.(ôĞÎøÿÿÿÿ
+T	java:S106¯"9Replace this use of System.out or System.err by a logger.(ôĞÎøÿÿÿÿ
+r
+java:S3008¸"VRename this field "AT_CAPACITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‘ÕÂÿÿÿÿÿ
+Q	java:S125º"<This block of commented-out lines of code should be removed.(¸¬Æ
+W	java:S125¿"<This block of commented-out lines of code should be removed.(›…ÈÒıÿÿÿÿ
+R	java:S125Ã"<This block of commented-out lines of code should be removed.(¬ÕŸ
+R
+java:S1854ë";Remove this useless assignment to local variable "objects".(äÉ„Ë
+B
+java:S2201Ü"+The return value of "replace" must be used.(í›¸
+T	java:S106Ş"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
+O	java:S106ê"9Replace this use of System.out or System.err by a logger.(£è­²
+C
+java:S1481ë",Remove this unused "objects" local variable.(äÉ„Ë
+N	java:S106ï"9Replace this use of System.out or System.err by a logger.(ªô×|
+W	java:S125ì"<This block of commented-out lines of code should be removed.(å±Æÿÿÿÿÿ
+W	java:S125ò"<This block of commented-out lines of code should be removed.(ìÙÆşşÿÿÿÿ
+T	java:S106÷"9Replace this use of System.out or System.err by a logger.(¼ÅÎ½üÿÿÿÿ
+T	java:S106ı"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+p	java:S115…"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(·ûÄç
+V
+java:S1118„":Add a private constructor to hide the implicit public one.(ŞîÍéıÿÿÿÿ
+O	java:S106›"9Replace this use of System.out or System.err by a logger.(Ê­ıò
+O	java:S106¡"9Replace this use of System.out or System.err by a logger.(Ôøé´
+O	java:S106¥"9Replace this use of System.out or System.err by a logger.(Ü³Ú
+O	java:S106¦"9Replace this use of System.out or System.err by a logger.(ÊæÍò
+C
+java:S1602¨",Remove useless curly braces around statement(ÿş«ß
+R	java:S125©"<This block of commented-out lines of code should be removed.(èèÅï
+O	java:S106Á"9Replace this use of System.out or System.err by a logger.(òİÛ²
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(ú¤ÍÇ
+W	java:S125Ì"<This block of commented-out lines of code should be removed.(¦¤å­ıÿÿÿÿ
+C
+java:S3599Ï",Use another way to initialize this instance.(ÈıÒå
+p
+java:S1171Ï"YMove the contents of this initializer to a standard constructor or to field initializers.(ÈıÒå
+T	java:S106Õ"9Replace this use of System.out or System.err by a logger.(¼ğ–Åúÿÿÿÿ
+T	java:S106Õ"9Replace this use of System.out or System.err by a logger.(¼ğ–Åúÿÿÿÿ
+O	java:S106Ø"9Replace this use of System.out or System.err by a logger.(Ü—¶Ì
+T	java:S106Ş"9Replace this use of System.out or System.err by a logger.(ã–¬ûÿÿÿÿ
+U
+java:S1854ç"9Remove this useless assignment to local variable "print".(ı‡Ëéüÿÿÿÿ
+W	java:S125ä"<This block of commented-out lines of code should be removed.(ÈÎ’úÿÿÿÿ
+T	java:S106ç"9Replace this use of System.out or System.err by a logger.(ı‡Ëéüÿÿÿÿ
+F
+java:S1481ç"*Remove this unused "print" local variable.(ı‡Ëéüÿÿÿÿ
+8
+java:S3864í"!Remove this use of "Stream.peek".(‚éïø
+8
+java:S3864ê"!Remove this use of "Stream.peek".(€ò÷Ö
+=
+java:S3864è"!Remove this use of "Stream.peek".(ñ’ãñùÿÿÿÿ
+T	java:S106è"9Replace this use of System.out or System.err by a logger.(ñ’ãñùÿÿÿÿ
+O	java:S106ê"9Replace this use of System.out or System.err by a logger.(€ò÷Ö
+T	java:S106ë"9Replace this use of System.out or System.err by a logger.(ÃüÿŒúÿÿÿÿ
+O	java:S106í"9Replace this use of System.out or System.err by a logger.(‚éïø
+O	java:S106ï"9Replace this use of System.out or System.err by a logger.(Õšñç
+U
+java:S1854¢"?Remove this useless assignment to local variable "optnullable".(ãâw
+M
+java:S1854Œ"6Remove this useless assignment to local variable "b1".(äØã
+W
+java:S1854‹";Remove this useless assignment to local variable "integer".(µ÷÷‚şÿÿÿÿ
+Z
+java:S1854">Remove this useless assignment to local variable "MAX_LENGTH".(­–Šîÿÿÿÿÿ
+R
+java:S1854ç";Remove this useless assignment to local variable "cupcake".(áöÀŞ
+V
+java:S1854¨"?Remove this useless assignment to local variable "comparatorr".(¤©ïÅ
+X
+java:S1854 "<Remove this useless assignment to local variable "asDouble".(šï‡™üÿÿÿÿ
+K
+java:S1481ø"/Remove this unused "MAX_LENGTH" local variable.(‚«˜úÿÿÿÿ
+E
+java:S1905ü")Remove this unnecessary cast to "Object".(Ğˆ„Îøÿÿÿÿ
+T	java:S106ÿ"9Replace this use of System.out or System.err by a logger.(Äï–çşÿÿÿÿ
+R	java:S125‚"<This block of commented-out lines of code should be removed.(‡¬‡ë
+O	java:S106…"9Replace this use of System.out or System.err by a logger.(®ä’„
+H
+java:S1481‹",Remove this unused "integer" local variable.(µ÷÷‚şÿÿÿÿ
+>
+java:S1481Œ"'Remove this unused "b1" local variable.(äØã
+R	java:S125‘"<This block of commented-out lines of code should be removed.(Ø®Â”
+D
+java:S2201–"-The return value of "isPresent" must be used.(”äúÀ
+Q	java:S125•"<This block of commented-out lines of code should be removed.(Ù‰•
+R	java:S125›"<This block of commented-out lines of code should be removed.(Øí¡Õ
+F
+java:S1481¢"0Remove this unused "optnullable" local variable.(ãâw
+N	java:S106­"9Replace this use of System.out or System.err by a logger.(Øéáj
+R	java:S125¦"<This block of commented-out lines of code should be removed.(·ïş™
+R	java:S125®"<This block of commented-out lines of code should be removed.(äõ™û
+O	java:S106±"9Replace this use of System.out or System.err by a logger.(»¤ï‡
+T	java:S106µ"9Replace this use of System.out or System.err by a logger.(İš½şÿÿÿÿ
+T	java:S106¶"9Replace this use of System.out or System.err by a logger.(Ó‡ìÍøÿÿÿÿ
+`
+java:S1858¶"D"v" is already a string, there's no need to call "toString()" on it.(Ó‡ìÍøÿÿÿÿ
+O	java:S106º"9Replace this use of System.out or System.err by a logger.(µˆœÑ
+O	java:S106»"9Replace this use of System.out or System.err by a logger.(­’¸Û
+O	java:S106¾"9Replace this use of System.out or System.err by a logger.(¬Ôã
+O	java:S106Ô"9Replace this use of System.out or System.err by a logger.(ë¯À¶
+O	java:S106Ú"9Replace this use of System.out or System.err by a logger.(•èÏê
+O	java:S106á"9Replace this use of System.out or System.err by a logger.(®”
+T	java:S106ã"9Replace this use of System.out or System.err by a logger.(Ú†ìÁûÿÿÿÿ
+R	java:S125è"<This block of commented-out lines of code should be removed.(ÒÍñ¿
+T	java:S106ë"9Replace this use of System.out or System.err by a logger.(Ë’¾èúÿÿÿÿ
+W	java:S125ê"<This block of commented-out lines of code should be removed.(ş›Ùûÿÿÿÿ
+N	java:S106ò"9Replace this use of System.out or System.err by a logger.(·Û{
+T	java:S106õ"9Replace this use of System.out or System.err by a logger.(ı‡Ëéüÿÿÿÿ
+=
+java:S3864û"!Remove this use of "Stream.peek".(˜Îïúÿÿÿÿ
+=
+java:S3864ø"!Remove this use of "Stream.peek".(Ä•ô‘ıÿÿÿÿ
+8
+java:S3864÷"!Remove this use of "Stream.peek".(Æ—¾ˆ
+O	java:S106ş"9Replace this use of System.out or System.err by a logger.(Ô÷ı‘
+W	java:S125€"<This block of commented-out lines of code should be removed.(âÙ†âıÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Üòışÿÿÿÿ
+R	java:S125†"<This block of commented-out lines of code should be removed.(·´´Ú
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(‰ŸÉ´ùÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(×½¤øÿÿÿÿ
+W	java:S125Š"<This block of commented-out lines of code should be removed.(‰ŸÉ´ùÿÿÿÿ
+[
+java:S1612•"?Replace this lambda with method reference 'Collection::stream'.(Û–‚©ÿÿÿÿÿ
+O	java:S106–"9Replace this use of System.out or System.err by a logger.(ÔÊ¢½
+T	java:S106—"9Replace this use of System.out or System.err by a logger.(¶éŞ·úÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(‡İ†Ñ
+I
+java:S1481 "-Remove this unused "asDouble" local variable.(šï‡™üÿÿÿÿ
+O	java:S106£"9Replace this use of System.out or System.err by a logger.(Ç‰ú¬
+G
+java:S1481¨"0Remove this unused "comparatorr" local variable.(¤©ïÅ
+T	java:S106³"9Replace this use of System.out or System.err by a logger.(·êÜöüÿÿÿÿ
+N	java:S106·"9Replace this use of System.out or System.err by a logger.(ù–d
+T	java:S106Æ"9Replace this use of System.out or System.err by a logger.(º•§…ûÿÿÿÿ
+T	java:S106Ë"9Replace this use of System.out or System.err by a logger.(º•§…ûÿÿÿÿ
+O	java:S106Ó"9Replace this use of System.out or System.err by a logger.(À«ş
+W	java:S125Ñ"<This block of commented-out lines of code should be removed.(Ş¿ÿÌşÿÿÿÿ
+T	java:S106Ø"9Replace this use of System.out or System.err by a logger.(à”Öşúÿÿÿÿ
+T	java:S106Û"9Replace this use of System.out or System.err by a logger.(Ì½à•øÿÿÿÿ
+T	java:S106Ş"9Replace this use of System.out or System.err by a logger.(Ôò§ÿÿÿÿÿ
+T	java:S106ã"9Replace this use of System.out or System.err by a logger.(ŞşÜ´ùÿÿÿÿ
+T	java:S106æ"9Replace this use of System.out or System.err by a logger.(üÎÑÙüÿÿÿÿ
+C
+java:S1481ç",Remove this unused "cupcake" local variable.(áöÀŞ
+O	java:S106ï"9Replace this use of System.out or System.err by a logger.(Ø±â‡
+R	java:S125é"<This block of commented-out lines of code should be removed.(ŸŸß
+T	java:S106ş"9Replace this use of System.out or System.err by a logger.(¼ıƒ©úÿÿÿÿ
+R	java:S125ò"<This block of commented-out lines of code should be removed.(¸şÏ
+[
+java:S1612"?Replace this lambda with method reference 'Collection::stream'.(é»Ü‹úÿÿÿÿ
+Z
+java:S1612">Replace this lambda with method reference 'System.out::print'.(é»Ü‹úÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(é»Ü‹úÿÿÿÿ
+O	java:S106‚"9Replace this use of System.out or System.err by a logger.(¯âèÒ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(“‚±×ûÿÿÿÿ
+B
+java:S1481“"+Remove this unused "flakes" local variable.(Ö¨üç
+R	java:S125”"<This block of commented-out lines of code should be removed.(÷¨¬ù
+O	java:S106—"9Replace this use of System.out or System.err by a logger.(û€½‡
+O	java:S106˜"9Replace this use of System.out or System.err by a logger.(‘Ó°
+O	java:S106š"9Replace this use of System.out or System.err by a logger.(æ‹¹„
+N	java:S106›"9Replace this use of System.out or System.err by a logger.(ûŞ€?
+p
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(‚êİ§şÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Îâöÿÿÿÿÿÿ
+O	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(Î”™
+T	java:S106¢"9Replace this use of System.out or System.err by a logger.(•¾ê²úÿÿÿÿ
+W	java:S125£"<This block of commented-out lines of code should be removed.(ìùÆÙùÿÿÿÿ
+O	java:S106©"9Replace this use of System.out or System.err by a logger.(¿éíÜ
+T	java:S106­"9Replace this use of System.out or System.err by a logger.(ÍÙÓğûÿÿÿÿ
+Q
+java:S1172¿"5Remove these unused method parameters "cause", "msg".(Øñá§øÿÿÿÿ
+W	java:S125Ô"<This block of commented-out lines of code should be removed.(˜—ò­ûÿÿÿÿ
+O	java:S106Ù"9Replace this use of System.out or System.err by a logger.(ú¤¡£
+O	java:S106Ü"9Replace this use of System.out or System.err by a logger.(ë¿Ÿ—
+T	java:S106à"9Replace this use of System.out or System.err by a logger.(ÍÔ¼ëÿÿÿÿÿ
+R	java:S125ß"<This block of commented-out lines of code should be removed.(‰†ã»
+C
+java:S1481ç"'Remove this unused "p0" local variable.(Âÿ²ûÿÿÿÿ
+D
+java:S1481è"(Remove this unused "p10" local variable.(ÎàÇŒúÿÿÿÿ
+W	java:S125ò"<This block of commented-out lines of code should be removed.(œ´Ìøÿÿÿÿÿ
+R	java:S125ó"<This block of commented-out lines of code should be removed.(Ó·›‹
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(Ø›¤Äüÿÿÿÿ
+E
+java:S1172")Remove this unused method parameter "fn".(¦¥ˆ“şÿÿÿÿ
+O	java:S106”"9Replace this use of System.out or System.err by a logger.(¹œı
+@
+java:S1481—")Remove this unused "read" local variable.( ®ä¶
+B
+java:S1481˜"&Remove this unused "s" local variable.(Ã‹Ì¾ùÿÿÿÿ
+F
+java:S1481™"*Remove this unused "chars" local variable.(ßıäıÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ä®ª™üÿÿÿÿ
+T	java:S106¡"9Replace this use of System.out or System.err by a logger.(¾ëÁ°şÿÿÿÿ
+T
+java:S1854É"8Remove this useless assignment to local variable "cake".(ì±ÄÓıÿÿÿÿ
+R	java:S125¥"<This block of commented-out lines of code should be removed.(™¼Ãò
+T	java:S106¬"9Replace this use of System.out or System.err by a logger.(»§ùÿÿÿÿ
+T	java:S106®"9Replace this use of System.out or System.err by a logger.(õËøµùÿÿÿÿ
+O	java:S106¯"9Replace this use of System.out or System.err by a logger.(Ï­¤ş
+T	java:S106±"9Replace this use of System.out or System.err by a logger.(ğŞÔúÿÿÿÿ
+j
+java:S4042±"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(ğŞÔúÿÿÿÿ
+O	java:S106²"9Replace this use of System.out or System.err by a logger.(´¿ß¦
+e
+java:S4042²"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(´¿ß¦
+O	java:S106¶"9Replace this use of System.out or System.err by a logger.(÷ÚÒŸ
+T	java:S106»"9Replace this use of System.out or System.err by a logger.(öŠ’¢ùÿÿÿÿ
+N	java:S106¼"9Replace this use of System.out or System.err by a logger.(«Î'
+T	java:S106½"9Replace this use of System.out or System.err by a logger.(à“Ğ¢ÿÿÿÿÿ
+T	java:S106¾"9Replace this use of System.out or System.err by a logger.(€¶¼üÿÿÿÿ
+O	java:S106Á"9Replace this use of System.out or System.err by a logger.(Š¶ø†
+W	java:S125À"<This block of commented-out lines of code should be removed.(åıÌÁüÿÿÿÿ
+T	java:S106Â"9Replace this use of System.out or System.err by a logger.(„›ú¯ûÿÿÿÿ
+T	java:S106Å"9Replace this use of System.out or System.err by a logger.(’ŠÑŠşÿÿÿÿ
+E
+java:S1481É")Remove this unused "cake" local variable.(ì±ÄÓıÿÿÿÿ
+O	java:S106Ï"9Replace this use of System.out or System.err by a logger.(·ˆûØ
+T	java:S106Û"9Replace this use of System.out or System.err by a logger.(„˜ğ®ÿÿÿÿÿ
+R	java:S125ò"<This block of commented-out lines of code should be removed.(©Ãâ
+a
+java:S2674õ"JCheck the return value of the "skip" call to see how many bytes were read.(™©¿
+a
+java:S2674ö"JCheck the return value of the "skip" call to see how many bytes were read.(¬ËÑ
+f
+java:S2674ı"JCheck the return value of the "skip" call to see how many bytes were read.(Ğ ì…ıÿÿÿÿ
+O	java:S106‚"9Replace this use of System.out or System.err by a logger.(´’·¸
+H
+java:S1481†",Remove this unused "console" local variable.(Ôı¾şÿÿÿÿ
+W	java:S125†"<This block of commented-out lines of code should be removed.(Ôı¾şÿÿÿÿ
+9
+java:S3010¦""Remove this assignment of "color".(©¬™
+L
+java:S2209¯"5Change this instance-reference to a static reference.(Ä‘óª
+O	java:S106·"9Replace this use of System.out or System.err by a logger.(ì•üß
+L
+java:S2209·"5Change this instance-reference to a static reference.(ì•üß
+u
+java:S1171»"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+j
+java:S1602Ê"SRemove useless curly braces around statement and then remove useless return keyword(‘¬†Â
+X
+java:S1612Ê"AReplace this lambda with method reference 'Path::toAbsolutePath'.(‘¬†Â
+R	java:S125Ì"<This block of commented-out lines of code should be removed.(¤É‰Ó
+T	java:S106Ó"9Replace this use of System.out or System.err by a logger.(¹¦…‡úÿÿÿÿ
+]
+java:S2147Ÿ"FCombine this catch with the one at line 2717, which has the same body.(”ı¾
+T	java:S106Ö"9Replace this use of System.out or System.err by a logger.(´¯ÎÕøÿÿÿÿ
+T	java:S106à"9Replace this use of System.out or System.err by a logger.(§Øìúÿÿÿÿ
+H
+java:S3011é",This accessibility update should be removed.(·µÓúÿÿÿÿ
+O	java:S106í"9Replace this use of System.out or System.err by a logger.(¿Ù–ì
+T	java:S106î"9Replace this use of System.out or System.err by a logger.(ÄÓšøÿÿÿÿ
+C
+java:S1905î"'Remove this unnecessary cast to "Long".(ÄÓšøÿÿÿÿ
+R	java:S125õ"<This block of commented-out lines of code should be removed.(•ÖíÆ
+
+java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¬·ºÖûÿÿÿÿ
+
+java:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ™¸ùÿÿÿÿ
+˜
+java:S1186Œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜ ù
+˜
+java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Úìşš
+˜
+java:S1186–"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ø×­’
+@
+java:S1481ö")Remove this unused "dfav" local variable.(ó¥É¦
+U
+java:S1854¸"9Remove this useless assignment to local variable "path_".(¿Ê¾¦úÿÿÿÿ
+V
+java:S1854ñ":Remove this useless assignment to local variable "path_1".(Õ÷»úÿÿÿÿ
+O	java:S106«"9Replace this use of System.out or System.err by a logger.(Ëàßá
+O	java:S106¬"9Replace this use of System.out or System.err by a logger.(Ááöˆ
+N	java:S106°"9Replace this use of System.out or System.err by a logger.(°ÏÓr
+W	java:S125®"<This block of commented-out lines of code should be removed.(ÚÓı‘úÿÿÿÿ
+O	java:S106±"9Replace this use of System.out or System.err by a logger.(»çùÍ
+O	java:S106´"9Replace this use of System.out or System.err by a logger.(Ú‘¶
+O	java:S106µ"9Replace this use of System.out or System.err by a logger.(ß›Ó
+O	java:S106¶"9Replace this use of System.out or System.err by a logger.(€Æğğ
+T	java:S106·"9Replace this use of System.out or System.err by a logger.(ïœãÏÿÿÿÿÿ
+F
+java:S1481¸"*Remove this unused "path_" local variable.(¿Ê¾¦úÿÿÿÿ
+O	java:S106º"9Replace this use of System.out or System.err by a logger.(º½ì
+N	java:S106À"9Replace this use of System.out or System.err by a logger.(Ù»
+R	java:S125Á"<This block of commented-out lines of code should be removed.(º°æÀ
+O	java:S106Å"9Replace this use of System.out or System.err by a logger.(øŞËÒ
+W	java:S125Í"<This block of commented-out lines of code should be removed.(ôîõ†şÿÿÿÿ
+R	java:S125Ù"<This block of commented-out lines of code should be removed.(íÌÍ‹
+G
+java:S1481ñ"+Remove this unused "path_1" local variable.(Õ÷»úÿÿÿÿ
+R	java:S125õ"<This block of commented-out lines of code should be removed.(¢íÂ“
+R	java:S125ÿ"<This block of commented-out lines of code should be removed.(Êşÿò
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(Õëğ‡
+]
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¦íÅûûÿÿÿÿ
+O	java:S106©"9Replace this use of System.out or System.err by a logger.(„íå¹
+>	java:S108ª")Either remove or fill this block of code.(Éò§+
+?	java:S108­")Either remove or fill this block of code.(‘¶ÙŒ
+T	java:S106á"9Replace this use of System.out or System.err by a logger.(Ä–î©úÿÿÿÿ
+T	java:S106ä"9Replace this use of System.out or System.err by a logger.(Å‚ßüÿÿÿÿ
+ƒ
+java:S1130é"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.( ˆ“
+O	java:S106ì"9Replace this use of System.out or System.err by a logger.(Âßÿé
+O	java:S106î"9Replace this use of System.out or System.err by a logger.(£°ùê
+T	java:S106ï"9Replace this use of System.out or System.err by a logger.(Ø»Êˆÿÿÿÿÿ
+O	java:S106ñ"9Replace this use of System.out or System.err by a logger.(¤¶±à
+X
+java:S1075ó"ARefactor your code to get this URI from a customizable parameter.(¹è”
+T	java:S106ö"9Replace this use of System.out or System.err by a logger.(Õ½ÊÁúÿÿÿÿ
+T	java:S106÷"9Replace this use of System.out or System.err by a logger.(š«¦Ÿùÿÿÿÿ
+O	java:S106ø"9Replace this use of System.out or System.err by a logger.(ÿÚÁŒ
+N	java:S106ù"9Replace this use of System.out or System.err by a logger.(“m
+N	java:S106ú"9Replace this use of System.out or System.err by a logger.(ëá!
+O	java:S106û"9Replace this use of System.out or System.err by a logger.(²¤
+O	java:S106ı"9Replace this use of System.out or System.err by a logger.(©€Û½
+O	java:S106ş"9Replace this use of System.out or System.err by a logger.(èŠÒ¸
+O	java:S106–"9Replace this use of System.out or System.err by a logger.(•×µÇ
+R	java:S125"<This block of commented-out lines of code should be removed.(äûÉ
+O	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(¡Ããš
+z
+java:S2142¦"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(è®ã¶øÿÿÿÿ
+O	java:S106§"9Replace this use of System.out or System.err by a logger.(ö¬
+T	java:S106©"9Replace this use of System.out or System.err by a logger.(ã²Üùÿÿÿÿ
+O	java:S106«"9Replace this use of System.out or System.err by a logger.(Ş’—ù
+U
+java:S1854²"9Remove this useless assignment to local variable "cache".(Áª‚øşÿÿÿÿ
+
+java:S1130­"€Remove the declaration of thrown exception 'java.util.concurrent.ExecutionException', as it cannot be thrown from method's body.(±®¸’üÿÿÿÿ
+“
+java:S1130­"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(±®¸’üÿÿÿÿ
+W	java:S125°"<This block of commented-out lines of code should be removed.(–ÈÓÿÿÿÿÿ
+F
+java:S1481²"*Remove this unused "cache" local variable.(Áª‚øşÿÿÿÿ
+W	java:S125³"<This block of commented-out lines of code should be removed.(øƒ¦şÿÿÿÿ
+R	java:S125µ"<This block of commented-out lines of code should be removed.(à´şÁ
+N	java:S106Ç"9Replace this use of System.out or System.err by a logger.(·ÍÀ(
+N	java:S106È"9Replace this use of System.out or System.err by a logger.(º –
+O	java:S106É"9Replace this use of System.out or System.err by a logger.(ğï¤¼
+T	java:S106Ì"9Replace this use of System.out or System.err by a logger.(­ã‚¸ûÿÿÿÿ
+O	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(¸¢
+W	java:S125Ï"<This block of commented-out lines of code should be removed.(÷ƒ˜èıÿÿÿÿ
+N	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(…ş q
+O	java:S106Ø"9Replace this use of System.out or System.err by a logger.(Ïå·Ú
+R	java:S125Ó"<This block of commented-out lines of code should be removed.(· —¡
+T	java:S106Ù"9Replace this use of System.out or System.err by a logger.(’ç°£øÿÿÿÿ
+T	java:S106á"9Replace this use of System.out or System.err by a logger.(Óêôÿÿÿÿÿ
+R	java:S125ä"<This block of commented-out lines of code should be removed.(±¯€¤
+O	java:S106ê"9Replace this use of System.out or System.err by a logger.(î”Í
+R	java:S125é"<This block of commented-out lines of code should be removed.(—ãç
+T	java:S106î"9Replace this use of System.out or System.err by a logger.(ÊŞäûÿÿÿÿ
+N	java:S106ï"9Replace this use of System.out or System.err by a logger.(º –
+T	java:S106÷"9Replace this use of System.out or System.err by a logger.(™•âıÿÿÿÿ
+O	java:S106ø"9Replace this use of System.out or System.err by a logger.(ı±·
+R	java:S125û"<This block of commented-out lines of code should be removed.( ÈĞâ
+T	java:S106‚"9Replace this use of System.out or System.err by a logger.(îâ¬ÿÿÿÿÿ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(œ¦Íşÿÿÿÿ
+W	java:S125…"<This block of commented-out lines of code should be removed.(ü˜ä‘øÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(È’Á
+H
+java:S1602‘",Remove useless curly braces around statement(ÓÆ´Óûÿÿÿÿ
+O	java:S106’"9Replace this use of System.out or System.err by a logger.(Û¾Ò
+O	java:S106—"9Replace this use of System.out or System.err by a logger.(Ö÷¸ß
+O	java:S106˜"9Replace this use of System.out or System.err by a logger.(õóèÍ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÛŠ£üÿÿÿÿ
+T	java:S106¥"9Replace this use of System.out or System.err by a logger.(Ò‹Éöıÿÿÿÿ
+W	java:S125¬"<This block of commented-out lines of code should be removed.(‘š¸øÿÿÿÿ
+O	java:S106¯"9Replace this use of System.out or System.err by a logger.(ßåŸ
+O	java:S106²"9Replace this use of System.out or System.err by a logger.(ÊˆÈÄ
+R	java:S125Å"<This block of commented-out lines of code should be removed.(°€á…
+R	java:S125Ë"<This block of commented-out lines of code should be removed.(¯¤íÑ
+X
+java:S3457Í"AFormat specifiers should be used instead of string concatenation.(®‹ëß
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(®‹ëß
+d	java:S100Ğ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À¨Ø
+?
+java:S1905Ö")Remove this unnecessary cast to "double".(¸œºn
+O	java:S106Ú"9Replace this use of System.out or System.err by a logger.(á ÂŒ
+=
+java:S1170İ"!Make this final field static too.(¼¡÷Ìøÿÿÿÿ
+=
+java:S1659ß"!Declare "end" on a separate line.(ÍôÁÑıÿÿÿÿ
+z
+java:S2142‡"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(¬Àáªøÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(ÔõŒ±
+O	java:S106‚"9Replace this use of System.out or System.err by a logger.(«àÑÔ
+T	java:S106…"9Replace this use of System.out or System.err by a logger.(š¾Áüÿÿÿÿ
+D	java:S108‡")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(à´şÁ
+R	java:S125™"<This block of commented-out lines of code should be removed.(›Éœƒ
+R	java:S125¤"<This block of commented-out lines of code should be removed.(”É¨ª
+t
+java:S4276«"]Refactor this code to use the more specialised Functional Interface 'BinaryOperator<Integer>'(ªÙ…Ê
+]
+java:S3457­"AFormat specifiers should be used instead of string concatenation.(Å¾³¤ÿÿÿÿÿ
+T	java:S106­"9Replace this use of System.out or System.err by a logger.(Å¾³¤ÿÿÿÿÿ
+T	java:S106±"9Replace this use of System.out or System.err by a logger.(ò¹°Ïüÿÿÿÿ
+X
+java:S3457¶"AFormat specifiers should be used instead of string concatenation.(ÔŞ‚¡
+O	java:S106¶"9Replace this use of System.out or System.err by a logger.(ÔŞ‚¡
+Q	java:S125»"<This block of commented-out lines of code should be removed.(ãÚã
+z
+java:S2142È"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(¬Àáªøÿÿÿÿ
+O	java:S106Ç"9Replace this use of System.out or System.err by a logger.(À›õ­
+D	java:S108È")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ
+W
+java:S1854Ï";Remove this useless assignment to local variable "results".(ÏÔ½¶ûÿÿÿÿ
+z
+java:S2142İ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(¢ò¨½şÿÿÿÿ
+H
+java:S1481Ï",Remove this unused "results" local variable.(ÏÔ½¶ûÿÿÿÿ
+O	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(Öìç
+T	java:S106Ó"9Replace this use of System.out or System.err by a logger.(¶Ä¼¹ıÿÿÿÿ
+z
+java:S2142Ù"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(è®ã¶øÿÿÿÿ
+T	java:S106×"9Replace this use of System.out or System.err by a logger.(Úá‘²ûÿÿÿÿ
+T	java:S106Ú"9Replace this use of System.out or System.err by a logger.(ãÇÓ’ÿÿÿÿÿ
+O	java:S106Û"9Replace this use of System.out or System.err by a logger.(ö¬
+V
+java:S1854ã":Remove this useless assignment to local variable "result".(àıèÿıÿÿÿÿ
+z
+java:S2142ñ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(¢ò¨½şÿÿÿÿ
+G
+java:S1481ã"+Remove this unused "result" local variable.(àıèÿıÿÿÿÿ
+T	java:S106å"9Replace this use of System.out or System.err by a logger.(äİÔØüÿÿÿÿ
+T	java:S106ç"9Replace this use of System.out or System.err by a logger.(Œğ›Äûÿÿÿÿ
+z
+java:S2142í"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(è®ã¶øÿÿÿÿ
+T	java:S106ë"9Replace this use of System.out or System.err by a logger.(é¬ì”üÿÿÿÿ
+T	java:S106î"9Replace this use of System.out or System.err by a logger.(©µƒ‰øÿÿÿÿ
+O	java:S106ï"9Replace this use of System.out or System.err by a logger.(ö¬
+ƒ
+java:S1130‹"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(¡ªÊ°
+N
+java:S1612Œ"7Replace this lambda with method reference 'Race::hare'.(í¢¤‡
+W
+java:S1612";Replace this lambda with method reference 'Race::tortoise'.(¶åÇãøÿÿÿÿ
+R	java:S125’"<This block of commented-out lines of code should be removed.(¶Â¾–
+W	java:S125"<This block of commented-out lines of code should be removed.(•ìİıÿÿÿÿ
+u
+java:S2142«"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(¯·Ñ
+?	java:S108«")Either remove or fill this block of code.(¯·Ñ
+T	java:S106°"9Replace this use of System.out or System.err by a logger.(Ø›Ô¯ıÿÿÿÿ
+T	java:S106¶"9Replace this use of System.out or System.err by a logger.(¢±¾ôùÿÿÿÿ
+W	java:S125³"<This block of commented-out lines of code should be removed.(½Â½ƒıÿÿÿÿ
+T	java:S106¸"9Replace this use of System.out or System.err by a logger.( â–ôûÿÿÿÿ
+O	java:S106À"9Replace this use of System.out or System.err by a logger.(èº‘Ğ
+O	java:S106Ä"9Replace this use of System.out or System.err by a logger.(¢Í´‚
+W	java:S125Â"<This block of commented-out lines of code should be removed.(½Â½ƒıÿÿÿÿ
+W	java:S125Å"<This block of commented-out lines of code should be removed.(æ©´üÿÿÿÿ
+O	java:S106È"9Replace this use of System.out or System.err by a logger.(Â´ö
+W	java:S125Ë"<This block of commented-out lines of code should be removed.(º¡äİüÿÿÿÿ
+b
+java:S2147ë"FCombine this catch with the one at line 3561, which has the same body.(åşŒóùÿÿÿÿ
+u
+java:S2142é"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+O	java:S106ç"9Replace this use of System.out or System.err by a logger.(ÙˆÄû
+T	java:S106è"9Replace this use of System.out or System.err by a logger.(Şÿòøøÿÿÿÿ
+T
+java:S1612ú"8Replace this lambda with method reference 'a::swimming'.(ôû¸äûÿÿÿÿ
+u
+java:S2142ƒ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾
+W	java:S125ÿ"<This block of commented-out lines of code should be removed.(€—£àøÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(®ÊŞ
+T	java:S106‚"9Replace this use of System.out or System.err by a logger.(§»éøÿÿÿÿ
+O	java:S106†"9Replace this use of System.out or System.err by a logger.(­ìûë
+2
+java:S3626˜"Remove this redundant jump.(ûÁİ…
+M
+java:S2696—"6Make the enclosing method "static" or remove this set.(Ü»áÒ
+u
+java:S2142§"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+O	java:S106¦"9Replace this use of System.out or System.err by a logger.(®ÊŞ
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(¹ë¦ 
+T	java:S106«"9Replace this use of System.out or System.err by a logger.(üıƒşÿÿÿÿ
+Q
+java:S2209«"5Change this instance-reference to a static reference.(üıƒşÿÿÿÿ
+O	java:S106Ã"9Replace this use of System.out or System.err by a logger.(‡½ë
+L
+java:S2209Ã"5Change this instance-reference to a static reference.(‡½ë
+R
+java:S6437à"6Revoke and change this password, as it is compromised.(Úß“áüÿÿÿÿ
+W	java:S125á"<This block of commented-out lines of code should be removed.(÷ƒ¹Áıÿÿÿÿ
+O	java:S106ï"9Replace this use of System.out or System.err by a logger.(ÛìÅ
+W	java:S125ğ"<This block of commented-out lines of code should be removed.(³õìõÿÿÿÿÿ
+R	java:S125ø"<This block of commented-out lines of code should be removed.(—Â½
+T	java:S106ı"9Replace this use of System.out or System.err by a logger.(¡­ÅØùÿÿÿÿ
+W	java:S125ı"<This block of commented-out lines of code should be removed.(¡­ÅØùÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(áÔÚºûÿÿÿÿ
+O	java:S106š"9Replace this use of System.out or System.err by a logger.(¶á·–
+T	java:S106œ"9Replace this use of System.out or System.err by a logger.(‚Î¤ûÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(û‹àğúÿÿÿÿ
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(• Šó
+Q
+java:S1161Á":Add the "@Override" annotation above this method signature(…½ÛØ
+T	java:S106Â"9Replace this use of System.out or System.err by a logger.(¤¸¤ûÿÿÿÿ
+W	java:S125Å"<This block of commented-out lines of code should be removed.(¾Óéãşÿÿÿÿ
+
+java:S1186Ï"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(°“÷ßüÿÿÿÿ
+V
+java:S1161Ï":Add the "@Override" annotation above this method signature(°“÷ßüÿÿÿÿ
+N
+java:S1610Û"7Convert the abstract class "Catctip" into an interface.(åæ¼ç
+Y
+java:S2094Û"BRemove this empty class, write its code or make it an "interface".(åæ¼ç
+V
+java:S1161à":Add the "@Override" annotation above this method signature(Ùğ–³şÿÿÿÿ
+2
+java:S3626á"Remove this redundant jump.(ûÁİ…
+R	java:S125ß"<This block of commented-out lines of code should be removed.(¡ŠÇÃ
+V
+java:S1161ã":Add the "@Override" annotation above this method signature(ª‹Ëïıÿÿÿÿ
+R	java:S125å"<This block of commented-out lines of code should be removed.(¦«Ú
+8
+java:S2129ç"!Remove this "Integer" constructor(åÕäğ
+u	java:S115î"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(”ãñşÿÿÿÿÿ
+u	java:S115ï"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(İ¥íŸûÿÿÿÿ
+c
+java:S1845ƒ"MRename method "live" to prevent any misunderstanding/clash with field "live".(€ø÷(
+a
+java:S1124ï"EReorder the modifiers to comply with the Java Language Specification.(İ¥íŸûÿÿÿÿ
+R	java:S125ó"<This block of commented-out lines of code should be removed.(Û“¤
+N	java:S106‰"9Replace this use of System.out or System.err by a logger.(´ÙÅ
+W	java:S125"<This block of commented-out lines of code should be removed.(îÌôˆıÿÿÿÿ
+O	java:S106¢"9Replace this use of System.out or System.err by a logger.(Éğ•Ü
+W	java:S125¤"<This block of commented-out lines of code should be removed.(Ä˜Âöıÿÿÿÿ
+O	java:S106¨"9Replace this use of System.out or System.err by a logger.(Ø¶—ş
+
+java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡Ï–íûÿÿÿÿ
+C
+java:S1125¯"'Remove the unnecessary boolean literal.(™¸¸òıÿÿÿÿ
+i	java:S100µ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ï–íûÿÿÿÿ
+a
+java:S1124µ"EReorder the modifiers to comply with the Java Language Specification.(¡Ï–íûÿÿÿÿ
+O	java:S106À"9Replace this use of System.out or System.err by a logger.(›Î†
+T	java:S106Ä"9Replace this use of System.out or System.err by a logger.(ï×„ úÿÿÿÿ
+N	java:S106Ç"9Replace this use of System.out or System.err by a logger.(’™¶|
+O	java:S106Ê"9Replace this use of System.out or System.err by a logger.(ÛÀı
+˜
+java:S1186Õ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿèÊ
+P
+java:S3400Ö"9Remove this method and declare a constant for this value.(İë©‘
+K
+java:S2387Ù"/"speed" is the name of a field in "Automobile".(’­öŸÿÿÿÿÿ
+n
+java:S2177à"WRename this method; there is a "private" method in the parent class with the same name.(±¯¯Ç
+?
+java:S2387è")"speed" is the name of a field in "Auto".(˜õëS
+O
+java:S1854õ"9Remove this useless assignment to local variable "car1o".(÷ ˜@
+A
+java:S1172ô"*Remove this unused method parameter "car".(à‰ûÿ
+@
+java:S1481õ"*Remove this unused "car1o" local variable.(÷ ˜@
+T	java:S106÷"9Replace this use of System.out or System.err by a logger.(¶Ò»øÿÿÿÿ
+R
+java:S2696ø"6Make the enclosing method "static" or remove this set.(Î‚…¾şÿÿÿÿ
+Z
+java:S1854Ÿ">Remove this useless assignment to local variable "ofdatetime".(Õ¤àòøÿÿÿÿ
+Z
+java:S1854">Remove this useless assignment to local variable "ofdatetime".(ËØß´ûÿÿÿÿ
+S
+java:S1854„"7Remove this useless assignment to local variable "eCo".(ğì±èûÿÿÿÿ
+D
+java:S1481„"(Remove this unused "eCo" local variable.(ğì±èûÿÿÿÿ
+T	java:S106…"9Replace this use of System.out or System.err by a logger.(®Õº™üÿÿÿÿ
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(ƒ¶Äæøÿÿÿÿ
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(Ú¬áúÿÿÿÿ
+T	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(š±’¥üÿÿÿÿ
+O	java:S106‹"9Replace this use of System.out or System.err by a logger.(¾Äã’
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ùİÒ²ÿÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(¿ÆÒšÿÿÿÿÿ
+T	java:S106‘"9Replace this use of System.out or System.err by a logger.(ŸÀ¬ºÿÿÿÿÿ
+O	java:S106’"9Replace this use of System.out or System.err by a logger.(®îúê
+O	java:S106“"9Replace this use of System.out or System.err by a logger.(–ñ¢
+O	java:S106”"9Replace this use of System.out or System.err by a logger.(ø˜·Ÿ
+O	java:S106—"9Replace this use of System.out or System.err by a logger.(¯ñ®
+R	java:S125š"<This block of commented-out lines of code should be removed.(ÌÃ
+K
+java:S1481"/Remove this unused "ofdatetime" local variable.(ËØß´ûÿÿÿÿ
+T	java:S106¨"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(ûùŒÃ
+O	java:S106­"9Replace this use of System.out or System.err by a logger.(ûùŒÃ
+N	java:S106¯"9Replace this use of System.out or System.err by a logger.(™¸øX
+^
+java:S2094É"BRemove this empty class, write its code or make it an "interface".(´š—ùÿÿÿÿ
+R	java:S125´"<This block of commented-out lines of code should be removed.(”Ñ¼Ÿ
+D
+java:S1172Ğ"(Remove this unused method parameter "a".(ì¨©Áúÿÿÿÿ
+E
+java:S1481Ü")Remove this unused "name" local variable.(ˆ¸‡ıûÿÿÿÿ
+H
+java:S1481İ",Remove this unused "_number" local variable.(¦¿óüÿÿÿÿ
+E
+java:S1481Ş".Remove this unused "profit$$$" local variable.(•Ì•…
+W	java:S125ß"<This block of commented-out lines of code should be removed.(Şäóøüÿÿÿÿ
+U
+java:S3400å"9Remove this method and declare a constant for this value.(¯§­øûÿÿÿÿ
+I
+java:S1172å"-Remove this unused method parameter "choice".(¯§­øûÿÿÿÿ
+@
+java:S1172ç")Remove this unused method parameter "ok".(¯ñ´¦
+P
+java:S3400é"9Remove this method and declare a constant for this value.(‘Ì®
+D
+java:S1172é"-Remove this unused method parameter "choice".(‘Ì®
+P
+java:S3400ê"9Remove this method and declare a constant for this value.(¾Ç¨»
+D
+java:S1172ê"-Remove this unused method parameter "choice".(¾Ç¨»
+U
+java:S3400ë"9Remove this method and declare a constant for this value.(®»©şÿÿÿÿ
+I
+java:S1172ë"-Remove this unused method parameter "choice".(®»©şÿÿÿÿ
+O
+java:S3400ì"9Remove this method and declare a constant for this value.(È³˜^
+C
+java:S1172ì"-Remove this unused method parameter "choice".(È³˜^
+7
+java:S3626í"Remove this redundant jump.(ªÒö×ûÿÿÿÿ
+I
+java:S1172í"-Remove this unused method parameter "choice".(ªÒö×ûÿÿÿÿ
+I
+java:S1172î"-Remove this unused method parameter "choice".(šÊÍ³úÿÿÿÿ
+T
+java:S1854ñ"8Remove this useless assignment to local variable "lval".(Äáïíúÿÿÿÿ
+ƒ
+java:S1130ï"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ú×Äš
+O	java:S106ğ"9Replace this use of System.out or System.err by a logger.(€Şˆ€
+2
+java:S3626õ"Remove this redundant jump.(—‡ÒŒ
+D
+java:S1172õ"-Remove this unused method parameter "choice".(—‡ÒŒ
+7
+java:S3626ö"Remove this redundant jump.(®’ô¶şÿÿÿÿ
+I
+java:S1172ö"-Remove this unused method parameter "choice".(®’ô¶şÿÿÿÿ
+N
+java:S1854ù"7Remove this useless assignment to local variable "jaa".(­öÈÉ
+R
+java:S1854ø"6Remove this useless assignment to local variable "ja".(³ÚŒœüÿÿÿÿ
+C
+java:S1481ø"'Remove this unused "ja" local variable.(³ÚŒœüÿÿÿÿ
+?
+java:S1481ù"(Remove this unused "jaa" local variable.(­öÈÉ
+T	java:S106ÿ"9Replace this use of System.out or System.err by a logger.(ŞöŒÄÿÿÿÿÿ
+W	java:S125ú"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(ïß¤Œûÿÿÿÿ
+T	java:S106‚ "9Replace this use of System.out or System.err by a logger.(¢•Çàûÿÿÿÿ
+T	java:S106ƒ "9Replace this use of System.out or System.err by a logger.(©£Ò¬ûÿÿÿÿ
+b
+java:S1764„ "KCorrect one of the identical sub-expressions on both sides of operator "=="(ß¸Ğ¶
+M
+java:S5261‰ "1Add explicit curly braces to avoid dangling else.(„¶áìøÿÿÿÿ
+b
+java:S1764† "KCorrect one of the identical sub-expressions on both sides of operator "=="(ß¸Ğ¶
+T	java:S106‡ "9Replace this use of System.out or System.err by a logger.(Æì° úÿÿÿÿ
+O	java:S106Š "9Replace this use of System.out or System.err by a logger.(‹¸ÿÉ
+O	java:S106‹ "9Replace this use of System.out or System.err by a logger.(¯§Íå
+8
+java:S1170Ÿ "!Make this final field static too.(òé©µ
+=
+java:S1170  "!Make this final field static too.(¤ÍŠıûÿÿÿÿ
+u
+java:S1171— "YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+W	java:S125™ "<This block of commented-out lines of code should be removed.(æ­ƒ¸üÿÿÿÿ
+a
+java:S1124  "EReorder the modifiers to comply with the Java Language Specification.(¤ÍŠıûÿÿÿÿ
+8
+java:S3010£ "!Remove this assignment of "root".(§ƒ±‡
+W	java:S125¢ "<This block of commented-out lines of code should be removed.(‡™§‰øÿÿÿÿ
+2
+java:S3626¥ "Remove this redundant jump.(—‡ÒŒ
+D
+java:S1172¥ "-Remove this unused method parameter "choice".(—‡ÒŒ
+T	java:S106© "9Replace this use of System.out or System.err by a logger.(ÊÈ¨Èÿÿÿÿÿ
+R
+java:S2696ª "6Make the enclosing method "static" or remove this set.(ú­ª•úÿÿÿÿ
+Q
+java:S2209ª "5Change this instance-reference to a static reference.(ú­ª•úÿÿÿÿ
+T	java:S106« "9Replace this use of System.out or System.err by a logger.(“¥Ïºûÿÿÿÿ
+R
+java:S2696¬ "6Make the enclosing method "static" or remove this set.(êû•şÿÿÿÿ
+O	java:S106­ "9Replace this use of System.out or System.err by a logger.(îñèŞ
+ƒ
+java:S1130² "lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø
+T	java:S106¶ "9Replace this use of System.out or System.err by a logger.(¦¯–Òüÿÿÿÿ
+O	java:S106· "9Replace this use of System.out or System.err by a logger.(ŠË»¥
+
+java:S1186Ë "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„›ş³ıÿÿÿÿ
+E
+java:S1172Â ")Remove this unused method parameter "ak".(–†¾âûÿÿÿÿ
+R	java:S125Ã "<This block of commented-out lines of code should be removed.(ÜŒŸ
+R	java:S125Å "<This block of commented-out lines of code should be removed.(†¨ˆ
+i	java:S100Ë "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„›ş³ıÿÿÿÿ
+R
+java:S1854ä "<Remove this useless assignment to local variable "rainfrst".(Ù†ãx
+T
+java:S1854à "8Remove this useless assignment to local variable "frst".(ù¿®øÿÿÿÿ
+T	java:S106Ú "9Replace this use of System.out or System.err by a logger.(‘—ûşÿÿÿÿ
+T	java:S106İ "9Replace this use of System.out or System.err by a logger.(‘†Â±ıÿÿÿÿ
+I
+java:S1481á "-Remove this unused "rainfrst" local variable.(İ¿âšüÿÿÿÿ
+T	java:S106æ "9Replace this use of System.out or System.err by a logger.(¸Áïøùÿÿÿÿ
+T	java:S106ö "9Replace this use of System.out or System.err by a logger.(í Âõøÿÿÿÿ
+B
+java:S1172ü "+Remove this unused method parameter "num2".(¥Åõ•
+Q	java:S125ú "<This block of commented-out lines of code should be removed.(‚ÒÍ)
+T	java:S106ı "9Replace this use of System.out or System.err by a logger.(í Âõøÿÿÿÿ
+:
+java:S2129ş "Remove this "Long" constructor(ù¦ş…ıÿÿÿÿ
+U
+java:S1854†!"9Remove this useless assignment to local variable "racer".(…¡ âøÿÿÿÿ
+O
+java:S1854ƒ!"8Remove this useless assignment to local variable "name".(®‹í
+7
+java:S3626‹!"Remove this redundant jump.(î“èÕıÿÿÿÿ
+W	java:S125!"<This block of commented-out lines of code should be removed.(›ôˆüÿÿÿÿ
+T	java:S106•!"9Replace this use of System.out or System.err by a logger.(ŸÆ²õÿÿÿÿÿ
+T	java:S106–!"9Replace this use of System.out or System.err by a logger.(°÷™¬ıÿÿÿÿ
+T	java:S106—!"9Replace this use of System.out or System.err by a logger.(öôŠúÿÿÿÿ
+O	java:S106˜!"9Replace this use of System.out or System.err by a logger.(ÓáÜß
+
+java:S1186Ÿ!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(›¸¿£üÿÿÿÿ
+
+java:S1186Œ""€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øıûëøÿÿÿÿ
+T	java:S106¥!"9Replace this use of System.out or System.err by a logger.(ùû³Åûÿÿÿÿ
+T	java:S106¦!"9Replace this use of System.out or System.err by a logger.(¡ìıÄıÿÿÿÿ
+T	java:S106§!"9Replace this use of System.out or System.err by a logger.(”¶„ÿúÿÿÿÿ
+T	java:S106¨!"9Replace this use of System.out or System.err by a logger.(Ë¥¨“şÿÿÿÿ
+u
+java:S1171¼!"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+T	java:S106¾!"9Replace this use of System.out or System.err by a logger.(ìÜ±äúÿÿÿÿ
+T	java:S106Â!"9Replace this use of System.out or System.err by a logger.(÷à…Îıÿÿÿÿ
+R	java:S125Á!"<This block of commented-out lines of code should be removed.(˜ù˜ğ
+R	java:S125Ï!"<This block of commented-out lines of code should be removed.(Ó²®Œ
+O	java:S106Ö!"9Replace this use of System.out or System.err by a logger.(ñ‰¯Œ
+9
+java:S1659ã!""Declare "num2" on a separate line.(à÷Áµ
+>
+java:S1659ä!""Declare "num4" on a separate line.(‘–Ëûÿÿÿÿ
+9
+java:S1659å!""Declare "num6" on a separate line.(·¢äá
+R	java:S125Ú!"<This block of commented-out lines of code should be removed.(‰†ã»
+E
+java:S1481Û!".Remove this unused "testlocal" local variable.(Ü•ì¸
+X
+java:S3457Ü!"AFormat specifiers should be used instead of string concatenation.(–›Ò•
+O	java:S106Ü!"9Replace this use of System.out or System.err by a logger.(–›Ò•
+5
+java:S2153à!"Remove the boxing to "Integer".(­ª†[
+7
+java:S2129à!"!Remove this "Integer" constructor(­ª†[
+A
+java:S3457á!"%String contains no format specifiers.(ƒ”ü¢ıÿÿÿÿ
+T	java:S106á!"9Replace this use of System.out or System.err by a logger.(ƒ”ü¢ıÿÿÿÿ
+@
+java:S1481ã!")Remove this unused "num1" local variable.(à÷Áµ
+@
+java:S1481ã!")Remove this unused "num2" local variable.(à÷Áµ
+E
+java:S1481ä!")Remove this unused "num3" local variable.(‘–Ëûÿÿÿÿ
+E
+java:S1481ä!")Remove this unused "num4" local variable.(‘–Ëûÿÿÿÿ
+@
+java:S1481å!")Remove this unused "num5" local variable.(·¢äá
+@
+java:S1481å!")Remove this unused "num6" local variable.(·¢äá
+N	java:S106æ!"9Replace this use of System.out or System.err by a logger.(Ïè¨^
+T	java:S106è!"9Replace this use of System.out or System.err by a logger.(€Êºûÿÿÿÿ
+T	java:S106ì!"9Replace this use of System.out or System.err by a logger.(ßÿ•ìıÿÿÿÿ
+Q	java:S125é!"<This block of commented-out lines of code should be removed.(ËÜ†]
+O	java:S106í!"9Replace this use of System.out or System.err by a logger.(™Æ½
+O	java:S106ğ!"9Replace this use of System.out or System.err by a logger.(Œ¨æÌ
+O	java:S106ñ!"9Replace this use of System.out or System.err by a logger.(™Æ½
+T	java:S106ò!"9Replace this use of System.out or System.err by a logger.(Ô¡•ˆıÿÿÿÿ
+T	java:S106ó!"9Replace this use of System.out or System.err by a logger.(àÀ–ùıÿÿÿÿ
+O	java:S106ô!"9Replace this use of System.out or System.err by a logger.(ìÿáá
+W
+java:S1854ÿ!";Remove this useless assignment to local variable "spinner".(†Çÿÿÿÿÿ
+B
+java:S1172ú!"+Remove this unused method parameter "args".(¸—ëñ
+W	java:S125÷!"<This block of commented-out lines of code should be removed.(¦‹Ò›úÿÿÿÿ
+R	java:S125ı!"<This block of commented-out lines of code should be removed.(€³Õü
+2
+java:S3626Š""Remove this redundant jump.(ûÁİ…
+n
+java:S3776""RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(¾¥îÙøÿÿÿÿ
+P
+java:S1854¤""9Remove this useless assignment to local variable "nums3".(ÓÅ’
+P
+java:S1854¢""9Remove this useless assignment to local variable "nums2".(ÂÇİ×
+O
+java:S1854¡""8Remove this useless assignment to local variable "num1".(ÒàĞƒ
+O
+java:S1854 ""9Remove this useless assignment to local variable "nums2".(¼ó·?
+S
+java:S1854É""7Remove this useless assignment to local variable "j_k".(ßî“šüÿÿÿÿ
+T
+java:S1854Å""8Remove this useless assignment to local variable "alm1".(ƒã³÷ûÿÿÿÿ
+Z
+java:S1854ú"">Remove this useless assignment to local variable "streamList".(§°ŒÀşÿÿÿÿ
+N
+java:S1854‹#"7Remove this useless assignment to local variable "obj".(ÅÓêœ
+N
+java:S1854‹#"7Remove this useless assignment to local variable "obj".(ÅÓêœ
+R
+java:S1854#";Remove this useless assignment to local variable "version".(¨›§ï
+M
+java:S1854µ#"6Remove this useless assignment to local variable "hj".(©“©
+T
+java:S1854˜#"=Remove this useless assignment to local variable "maxMemory".(ºÙ¦Ò
+[
+java:S1854—#"?Remove this useless assignment to local variable "totalMemory".(¢ªÍÔøÿÿÿÿ
+c
+java:S1854–#"GRemove this useless assignment to local variable "availableProcessors".(®ÅÕ‰ıÿÿÿÿ
+T
+java:S1854‰$"8Remove this useless assignment to local variable "fall".(¨Ô‰¹ÿÿÿÿÿ
+V
+java:S1854‡$":Remove this useless assignment to local variable "winter".(ÏØø³şÿÿÿÿ
+U
+java:S1854İ$"9Remove this useless assignment to local variable "narri".(¥ûêøÿÿÿÿ
+T
+java:S1854Ø$"8Remove this useless assignment to local variable "parr".(·•õãøÿÿÿÿ
+V
+java:S1854Ó$":Remove this useless assignment to local variable "charaa".(ĞÃ•úÿÿÿÿ
+Q
+java:S1854Ğ$":Remove this useless assignment to local variable "arrij5".(ôÁ‰Š
+P
+java:S1854Ï$"9Remove this useless assignment to local variable "arrij".(†¡·Ù
+U
+java:S1854Æ$">Remove this useless assignment to local variable "ingWrapper".(ÃÈÅ·
+S
+java:S1854Å$"7Remove this useless assignment to local variable "ing".(”üÿÿÿÿÿ
+R
+java:S1854§$";Remove this useless assignment to local variable "tdbytea".(ƒõ†
+P
+java:S1854 $"9Remove this useless assignment to local variable "bbyte".(„¹öú
+P
+java:S1854Ÿ$"9Remove this useless assignment to local variable "abyte".(›¼¸õ
+R
+java:S1854‘%"6Remove this useless assignment to local variable "pg".(í¥ÆŒÿÿÿÿÿ
+:
+java:S1659«""#Declare "arr2a" on a separate line.(í§®ø
+;
+java:S1659¬""$Declare "arr2mm" on a separate line.(˜£Ñê
+;
+java:S1659ª#"$Declare "nums2b" on a separate line.(¾œİ¨
+:
+java:S1659$"#Declare "bbyte" on a separate line.(šúß
+<
+java:S1659¯%" Declare "ed" on a separate line.(³çˆÍşÿÿÿÿ
+O	java:S106‘""9Replace this use of System.out or System.err by a logger.(ÔÜº‡
+O	java:S106”""9Replace this use of System.out or System.err by a logger.(Ÿ˜¹
+g
+java:S1764˜""KCorrect one of the identical sub-expressions on both sides of operator "&&"(òŸ­ôùÿÿÿÿ
+O	java:S106™""9Replace this use of System.out or System.err by a logger.(³é“æ
+F
+java:S1197Ÿ""*Move the array designators [] to the type.(­åÒôıÿÿÿÿ
+W	java:S125›""<This block of commented-out lines of code should be removed.(¸ãŸ…ùÿÿÿÿ
+B
+java:S1197 "",Move the array designators [][] to the type.(¼ó·?
+@
+java:S1481 ""*Remove this unused "nums2" local variable.(¼ó·?
+?
+java:S1905¡""(Remove this unnecessary cast to "int[]".(ÒàĞƒ
+@
+java:S1481¡"")Remove this unused "num1" local variable.(ÒàĞƒ
+A
+java:S1481¤""*Remove this unused "nums3" local variable.(ÓÅ’
+Q
+java:S1119¦"";Refactor the code to remove this label and the need for it.(ı™‡y
+O	java:S106§""9Replace this use of System.out or System.err by a logger.(‰©÷‹
+A
+java:S1197«""*Move the array designators [] to the type.(í§®ø
+A
+java:S1481«""*Remove this unused "arr1a" local variable.(í§®ø
+A
+java:S1481«""*Remove this unused "arr2a" local variable.(í§®ø
+@
+java:S1481¬"")Remove this unused "arr1" local variable.(˜£Ñê
+B
+java:S1481¬""+Remove this unused "arr2mm" local variable.(˜£Ñê
+R	java:S125°""<This block of commented-out lines of code should be removed.(ßÊ‚å
+L
+java:S1751¼""5Remove this "break" statement or make it conditional.(›ûä·
+T	java:S106¾""9Replace this use of System.out or System.err by a logger.(³ğ¸ûÿÿÿÿ
+L
+java:S4838Á""6Change "Object" to the type handled by the Collection.(•¡°k
+O	java:S106Â""9Replace this use of System.out or System.err by a logger.(ö›Ùæ
+R	java:S125Ä""<This block of commented-out lines of code should be removed.(ÒÁù¹
+E
+java:S1481Å"")Remove this unused "alm1" local variable.(ƒã³÷ûÿÿÿÿ
+D
+java:S1481É""(Remove this unused "j_k" local variable.(ßî“šüÿÿÿÿ
+W
+java:S1119Ë"";Refactor the code to remove this label and the need for it.(ºªÈ­ùÿÿÿÿ
+H
+java:S1264Ë"",Replace this "for" loop with a "while" loop.(ºªÈ­ùÿÿÿÿ
+R
+java:S1119Ì"";Refactor the code to remove this label and the need for it.(ö³Ïæ
+0
+java:S1065Ì""Remove this unused label.(ö³Ïæ
+C
+java:S1264Ì"",Replace this "for" loop with a "while" loop.(ö³Ïæ
+O	java:S106Í""9Replace this use of System.out or System.err by a logger.(ãÎé
+8
+java:S1116Ñ""Remove this empty statement.(ø·‹šüÿÿÿÿ
+H
+java:S1264Ó"",Replace this "for" loop with a "while" loop.(ã€ıÿÿÿÿ
+R
+java:S1119Õ"";Refactor the code to remove this label and the need for it.(‰€ÖÈ
+L
+java:S1751×""5Remove this "break" statement or make it conditional.(ƒˆ×
+8
+java:S1116Ø""Remove this empty statement.(ôŸìúÿÿÿÿ
+O	java:S106Ù""9Replace this use of System.out or System.err by a logger.(ãÎé
+W
+java:S1119Û"";Refactor the code to remove this label and the need for it.(¤¸ÚÌÿÿÿÿÿ
+5
+java:S1065Û""Remove this unused label.(¤¸ÚÌÿÿÿÿÿ
+W
+java:S1119Ü"";Refactor the code to remove this label and the need for it.(ëãºØüÿÿÿÿ
+O	java:S106İ""9Replace this use of System.out or System.err by a logger.(Ø·«‚
+T	java:S106á""9Replace this use of System.out or System.err by a logger.(¼‹–çÿÿÿÿÿ
+O	java:S106ã""9Replace this use of System.out or System.err by a logger.(åüƒÆ
+3
+java:S1116ã""Remove this empty statement.(åüƒÆ
+O	java:S106ä""9Replace this use of System.out or System.err by a logger.(°¨®Ò
+3
+java:S1116ä""Remove this empty statement.(°¨®Ò
+T	java:S106å""9Replace this use of System.out or System.err by a logger.(€Ã™¥ÿÿÿÿÿ
+8
+java:S1116å""Remove this empty statement.(€Ã™¥ÿÿÿÿÿ
+W
+java:S1119é"";Refactor the code to remove this label and the need for it.(åÍœûÿÿÿÿ
+T	java:S106î""9Replace this use of System.out or System.err by a logger.(äº±›ÿÿÿÿÿ
+<
+java:S2129õ"" Remove this "String" constructor(Áìãıÿÿÿÿ
+W	java:S125ö""<This block of commented-out lines of code should be removed.(Óôú£øÿÿÿÿ
+K
+java:S1481ú""/Remove this unused "streamList" local variable.(§°ŒÀşÿÿÿÿ
+O	java:S106€#"9Replace this use of System.out or System.err by a logger.(Øş§´
+T	java:S106#"9Replace this use of System.out or System.err by a logger.(š÷‹İúÿÿÿÿ
+O	java:S106‚#"9Replace this use of System.out or System.err by a logger.(‰¢¢›
+W	java:S125ƒ#"<This block of commented-out lines of code should be removed.(÷ßŒôÿÿÿÿÿ
+W
+java:S1119‡#";Refactor the code to remove this label and the need for it.(àëæûÿÿÿÿ
+5
+java:S1065‡#"Remove this unused label.(àëæûÿÿÿÿ
+O	java:S106ˆ#"9Replace this use of System.out or System.err by a logger.(ñø¿
+i
+java:S3981‹#"RThe length of "game" is always ">=0", so update this test to either "==0" or ">0".(ÅÓêœ
+L
+java:S1751Œ#"5Remove this "break" statement or make it conditional.(›ûä·
+C
+java:S1481#",Remove this unused "version" local variable.(¨›§ï
+T	java:S106’#"9Replace this use of System.out or System.err by a logger.(™‰İ¨üÿÿÿÿ
+O	java:S106”#"9Replace this use of System.out or System.err by a logger.(îà²Ë
+T
+java:S1481–#"8Remove this unused "availableProcessors" local variable.(®ÅÕ‰ıÿÿÿÿ
+L
+java:S1481—#"0Remove this unused "totalMemory" local variable.(¢ªÍÔøÿÿÿÿ
+E
+java:S1481˜#".Remove this unused "maxMemory" local variable.(ºÙ¦Ò
+O	java:S106š#"9Replace this use of System.out or System.err by a logger.(®â¤›
+T	java:S106#"9Replace this use of System.out or System.err by a logger.(¹ÍÖÇùÿÿÿÿ
+R	java:S125#"<This block of commented-out lines of code should be removed.(„Êª¬
+T	java:S106 #"9Replace this use of System.out or System.err by a logger.(¹ÍÖÇùÿÿÿÿ
+N	java:S106¨#"9Replace this use of System.out or System.err by a logger.(ıô)
+A
+java:S1197ª#"*Move the array designators [] to the type.(¾œİ¨
+B
+java:S1481ª#"+Remove this unused "nums2a" local variable.(¾œİ¨
+B
+java:S1481ª#"+Remove this unused "nums2b" local variable.(¾œİ¨
+W	java:S125¬#"<This block of commented-out lines of code should be removed.(ú”€Äşÿÿÿÿ
+R	java:S125³#"<This block of commented-out lines of code should be removed.(«ã¾ë
+>
+java:S1481µ#"'Remove this unused "hj" local variable.(©“©
+g	java:S128¾#"LEnd this switch case with an unconditional break, return or throw statement.(£Ş¾Ëşÿÿÿÿ
+g	java:S128¼#"LEnd this switch case with an unconditional break, return or throw statement.(İ–Ò˜ÿÿÿÿÿ
+G
+java:S4524¼#"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ
+O	java:S106½#"9Replace this use of System.out or System.err by a logger.(Íá²
+T	java:S106¿#"9Replace this use of System.out or System.err by a logger.(”æôÈûÿÿÿÿ
+O	java:S106Á#"9Replace this use of System.out or System.err by a logger.(ŸÀ•Ö
+?	java:S108Ç#")Either remove or fill this block of code.(ª”°€
+8	java:S131Ç#""Add a default case to this switch.(ª”°€
+R	java:S125È#"<This block of commented-out lines of code should be removed.(ÀÂÊ¬
+g	java:S128Ñ#"LEnd this switch case with an unconditional break, return or throw statement.(ƒÃç‹øÿÿÿÿ
+g	java:S128Ì#"LEnd this switch case with an unconditional break, return or throw statement.(İ–Ò˜ÿÿÿÿÿ
+G
+java:S4524Ì#"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ
+N	java:S106Í#"9Replace this use of System.out or System.err by a logger.(ÂÏïw
+R	java:S125Î#"<This block of commented-out lines of code should be removed.(±¯€¤
+T	java:S106Ò#"9Replace this use of System.out or System.err by a logger.(Ä¹À£ùÿÿÿÿ
+O	java:S106Ô#"9Replace this use of System.out or System.err by a logger.(Õ¦ÀÆ
+8
+java:S1116Õ#"Remove this empty statement.(ôŸìúÿÿÿÿ
+g	java:S128Ü#"LEnd this switch case with an unconditional break, return or throw statement.(İ–Ò˜ÿÿÿÿÿ
+G
+java:S4524Ü#"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ
+O	java:S106Ú#"9Replace this use of System.out or System.err by a logger.(Õ‹ëƒ
+O	java:S106İ#"9Replace this use of System.out or System.err by a logger.(³Âéì
+R	java:S125Ş#"<This block of commented-out lines of code should be removed.(±¯€¤
+T	java:S106à#"9Replace this use of System.out or System.err by a logger.(Èò‹Éøÿÿÿÿ
+W	java:S125å#"<This block of commented-out lines of code should be removed.(öêàÚûÿÿÿÿ
+b	java:S128ú#"LEnd this switch case with an unconditional break, return or throw statement.(õÈÌá
+g	java:S128ö#"LEnd this switch case with an unconditional break, return or throw statement.(İ–Ò˜ÿÿÿÿÿ
+b	java:S128ò#"LEnd this switch case with an unconditional break, return or throw statement.(ğ®æø
+G
+java:S4524ö#"+Move this default to the end of the switch.(İ–Ò˜ÿÿÿÿÿ
+O	java:S106ô#"9Replace this use of System.out or System.err by a logger.(©‰¯
+R	java:S125õ#"<This block of commented-out lines of code should be removed.(±¯€¤
+T	java:S106ø#"9Replace this use of System.out or System.err by a logger.(óü´ùÿÿÿÿ
+R	java:S125ù#"<This block of commented-out lines of code should be removed.(±¯€¤
+O	java:S106ü#"9Replace this use of System.out or System.err by a logger.(ùƒ·
+R	java:S125ı#"<This block of commented-out lines of code should be removed.(±¯€¤
+O	java:S106€$"9Replace this use of System.out or System.err by a logger.(»¹ıß
+R	java:S125$"<This block of commented-out lines of code should be removed.(±¯€¤
+T	java:S106…$"9Replace this use of System.out or System.err by a logger.(ÎåğÛşÿÿÿÿ
+G
+java:S1481‡$"+Remove this unused "winter" local variable.(ÏØø³şÿÿÿÿ
+E
+java:S1481‰$")Remove this unused "fall" local variable.(¨Ô‰¹ÿÿÿÿÿ
+g	java:S128$"LEnd this switch case with an unconditional break, return or throw statement.(ä˜÷¥úÿÿÿÿ
+R	java:S125$"<This block of commented-out lines of code should be removed.(ØÒ¥©
+T	java:S106$"9Replace this use of System.out or System.err by a logger.(ä˜÷¥úÿÿÿÿ
+W	java:S125˜$"<This block of commented-out lines of code should be removed.(İ–³óüÿÿÿÿ
+A
+java:S1481$"*Remove this unused "abyte" local variable.(šúß
+A
+java:S1197$"*Move the array designators [] to the type.(šúß
+W	java:S125˜$"<This block of commented-out lines of code should be removed.(İ–³óüÿÿÿÿ
+A
+java:S1481$"*Remove this unused "bbyte" local variable.(šúß
+F
+java:S1197£$"*Move the array designators [] to the type.(ëÂĞËúÿÿÿÿ
+A
+java:S1197§$"*Move the array designators [] to the type.(ƒõ†
+C
+java:S1481§$",Remove this unused "tdbytea" local variable.(ƒõ†
+R	java:S125¬$"<This block of commented-out lines of code should be removed.(Å«É
+T	java:S106²$"9Replace this use of System.out or System.err by a logger.(ş¤Ù®ÿÿÿÿÿ
+L
+java:S5669³$"5Use an array of 'Byte' instead of an array of 'byte'.(©ĞàÔ
+O	java:S106³$"9Replace this use of System.out or System.err by a logger.(©ĞàÔ
+O	java:S106µ$"9Replace this use of System.out or System.err by a logger.(ìËäÚ
+O	java:S106·$"9Replace this use of System.out or System.err by a logger.(§öİ¢
+O	java:S106¹$"9Replace this use of System.out or System.err by a logger.(Ú¨ÇÇ
+O	java:S106»$"9Replace this use of System.out or System.err by a logger.(êïµ²
+T	java:S106½$"9Replace this use of System.out or System.err by a logger.(èûòËúÿÿÿÿ
+T	java:S106¿$"9Replace this use of System.out or System.err by a logger.(å§°ûÿÿÿÿ
+O	java:S106Á$"9Replace this use of System.out or System.err by a logger.(¥îÉÓ
+D
+java:S1481Å$"(Remove this unused "ing" local variable.(”üÿÿÿÿÿ
+F
+java:S1481Æ$"/Remove this unused "ingWrapper" local variable.(ÃÈÅ·
+R	java:S125È$"<This block of commented-out lines of code should be removed.(Ù­Á‹
+T	java:S106Ì$"9Replace this use of System.out or System.err by a logger.(„Ñ‹æÿÿÿÿÿ
+A
+java:S1481Ï$"*Remove this unused "arrij" local variable.(†¡·Ù
+B
+java:S1481Ğ$"+Remove this unused "arrij5" local variable.(ôÁ‰Š
+G
+java:S1481Ó$"+Remove this unused "charaa" local variable.(ĞÃ•úÿÿÿÿ
+E
+java:S1481Ø$")Remove this unused "parr" local variable.(·•õãøÿÿÿÿ
+8
+java:S2129Û$"!Remove this "Integer" constructor(Ûúöê
+F
+java:S1481İ$"*Remove this unused "narri" local variable.(¥ûêøÿÿÿÿ
+T	java:S106ß$"9Replace this use of System.out or System.err by a logger.(ÏÎéşÿÿÿÿ
+T	java:S106â$"9Replace this use of System.out or System.err by a logger.(ˆŞùÿÿÿÿ
+O	java:S106å$"9Replace this use of System.out or System.err by a logger.(©ÃşŸ
+O	java:S106æ$"9Replace this use of System.out or System.err by a logger.(®’¶Ä
+T	java:S106è$"9Replace this use of System.out or System.err by a logger.(£’­øÿÿÿÿ
+
+java:S2159è$"qUse "Arrays.equals(array1, array2)" or the "==" operator instead of using the "Object.equals(Object obj)" method.(£’­øÿÿÿÿ
+T	java:S106ì$"9Replace this use of System.out or System.err by a logger.(¡óãôøÿÿÿÿ
+T	java:S106í$"9Replace this use of System.out or System.err by a logger.(û½í¸úÿÿÿÿ
+T	java:S106ï$"9Replace this use of System.out or System.err by a logger.(‚¯ÁÜşÿÿÿÿ
+R	java:S125î$"<This block of commented-out lines of code should be removed.(¨ñªŸ
+T	java:S106ò$"9Replace this use of System.out or System.err by a logger.(¢­ÉÒÿÿÿÿÿ
+Q
+java:S2209õ$"5Change this instance-reference to a static reference.(™ø˜ÿÿÿÿÿ
+T	java:S106ö$"9Replace this use of System.out or System.err by a logger.(ı¦†„ùÿÿÿÿ
+R	java:S125ù$"<This block of commented-out lines of code should be removed.(Œïô¦
+R	java:S125ÿ$"<This block of commented-out lines of code should be removed.(¾€Ê
+W	java:S125%"<This block of commented-out lines of code should be removed.(åí‘ÿÿÿÿÿ
+T	java:S106…%"9Replace this use of System.out or System.err by a logger.(½«õ¼øÿÿÿÿ
+O	java:S106‹%"9Replace this use of System.out or System.err by a logger.(ó·ºœ
+T	java:S106Œ%"9Replace this use of System.out or System.err by a logger.(Å¾Ç¥üÿÿÿÿ
+T	java:S106%"9Replace this use of System.out or System.err by a logger.(–Î’©ùÿÿÿÿ
+T	java:S106%"9Replace this use of System.out or System.err by a logger.(‚ô÷Ôüÿÿÿÿ
+C
+java:S1481‘%"'Remove this unused "pg" local variable.(í¥ÆŒÿÿÿÿÿ
+H
+java:S1197–%",Move the array designators [][] to the type.(©íÀ øÿÿÿÿ
+R	java:S125”%"<This block of commented-out lines of code should be removed.(ıú‰ñ
+T	java:S106%"9Replace this use of System.out or System.err by a logger.(áá‹Ùşÿÿÿÿ
+O	java:S106Ÿ%"9Replace this use of System.out or System.err by a logger.(³İŠÈ
+N	java:S106¢%"9Replace this use of System.out or System.err by a logger.(úÛ 
+O	java:S106¦%"9Replace this use of System.out or System.err by a logger.(è·ôÂ
+T	java:S106©%"9Replace this use of System.out or System.err by a logger.(Ïø÷¿üÿÿÿÿ
+O	java:S106ª%"9Replace this use of System.out or System.err by a logger.(Áß‡Ü
+O	java:S106«%"9Replace this use of System.out or System.err by a logger.(¯ÈÕ¸
+T	java:S106®%"9Replace this use of System.out or System.err by a logger.(§ıêıùÿÿÿÿ
+T	java:S106¯%"9Replace this use of System.out or System.err by a logger.(³çˆÍşÿÿÿÿ
+O	java:S106±%"9Replace this use of System.out or System.err by a logger.(ßçª÷
+O	java:S106²%"9Replace this use of System.out or System.err by a logger.(àİÒÖ
+T	java:S106³%"9Replace this use of System.out or System.err by a logger.(å¦’Õÿÿÿÿÿ
+O	java:S106¶%"9Replace this use of System.out or System.err by a logger.(‹°ÏÃ
+W	java:S125µ%"<This block of commented-out lines of code should be removed.(ƒ­şÿÿÿÿ
+W	java:S125º%"<This block of commented-out lines of code should be removed.(ä³œ»ıÿÿÿÿ
+Q
+java:S1161Å%":Add the "@Override" annotation above this method signature(Ñ˜¦Ï
+T	java:S106Ì%"9Replace this use of System.out or System.err by a logger.(ıü’Êşÿÿÿÿ
+h
+java:S4276Ö%"RRefactor this code to use the more specialised Functional Interface 'IntPredicate'(ë t
+T	java:S106Ù%"9Replace this use of System.out or System.err by a logger.(í Âõøÿÿÿÿ
+p	java:S115ç%"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(±ŸíÖ
+\
+java:S1124ç%"EReorder the modifiers to comply with the Java Language Specification.(±ŸíÖ
+\
+java:S1124è%"EReorder the modifiers to comply with the Java Language Specification.(é÷•ô
+R	java:S125í%"<This block of commented-out lines of code should be removed.(Ú°à¬
+5
+java:S2153ò%"Remove the boxing to "Double".(°§— 
+7
+java:S2129ò%" Remove this "Double" constructor(°§— 
+=
+java:S1481ò%"&Remove this unused "n" local variable.(°§— 
+6
+java:S2153ó%"Remove the boxing to "Boolean".(€Ÿ­÷
+8
+java:S2129ó%"!Remove this "Boolean" constructor(€Ÿ­÷
+>
+java:S1481ó%"'Remove this unused "bb" local variable.(€Ÿ­÷
+C
+java:S1481ô%"'Remove this unused "nb" local variable.(³ôÉÌÿÿÿÿÿ
+W	java:S125ö%"<This block of commented-out lines of code should be removed.(•ßÖæúÿÿÿÿ
+Q	java:S125„&"<This block of commented-out lines of code should be removed.(Ş×°y
+f	java:S116‹&"PRename this field "$aint" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ø£
+D
+java:S1185&"(Remove this method to simply inherit it.(¨‹§‡øÿÿÿÿ
+M
+java:S1854Ë&"6Remove this useless assignment to local variable "ln".(‰µü„
+U
+java:S1854Ê&"9Remove this useless assignment to local variable "akmax".(˜Íó†ÿÿÿÿÿ
+S
+java:S1854É&"7Remove this useless assignment to local variable "bi2".(‹üÓ—ıÿÿÿÿ
+R
+java:S1854É&"6Remove this useless assignment to local variable "bi".(‹üÓ—ıÿÿÿÿ
+T
+java:S1854Ç&"=Remove this useless assignment to local variable "binary_i3".(ø£ˆÑ
+R
+java:S1854Æ&";Remove this useless assignment to local variable "hexa_i2".(âÜÄ
+Q
+java:S1854Å&":Remove this useless assignment to local variable "hexa_i".(Â˜î®
+R
+java:S1854Ä&";Remove this useless assignment to local variable "octal_i".(ËøŠŞ
+M
+java:S1854Â&"6Remove this useless assignment to local variable "de".(§«ùÊ
+R
+java:S1854Á&"6Remove this useless assignment to local variable "d1".(ˆò¿§üÿÿÿÿ
+Q
+java:S1854À&"5Remove this useless assignment to local variable "d".(²½ó¨ûÿÿÿÿ
+Q
+java:S1854¿&"5Remove this useless assignment to local variable "f".(õ¯Äáûÿÿÿÿ
+R
+java:S1854¾&"6Remove this useless assignment to local variable "fa".(ëªˆ şÿÿÿÿ
+R
+java:S1854½&"6Remove this useless assignment to local variable "dt".(ÌÂ•üÿÿÿÿ
+R
+java:S1854º&"6Remove this useless assignment to local variable "af".(°•½×øÿÿÿÿ
+L
+java:S1854¸&"6Remove this useless assignment to local variable "bf".(ûŠ£L
+L
+java:S1854·&"6Remove this useless assignment to local variable "af".(ø‰í
+O
+java:S1854´&"8Remove this useless assignment to local variable "arr7".(çÈÔ¹
+T
+java:S1854³&"8Remove this useless assignment to local variable "arr6".(«ŠÃõüÿÿÿÿ
+T
+java:S1854²&"8Remove this useless assignment to local variable "arr5".( ÓÑ©şÿÿÿÿ
+T
+java:S1854±&"8Remove this useless assignment to local variable "arr4".(æ•Ñøøÿÿÿÿ
+T
+java:S1854°&"8Remove this useless assignment to local variable "arr3".(ıÕ×˜üÿÿÿÿ
+R
+java:S1854«&"6Remove this useless assignment to local variable "li".(Ö©‰íùÿÿÿÿ
+R
+java:S1854š&"6Remove this useless assignment to local variable "sp".(‚ÁÇ˜ıÿÿÿÿ
+Q
+java:S1854˜&":Remove this useless assignment to local variable "numobj".(àê¾Ë
+O
+java:S1854—&"8Remove this useless assignment to local variable "oarr".(–Äœ
+=
+java:S1659¢&"!Declare "ar1" on a separate line.(Û Çşüÿÿÿÿ
+>
+java:S1659¤&""Declare "azz1" on a separate line.(É÷×üÿÿÿÿ
+=
+java:S1659É&"!Declare "bi2" on a separate line.(‹üÓ—ıÿÿÿÿ
+@
+java:S1481—&")Remove this unused "oarr" local variable.(–Äœ
+8
+java:S2129˜&"!Remove this "Integer" constructor(àê¾Ë
+B
+java:S1481˜&"+Remove this unused "numobj" local variable.(àê¾Ë
+C
+java:S1481š&"'Remove this unused "sp" local variable.(‚ÁÇ˜ıÿÿÿÿ
+T	java:S106&"9Replace this use of System.out or System.err by a logger.(Ïø÷¿üÿÿÿÿ
+O	java:S106&"9Replace this use of System.out or System.err by a logger.(Áß‡Ü
+O	java:S106Ÿ&"9Replace this use of System.out or System.err by a logger.(¯ÈÕ¸
+F
+java:S1197¢&"*Move the array designators [] to the type.(Û Çşüÿÿÿÿ
+E
+java:S1481¢&")Remove this unused "arr1" local variable.(Û Çşüÿÿÿÿ
+D
+java:S1481¢&"(Remove this unused "ar1" local variable.(Û Çşüÿÿÿÿ
+D
+java:S1481¤&"(Remove this unused "az1" local variable.(É÷×üÿÿÿÿ
+E
+java:S1481¤&")Remove this unused "azz1" local variable.(É÷×üÿÿÿÿ
+C
+java:S1481«&"'Remove this unused "li" local variable.(Ö©‰íùÿÿÿÿ
+O	java:S106®&"9Replace this use of System.out or System.err by a logger.(³İŠÈ
+R	java:S125¬&"<This block of commented-out lines of code should be removed.(»Æ·‰
+T	java:S106¯&"9Replace this use of System.out or System.err by a logger.(áá‹Ùşÿÿÿÿ
+H
+java:S1197°&",Move the array designators [][] to the type.(ıÕ×˜üÿÿÿÿ
+E
+java:S1481°&")Remove this unused "arr3" local variable.(ıÕ×˜üÿÿÿÿ
+E
+java:S1481±&")Remove this unused "arr4" local variable.(æ•Ñøøÿÿÿÿ
+F
+java:S1197²&"*Move the array designators [] to the type.( ÓÑ©şÿÿÿÿ
+E
+java:S1481²&")Remove this unused "arr5" local variable.( ÓÑ©şÿÿÿÿ
+F
+java:S1197³&"*Move the array designators [] to the type.(«ŠÃõüÿÿÿÿ
+E
+java:S1481³&")Remove this unused "arr6" local variable.(«ŠÃõüÿÿÿÿ
+A
+java:S1197´&"*Move the array designators [] to the type.(çÈÔ¹
+@
+java:S1481´&")Remove this unused "arr7" local variable.(çÈÔ¹
+=
+java:S1481·&"'Remove this unused "af" local variable.(ø‰í
+=
+java:S1481¸&"'Remove this unused "bf" local variable.(ûŠ£L
+C
+java:S1905º&"'Remove this unnecessary cast to "long".(°•½×øÿÿÿÿ
+C
+java:S1481½&"'Remove this unused "dt" local variable.(ÌÂ•üÿÿÿÿ
+C
+java:S1481¾&"'Remove this unused "fa" local variable.(ëªˆ şÿÿÿÿ
+B
+java:S1481¿&"&Remove this unused "f" local variable.(õ¯Äáûÿÿÿÿ
+B
+java:S1481À&"&Remove this unused "d" local variable.(²½ó¨ûÿÿÿÿ
+C
+java:S1481Á&"'Remove this unused "d1" local variable.(ˆò¿§üÿÿÿÿ
+>
+java:S1481Â&"'Remove this unused "de" local variable.(§«ùÊ
+C
+java:S1481Ä&",Remove this unused "octal_i" local variable.(ËøŠŞ
+B
+java:S1481Å&"+Remove this unused "hexa_i" local variable.(Â˜î®
+C
+java:S1481Æ&",Remove this unused "hexa_i2" local variable.(âÜÄ
+E
+java:S1481Ç&".Remove this unused "binary_i3" local variable.(ø£ˆÑ
+R	java:S125È&"<This block of commented-out lines of code should be removed.(‡½¯«
+C
+java:S1481É&"'Remove this unused "bi" local variable.(‹üÓ—ıÿÿÿÿ
+D
+java:S1481É&"(Remove this unused "bi2" local variable.(‹üÓ—ıÿÿÿÿ
+F
+java:S1481Ê&"*Remove this unused "akmax" local variable.(˜Íó†ÿÿÿÿÿ
+>
+java:S1481Ë&"'Remove this unused "ln" local variable.(‰µü„
+O	java:S106Í&"9Replace this use of System.out or System.err by a logger.(º³ÄÙ
+F
+java:S2201Ò&"*The return value of "length" must be used.(ÛşäÍøÿÿÿÿ
+?
+java:S2201Ó&"(The return value of "size" must be used.(Öš£
+T	java:S106Ô&"9Replace this use of System.out or System.err by a logger.(ŸÎÀüÿÿÿÿ
+O	java:S106×&"9Replace this use of System.out or System.err by a logger.(“èºŞ
+b
+java:S2147ê&"FCombine this catch with the one at line 4968, which has the same body.(¥¨›ıÿÿÿÿ
+]
+java:S2147ì&"FCombine this catch with the one at line 4968, which has the same body.(Å¡ß
+]
+java:S2147î&"FCombine this catch with the one at line 4968, which has the same body.(åşáÿ
+C
+java:S3011æ&",This accessibility update should be removed.(Ó«§¯
+X
+java:S1854Š'"<Remove this useless assignment to local variable "bwrapper".(†Íøüÿÿÿÿ
+U
+java:S1854‰'">Remove this useless assignment to local variable "bprimitive".( Ô•
+O
+java:S1854ş&"8Remove this useless assignment to local variable "arl4".(—²Ò½
+O
+java:S1854ı&"8Remove this useless assignment to local variable "arl3".(«›
+O
+java:S1854ü&"8Remove this useless assignment to local variable "arl2".(¦™š
+T
+java:S1854û&"8Remove this useless assignment to local variable "arl1".(Ü‰Èõüÿÿÿÿ
+E
+java:S1481û&")Remove this unused "arl1" local variable.(Ü‰Èõüÿÿÿÿ
+@
+java:S1481ü&")Remove this unused "arl2" local variable.(¦™š
+@
+java:S1481ı&")Remove this unused "arl3" local variable.(«›
+@
+java:S1481ş&")Remove this unused "arl4" local variable.(—²Ò½
+<
+java:S2129ÿ&" Remove this "String" constructor(·èáøÿÿÿÿ
+C
+java:S1602…'",Remove useless curly braces around statement(ú¸â®
+O	java:S106†'"9Replace this use of System.out or System.err by a logger.(üÍßô
+F
+java:S1481‰'"/Remove this unused "bprimitive" local variable.( Ô•
+I
+java:S1481Š'"-Remove this unused "bwrapper" local variable.(†Íøüÿÿÿÿ
+R	java:S125Œ'"<This block of commented-out lines of code should be removed.(‡·å›
+E
+java:S1481'")Remove this unused "str_" local variable.(¦´šıÿÿÿÿ
+a
+java:S1764'"JCorrect one of the identical sub-expressions on both sides of operator "^"(¢Üá¤
+T	java:S106‘'"9Replace this use of System.out or System.err by a logger.(†ªĞùÿÿÿÿ
+O	java:S106’'"9Replace this use of System.out or System.err by a logger.(ê†¬Ã
+O	java:S106•'"9Replace this use of System.out or System.err by a logger.(³şµÓ
+T	java:S106–'"9Replace this use of System.out or System.err by a logger.(›òÈÆúÿÿÿÿ
+P
+java:S1854ª'"9Remove this useless assignment to local variable "start".(’Ã¼
+ˆ
+java:S1130¤'"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(òõÙñøÿÿÿÿ
+A
+java:S1481ª'"*Remove this unused "start" local variable.(’Ã¼
+R	java:S125­'"<This block of commented-out lines of code should be removed.(Ñãğ
+u	java:S115º'"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Î¸¹ßşÿÿÿÿ
+O
+java:S1854×'"8Remove this useless assignment to local variable "arri".(¬ “
+V
+java:S1854Ì'":Remove this useless assignment to local variable "strObj".(šúÿÿÿÿ
+S
+java:S1854à'"7Remove this useless assignment to local variable "iw7".(èÏâıÿÿÿÿ
+N
+java:S1854ß'"7Remove this useless assignment to local variable "c71".(ÙÁí£
+<
+java:S2129¼'" Remove this "String" constructor(ı¯¡Ÿùÿÿÿÿ
+7
+java:S2129½'" Remove this "String" constructor(ÿŞâİ
+O	java:S106¾'"9Replace this use of System.out or System.err by a logger.(—±ÿé
+T	java:S106À'"9Replace this use of System.out or System.err by a logger.(§¯ÄÊüÿÿÿÿ
+O	java:S106Ã'"9Replace this use of System.out or System.err by a logger.(èÛíÚ
+O	java:S106Æ'"9Replace this use of System.out or System.err by a logger.(¨¦©¹
+N	java:S106Ç'"9Replace this use of System.out or System.err by a logger.(ëòäq
+T	java:S106Ê'"9Replace this use of System.out or System.err by a logger.(ÁÌéÌüÿÿÿÿ
+<
+java:S2129Ì'" Remove this "String" constructor(šúÿÿÿÿ
+G
+java:S1481Ì'"+Remove this unused "strObj" local variable.(šúÿÿÿÿ
+O	java:S106Ö'"9Replace this use of System.out or System.err by a logger.(ç¸ùÜ
+@
+java:S1481×'")Remove this unused "arri" local variable.(¬ “
+Q	java:S125Ù'"<This block of commented-out lines of code should be removed.(‰ó
+
+O	java:S106Û'"9Replace this use of System.out or System.err by a logger.(Ìğ
+?
+java:S1481ß'"(Remove this unused "c71" local variable.(ÙÁí£
+D
+java:S1481à'"(Remove this unused "iw7" local variable.(èÏâıÿÿÿÿ
+D	java:S108â'")Either remove or fill this block of code.(ïß¯ùÿÿÿÿ
+O	java:S106ç'"9Replace this use of System.out or System.err by a logger.(Ãœ¬Œ
+O	java:S106è'"9Replace this use of System.out or System.err by a logger.(Ã½Ø†
+T	java:S106é'"9Replace this use of System.out or System.err by a logger.(ß‡«Úşÿÿÿÿ
+O	java:S106ê'"9Replace this use of System.out or System.err by a logger.(·¦Œ„
+O	java:S106í'"9Replace this use of System.out or System.err by a logger.(Ã‹ÇÅ
+T	java:S106ğ'"9Replace this use of System.out or System.err by a logger.(äö•ßÿÿÿÿÿ
+W	java:S125ô'"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+i
+java:S1128"NRemove this unused import 'com.sun.org.apache.xpath.internal.operations.Bool'.(™¦èûÿÿÿÿ
+[
+java:S1128
+"@Remove this unused import 'org.apache.commons.lang.StringUtils'.(Ö¥¬øÿÿÿÿ
+[
+java:S1128"@Remove this unused import 'org.apache.http.annotation.Contract'.(Ã”Ğ’şÿÿÿÿ
+W
+java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû
+i
+java:S1128"NRemove this unused import 'org.springframework.jdbc.support.rowset.SqlRowSet'.(‰ğî›øÿÿÿÿ
+R
+java:S1128"<Remove this unused import 'org.springframework.util.Assert'.(ü‰¤š
+X
+java:S1128""=Remove this unused import 'javax.el.MethodNotFoundException'.(ÚÁ‹ïøÿÿÿÿ
+_
+java:S1128#"DRemove this unused import 'javax.validation.constraints.AssertTrue'.(ÔÙ¸›üÿÿÿÿ
+T
+java:S1128$">Remove this unused import 'javax.validation.constraints.Null'.(ã¥˜
+G
+java:S1128("1Remove this unused import 'java.math.BigDecimal'.(êêŠ
+J
+java:S11280"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ
+G
+java:S11283"1Remove this unused import 'java.time.ZoneOffset'.(ìÍÄË
+^
+java:S1128;"CRemove this unused import 'java.util.concurrent.locks.LockSupport'.(§ÿœÅúÿÿÿÿ
+I
+java:S1144Ó"2Remove this unused private "getEqualSides" method.(åƒš®
+D
+java:S1144"(Remove this unused private "use" method.(ÿş§üÿÿÿÿ
+J
+java:S1144¡	".Remove this unused private "Tree" constructor.(Ò›¨´øÿÿÿÿ
+D
+java:S1144¬	"-Remove this unused private "Oak" constructor.(Ì¹ª
+A
+java:S1144Ö"*Remove this unused private "drive" method.(İë©‘
+B
+java:S1144ê"+Remove this unused private "choose" method.(¾Ç¨»
+G
+java:S1144ë"+Remove this unused private "choose" method.(®»©şÿÿÿÿ
+G
+java:S1144í"+Remove this unused private "choose" method.(ªÒö×ûÿÿÿÿ
+I
+java:S1144Õ!"-Remove this unused private "callPint" method.(‘üÑşÿÿÿÿ

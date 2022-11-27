@@ -45,7 +45,7 @@ com.atguigu.springcloud.config.RestTemplateConfig: org.springframework.http.clie
 com.atguigu.springcloud.config.RestTemplateConfig: org.apache.http.client.HttpClient httpClient()
 com.atguigu.springcloud.config.WebMvcConfig
 com.atguigu.springcloud.config.WebMvcConfig: WebMvcConfig()
-com.atguigu.springcloud.config.WebMvcConfig: org.springframework.boot.web.server.ConfigurableWebServerFactory sessionManagerCustomizer()
+com.atguigu.springcloud.config.WebMvcConfig: org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory sessionManagerCustomizer()
 com.atguigu.springcloud.config.WebMvcConfig: org.springframework.web.filter.HiddenHttpMethodFilter hiddenHttpFilter()
 com.atguigu.springcloud.config.WebMvcConfig: org.springframework.web.servlet.config.annotation.WebMvcConfigurer webMvcConfigurer()
 com.atguigu.springcloud.config.WebMvcConfig$1
@@ -1104,3 +1104,68 @@ com.atguigu.springcloud.service.Zoologist: void setAnimal(com.atguigu.springclou
 com.atguigu.springcloud.service.Zoologist: void calc(long)
 com.atguigu.springcloud.service.Zoologist: void calcc(int)
 com.atguigu.springcloud.service.Zoologist: void main(java.lang.String[])
+org.springframework.boot.loader.JarLauncher
+org.springframework.boot.loader.JarLauncher: void main(java.lang.String[])
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType MANIFEST
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType ATTRIBUTES
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType[] $VALUES
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType[] values()
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType valueOf(java.lang.String)
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: LaunchedURLClassLoader$DefinePackageCallType(java.lang.String,int)
+org.springframework.boot.loader.LaunchedURLClassLoader$DefinePackageCallType: void <clinit>()
+org.springframework.boot.loader.PropertiesLauncher
+org.springframework.boot.loader.PropertiesLauncher: void main(java.lang.String[])
+org.springframework.boot.loader.WarLauncher
+org.springframework.boot.loader.WarLauncher: void main(java.lang.String[])
+org.springframework.boot.loader.archive.Archive
+org.springframework.boot.loader.archive.Archive: java.net.URL getUrl()
+org.springframework.boot.loader.archive.Archive: java.util.jar.Manifest getManifest()
+org.springframework.boot.loader.archive.Archive: java.util.Iterator getNestedArchives(org.springframework.boot.loader.archive.Archive$EntryFilter,org.springframework.boot.loader.archive.Archive$EntryFilter)
+org.springframework.boot.loader.archive.Archive: java.util.List getNestedArchives(org.springframework.boot.loader.archive.Archive$EntryFilter)
+org.springframework.boot.loader.archive.Archive: java.util.Iterator iterator()
+org.springframework.boot.loader.archive.Archive: void forEach(java.util.function.Consumer)
+org.springframework.boot.loader.archive.Archive: java.util.Spliterator spliterator()
+org.springframework.boot.loader.archive.Archive: boolean isExploded()
+org.springframework.boot.loader.archive.Archive: void close()
+org.springframework.boot.loader.archive.Archive: boolean lambda$getNestedArchives$0(org.springframework.boot.loader.archive.Archive$EntryFilter,org.springframework.boot.loader.archive.Archive$EntryFilter,org.springframework.boot.loader.archive.Archive$Entry)
+org.springframework.boot.loader.archive.Archive$Entry
+org.springframework.boot.loader.archive.Archive$Entry: boolean isDirectory()
+org.springframework.boot.loader.archive.Archive$Entry: java.lang.String getName()
+org.springframework.boot.loader.archive.Archive$EntryFilter
+org.springframework.boot.loader.archive.Archive$EntryFilter: boolean matches(org.springframework.boot.loader.archive.Archive$Entry)
+org.springframework.boot.loader.data.RandomAccessData
+org.springframework.boot.loader.data.RandomAccessData: java.io.InputStream getInputStream()
+org.springframework.boot.loader.data.RandomAccessData: org.springframework.boot.loader.data.RandomAccessData getSubsection(long,long)
+org.springframework.boot.loader.data.RandomAccessData: byte[] read()
+org.springframework.boot.loader.data.RandomAccessData: byte[] read(long,long)
+org.springframework.boot.loader.data.RandomAccessData: long getSize()
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: org.springframework.boot.loader.jar.AbstractJarFile$JarFileType DIRECT
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: org.springframework.boot.loader.jar.AbstractJarFile$JarFileType NESTED_DIRECTORY
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: org.springframework.boot.loader.jar.AbstractJarFile$JarFileType NESTED_JAR
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: org.springframework.boot.loader.jar.AbstractJarFile$JarFileType[] $VALUES
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: org.springframework.boot.loader.jar.AbstractJarFile$JarFileType[] values()
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: org.springframework.boot.loader.jar.AbstractJarFile$JarFileType valueOf(java.lang.String)
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: AbstractJarFile$JarFileType(java.lang.String,int)
+org.springframework.boot.loader.jar.AbstractJarFile$JarFileType: void <clinit>()
+org.springframework.boot.loader.jar.CentralDirectoryVisitor
+org.springframework.boot.loader.jar.CentralDirectoryVisitor: void visitStart(org.springframework.boot.loader.jar.CentralDirectoryEndRecord,org.springframework.boot.loader.data.RandomAccessData)
+org.springframework.boot.loader.jar.CentralDirectoryVisitor: void visitFileHeader(org.springframework.boot.loader.jar.CentralDirectoryFileHeader,long)
+org.springframework.boot.loader.jar.CentralDirectoryVisitor: void visitEnd()
+org.springframework.boot.loader.jar.FileHeader
+org.springframework.boot.loader.jar.FileHeader: boolean hasName(java.lang.CharSequence,char)
+org.springframework.boot.loader.jar.FileHeader: long getLocalHeaderOffset()
+org.springframework.boot.loader.jar.FileHeader: long getCompressedSize()
+org.springframework.boot.loader.jar.FileHeader: long getSize()
+org.springframework.boot.loader.jar.FileHeader: int getMethod()
+org.springframework.boot.loader.jar.JarEntryFilter
+org.springframework.boot.loader.jar.JarEntryFilter: org.springframework.boot.loader.jar.AsciiBytes apply(org.springframework.boot.loader.jar.AsciiBytes)
+org.springframework.boot.loader.jar.JarFileEntries$Offsets
+org.springframework.boot.loader.jar.JarFileEntries$Offsets: void set(int,long)
+org.springframework.boot.loader.jar.JarFileEntries$Offsets: long get(int)
+org.springframework.boot.loader.jar.JarFileEntries$Offsets: void swap(int,int)
+org.springframework.boot.loader.jar.JarFileEntries$Offsets: org.springframework.boot.loader.jar.JarFileEntries$Offsets from(org.springframework.boot.loader.jar.CentralDirectoryEndRecord)
+org.springframework.boot.loader.jarmode.JarMode
+org.springframework.boot.loader.jarmode.JarMode: boolean accepts(java.lang.String)
+org.springframework.boot.loader.jarmode.JarMode: void run(java.lang.String,java.lang.String[])
+org.springframework.boot.loader.jarmode.JarModeLauncher
+org.springframework.boot.loader.jarmode.JarModeLauncher: void main(java.lang.String[])

@@ -21,6 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources/public" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
@@ -199,14 +200,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.29" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-annotations-api:9.0.29" level="project" />
-    <orderEntry type="module-library">
-      <library name="Maven: smart.card:reader:1.0.0">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/smart-card-reader-z.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: smart.card:reader:1.0.0" level="project" />
   </component>
 </module>

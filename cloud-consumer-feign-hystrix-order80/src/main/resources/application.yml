@@ -1,13 +1,19 @@
 debug: true
 
+
 server:
+  address: 127.0.0.1
+  servlet:
+    context-path: /servlet
   port: 89
-  #server-header: KING
+  server-header: KING
   tomcat:
-    basedir: file:/testtomcat
+    #basedir: file:/testtomcat
     accesslog:
       enabled: true
       pattern: '%t %a "%r" %s (%D ms)'
+      max-days: 1
+
 
 http-pool:
   max-total: 200
@@ -23,6 +29,9 @@ http-pool:
 #    static-path-pattern: /static/**
 
 spring:
+  mvc:
+    servlet:
+      path: /mvc
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/mtravel_db
     username: root

@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
@@ -2124,7 +2125,7 @@ public class OrderHystrixMain80
         在JDBC4.0之前，我们开发有连接数据库的时候，通常会用Class.forName("com.mysql.jdbc.Driver")这句先加载数据库相关的驱动，然后再进行获取连接等的操作。而JDBC4.0之后不需要用Class.forName("com.mysql.jdbc.Driver")来加载驱动，直接获取连接就可以了，现在这种方式就是使用了Java的SPI扩展机制来实现。# JDBC接口定义
 
         2.
-        common-logging（也称Jakarta Commons Logging，缩写 JCL）是常用的日志库门面，具体日志库相关可以看这篇。我们看下它是怎么解耦的。
+        common-logging（也称Jakarta Commons Logging，缩写 JCL）是常用的日志库门面
 
         3.
         spring META-INF/spring.factories
@@ -2229,6 +2230,7 @@ public class OrderHystrixMain80
 
         String testPwd_ak="12345_jason_pwd_67890";
         char[] testPwd_ak_char={'j','a','s','o','n','_','p','w','d'};
+
 
         Stack<Integer> stack = new Stack<>();
 
@@ -2504,7 +2506,12 @@ public class OrderHystrixMain80
         }
 
 
-        ConfigurableApplicationContext run = SpringApplication.run(OrderHystrixMain80.class, args);
+        SpringApplication app = new SpringApplication(OrderHystrixMain80.class);
+        app.setWebApplicationType(WebApplicationType.SERVLET); //<<<<<<<<<
+        ConfigurableApplicationContext run = app.run(args);
+
+
+        //ConfigurableApplicationContext run = SpringApplication.run(OrderHystrixMain80.class, args);
 
         System.out.println("beanDefinitionCount: "+run.getBeanDefinitionCount());
         System.out.println("=======================getBeanDefinitionNames=========================");
