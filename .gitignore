@@ -1,0 +1,11 @@
+*.log
+log.txt
+npm-debug.log*
+
+/.gradle
+/ios_file
+/libs
+/.idea
+**/target
+out
+work
