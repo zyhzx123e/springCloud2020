@@ -11,10 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
+import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Arrays;
@@ -22,32 +19,47 @@ import java.util.Base64;
 import java.util.Objects;
 
 public class CryptoUtil {
-    
-    @Autowired
-    public Environment ev;
+
+    public static String hashkeyPart2Encrypted = "CXjThjwR1mm37shCa0Qd6Uajy2MQJvNmPZ0AajWZt7e+Jo83e/6V15+fhSluUm9wvSwScz5n7areTIrBRguJ0DMF/pj/HR0O7ULD0BuZxJuYAFGURstr/f3Xz4h6kIyPyBpoVcxxAA==";
 
     public static void main(String[] args) throws Exception{
 
-        String encryptedKeyFromFile = "KQ7hemiIT7z/Ye4JPouHyHOlGr6H9BE0uQBUm4FErlppGZQQDYhnwMSGxe2iIC/+jPHwWf/kue8qtoLYE/ppgHJoh/UAw2MQ9poZvo1JxiKB2pyk1SE1/a7v9B+EVgCuG5Wn";
-        //1. use class hashcode to decrypt the encrypted key in file
-        String shashCode = String.valueOf(CryptoUtil.class.hashCode());//1297685781
+        String encryptedKeyFromFile = "Ut1MCbKjFRTKg0AbGTJ8W/sU8NZ9Ilnjs64t4SLss5h5lqg0Xtcy0M5IjqmsXCPtNWs9LxbHXPEuo360vD6ga2gziAbYkvGxOEXrodGz/LUvBEDqQ+UxDv5hhjXeeghz9p8d";
+        //1. use class name hash
+        String shash = hashStr(CryptoUtil.class.getName());//Y9r7kNqQjPqgBTRLeM31AiVtUDEt88v9TQMhqitRsE4=
 
-        //String encrypt = encrypt(masterKey, shashCode);
-        String masterKey = decrypt(encryptedKeyFromFile, shashCode);
-        //2. use the decrypted key from file as master key
-        
-        //3. use the master key to decrypt further
+        //2 use class name hash to decrypt the hashkeyPart2
+        hashKeyPart2 = decrypt(hashkeyPart2Encrypted, shash);
+
+        //String hashPart2 = encrypt(hashKeyPart2, shash);
+        //String encrypt = encrypt(masterKey, shash+"."+hashKeyPart2);
+
+        //3. concatenate shash & hashKeyPart2 in 1 string to decrypt the encrypted masterKey in file
+        String masterKey = decrypt(encryptedKeyFromFile, shash + "." + hashKeyPart2);//if it fails, exception will throw -> javax.crypto.AEADBadTagException: Tag mismatch!
+
+        //4. use the master key to encrypt/decrypt further
         String encryptedKey = encrypt("abcd1234", masterKey);
         System.out.println("encryptedKey :" + encryptedKey);
         String decryptedText = decrypt(encryptedKey, masterKey);
         System.out.println("decryptedText :" + decryptedText);
     }
-
-    public static final String masterKey = "123";
+    public  static String hashKeyPart2;// = "abcdefg";//this should store in a file or env
+    public  static String masterKey;// = "123";//this should store in a file or env
     public static final int GCM_TAG_LENGTH = 16;
     public static final String AES_GCM_NO_PADDING = "AES/GCM/NoPadding";
     public static final String ALGO_AES = "AES";
 
+
+    public static String hashStr(String textToHash) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] byteOfTextToHash = textToHash.getBytes(StandardCharsets.UTF_8);
+            byte[] hashedByetArray = digest.digest(byteOfTextToHash);
+            return Base64.getEncoder().encodeToString(hashedByetArray);
+        } catch (Exception e) {
+            return textToHash;
+        }
+    }
 
     private enum SingletonSecureRandom {
         INSTANCE;
