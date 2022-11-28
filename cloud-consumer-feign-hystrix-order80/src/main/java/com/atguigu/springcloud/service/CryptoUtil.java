@@ -35,12 +35,12 @@ public class CryptoUtil {
         //String encrypt = encrypt(masterKey, shash+"."+hashKeyPart2);
 
         //3. concatenate shash & hashKeyPart2 in 1 string to decrypt the encrypted masterKey in file
-        String masterKey = decrypt(encryptedKeyFromFile, shash + "." + hashKeyPart2);//if it fails, exception will throw -> javax.crypto.AEADBadTagException: Tag mismatch!
+        char[] masterKey = decrypt(encryptedKeyFromFile, shash + "." + hashKeyPart2).toCharArray();//if it fails, exception will throw -> javax.crypto.AEADBadTagException: Tag mismatch!
 
         //4. use the master key to encrypt/decrypt further
-        String encryptedKey = encrypt("abcd1234", masterKey);
+        String encryptedKey = encrypt("abcd1234", String.valueOf(masterKey));
         System.out.println("encryptedKey :" + encryptedKey);
-        String decryptedText = decrypt(encryptedKey, masterKey);
+        String decryptedText = decrypt(encryptedKey, String.valueOf(masterKey));
         System.out.println("decryptedText :" + decryptedText);
     }
     public  static String hashKeyPart2;// = "abcdefg";//this should store in a file or env
