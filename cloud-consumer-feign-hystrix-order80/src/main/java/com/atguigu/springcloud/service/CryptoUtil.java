@@ -1,6 +1,9 @@
 package com.atguigu.springcloud.service;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+
 import javax.crypto.*;
 import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
@@ -19,8 +22,21 @@ import java.util.Base64;
 import java.util.Objects;
 
 public class CryptoUtil {
+    
+    @Autowired
+    public Environment ev;
 
     public static void main(String[] args) throws Exception{
+
+        String encryptedKeyFromFile = "KQ7hemiIT7z/Ye4JPouHyHOlGr6H9BE0uQBUm4FErlppGZQQDYhnwMSGxe2iIC/+jPHwWf/kue8qtoLYE/ppgHJoh/UAw2MQ9poZvo1JxiKB2pyk1SE1/a7v9B+EVgCuG5Wn";
+        //1. use class hashcode to decrypt the encrypted key in file
+        String shashCode = String.valueOf(CryptoUtil.class.hashCode());//1297685781
+
+        //String encrypt = encrypt(masterKey, shashCode);
+        String masterKey = decrypt(encryptedKeyFromFile, shashCode);
+        //2. use the decrypted key from file as master key
+        
+        //3. use the master key to decrypt further
         String encryptedKey = encrypt("abcd1234", masterKey);
         System.out.println("encryptedKey :" + encryptedKey);
         String decryptedText = decrypt(encryptedKey, masterKey);
