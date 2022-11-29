@@ -64,7 +64,7 @@ public class CryptoUtil {
     private enum SingletonSecureRandom {
         INSTANCE;
         private SecureRandom singleton;
-        // JVM ensure this only execute once
+        // JVM ensures this only execute once
         SingletonSecureRandom() {
             singleton = new SecureRandom();
         }

@@ -1,5 +1,6 @@
 package com.atguigu.springcloud;
 
+import com.atguigu.springcloud.entity.SecureString;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -2216,6 +2217,9 @@ public class OrderHystrixMain80
         libLoadCert();
         libLoadCertNcrypt();
 
+        SecureString sstr = new SecureString("1234");
+
+        System.out.println(sstr.asString());
 
         // SPI Service Provider Interface
         // java.util.ServiceLoader serviceLoader = new java.util.ServiceLoader();
