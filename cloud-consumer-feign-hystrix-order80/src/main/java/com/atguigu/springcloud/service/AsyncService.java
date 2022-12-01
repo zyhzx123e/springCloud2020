@@ -2,6 +2,7 @@ package com.atguigu.springcloud.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ public class AsyncService {
     private static Logger log = LoggerFactory.getLogger(AsyncService.class);
 
     @Resource
+    @Qualifier("RestTemplateConfigMainRestTemplate")
     private RestTemplate restTemplate;
 
 //    @Bean

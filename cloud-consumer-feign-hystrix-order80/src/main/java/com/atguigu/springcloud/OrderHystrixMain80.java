@@ -1,5 +1,6 @@
 package com.atguigu.springcloud;
 
+import com.atguigu.springcloud.config.BeanNameGen;
 import com.atguigu.springcloud.entity.SecureString;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,12 +17,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.UrlResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -36,6 +40,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -2143,21 +2148,28 @@ public class OrderHystrixMain80
             drivers = null;
         }
 
+        AtomicReference<Driver> driverRef = new AtomicReference<>(null);
         AccessController.doPrivileged(new PrivilegedAction<Void>() {
             public Void run() {
-                //使用SPI的ServiceLoader来加载接口的实现
-                ServiceLoader<Driver> loadedDrivers = ServiceLoader.load(Driver.class);
-                Iterator<Driver> driversIterator = loadedDrivers.iterator();
                 try{
+                    //use SPI ServiceLoader and load the implemented driver class
+                    ServiceLoader<java.sql.Driver> loadedDrivers = ServiceLoader.load(java.sql.Driver.class);
+                    Iterator<java.sql.Driver> driversIterator = loadedDrivers.iterator();
                     while(driversIterator.hasNext()) {
-                        driversIterator.next();
+                        driverRef.set(driversIterator.next());
+                        break;
                     }
-                } catch(Throwable t) {
+                } catch(RuntimeException t) {
                     // Do nothing
                 }
                 return null;
             }
         });
+
+        if(!Objects.isNull(driverRef.get())){
+            System.setProperty("jdbc.spi.driver.impl",driverRef.get().getClass().getName());
+            System.out.println("DriverManager.initialize from spi loop: jdbc.drivers = " + System.getProperty("jdbc.spi.driver.impl"));
+        }
 
         System.out.println("DriverManager.initialize: jdbc.drivers = " + drivers);
 
@@ -2212,10 +2224,21 @@ public class OrderHystrixMain80
 
     public static void main(String[] args) throws Exception
     {
-
+        loadInitialDrivers();
+        //ServiceLoader<Driver> loadedDrivers = ServiceLoader.load(Driver.class);
         libLoadCertInfoStr();
         libLoadCert();
         libLoadCertNcrypt();
+
+        int vxor_1 = 13;
+        int vxor_2 = 87;
+        int vxor = vxor_1 ^ vxor_2;
+        int verifyXOR2 = vxor ^ vxor_2;
+        int verifyXOR1 = vxor ^ vxor_1;
+        assert verifyXOR2==vxor_1;
+
+        assert verifyXOR1==vxor_2;
+
 
         SecureString sstr = new SecureString("1234");
 
@@ -2512,8 +2535,12 @@ public class OrderHystrixMain80
 
         SpringApplication app = new SpringApplication(OrderHystrixMain80.class);
         app.setWebApplicationType(WebApplicationType.SERVLET); //<<<<<<<<<
+        app.setBeanNameGenerator(new BeanNameGen());
         ConfigurableApplicationContext run = app.run(args);
 
+//        ApplicationContext ctx = new SpringApplicationBuilder(OrderHystrixMain80.class)
+//                .beanNameGenerator(new BeanNameGen())
+//                .run(args);
 
         //ConfigurableApplicationContext run = SpringApplication.run(OrderHystrixMain80.class, args);
 
@@ -2523,6 +2550,13 @@ public class OrderHystrixMain80
         for (String beanDefinitionName : run.getBeanDefinitionNames()) {
             System.out.println("beanDefinitionName: "+beanDefinitionName);
         }
+
+        for (String beanController : run.getBeanNamesForAnnotation(RestController.class)) {
+            System.out.println("controller bean: "+beanController);//com.atguigu.springcloud.controller.asyncController
+            //com.atguigu.springcloud.controller.employeeDataController
+            //com.atguigu.springcloud.controller.orderHystirxController
+        }
+
 
         //2.Callable fulturetask start
 
