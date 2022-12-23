@@ -88,7 +88,48 @@ public class SecureString implements CharSequence {
             final char charAt = characters.charAt(i);
             pad[i] = random.nextInt();
             chars[i] = pad[i] ^ charAt;
+            //1 xor 1 = 0
+            //0 xor 0 = 0
+            //1 xor 0 = 1
+
+            //1 and 0 = 0
+            //1 or 0 = 1
         }
     }
+
+    /*
+-XX:+UseG1GC -XX:+PrintGCDetails -Xms1024m -Xmx1024m -XX:MinHeapFreeRatio=30 -XX:MaxHeapFreeRatio=60 -XX:GCTimeRatio=12 -XX:MaxGCPauseMillis=150 -XX:NewRatio=3
+-XX:+UseGCLogFileRotation
+-XX:NumberOfGCLogFiles=10
+-XX:GCLogFileSize=50M
+-Xloggc:/home/user/log/gc.log
+*/
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SecureString that = (SecureString) o;
+        if (that.chars.length != chars.length || that.pad.length != pad.length) return false;
+        int i = chars.length;
+        while (--i >= 0) {
+            if ((chars[i] ^ pad[i]) != (that.chars[i] ^ that.pad[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        final char[] value = new char[chars.length];
+        int h, i = value.length;
+        while (--i >= 0) {
+            value[i] = charAt(i);
+        }
+        return (h = Arrays.hashCode(value)) ^ (h >>> 16);
+    }
+
 
 }

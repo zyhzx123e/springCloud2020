@@ -2546,7 +2546,7 @@ class PrimeReader {
         //InputStream is = cl.getResourceAsStream("prime6.txt");
         //this.getClass().getClassLoader().getResourceAsStream("file.name");
         try (InputStream is = cl.getResourceAsStream("prime6.txt")) {
-            is.skip(1); is.read();//read read the next byte called native method read0()
+            is.skip(1); is.read();//read the next byte called native method read0()
             is.skip(1); is.read();
             //InputStream markSupported() method default return false
             // & FileInputStream did not override markSupported() so it also return false
